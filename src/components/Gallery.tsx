@@ -12,11 +12,30 @@ export const Gallery = () => {
   useEffect(() => {
     const loadImages = async () => {
       try {
-        // This will be replaced with actual images from the public/gallery folder
-        const tempImages = Array.from({ length: 16 }, (_, i) => ({
-          id: i + 1,
-          src: `/gallery/image${i + 1}.jpg`,
+        // Using the uploaded images from lovable-uploads folder
+        const imageNames = [
+          'DSC_9898-positive.jpg',
+          'DSC_9900-positive.jpg',
+          'DSC_9901-positive.jpg',
+          'DSC_9910-positive.jpg',
+          'DSC_9911-positive.jpg',
+          'DSC_9913-positive.jpg',
+          'DSC_9915-positive.jpg',
+          'DSC_9918-positive.jpg',
+          'DSC_9921-positive.jpg',
+          'DSC_9924-positive.jpg',
+          'DSC_9928-positive.jpg',
+          'DSC_9930-positive.jpg',
+          'DSC_9934-positive.jpg',
+          'DSC_9938-positive.jpg',
+          'DSC_9949-positive.jpg'
+        ];
+
+        const tempImages = imageNames.map((name, index) => ({
+          id: index + 1,
+          src: `/lovable-uploads/${name}`
         }));
+        
         setImages(tempImages);
       } catch (error) {
         console.error("Error loading images:", error);
