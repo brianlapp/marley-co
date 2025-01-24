@@ -14,6 +14,7 @@ export const Gallery = () => {
       try {
         // Using the uploaded images from lovable-uploads folder
         const imageNames = [
+          '768adfd4-910f-4d6e-a1b8-3bdfb9878afe.png', // Adding the hero image
           'DSC_9898-positive.jpg',
           'DSC_9900-positive.jpg',
           'DSC_9901-positive.jpg',
@@ -59,19 +60,22 @@ export const Gallery = () => {
     <section className="w-screen relative left-[50%] right-[50%] ml-[-50vw] mr-[-50vw] bg-[#545454] py-8 sm:py-12 md:py-16">
       <div className="max-w-[2000px] mx-auto px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {images.map((image) => (
+          {images.map((image, index) => (
             <div
               key={image.id}
-              className="relative aspect-square overflow-hidden rounded-lg group animate-fadeIn"
-              style={{ animationDelay: `${image.id * 0.1}s` }}
+              className="relative aspect-square overflow-hidden rounded-lg group"
+              style={{
+                opacity: 0,
+                animation: `fadeIn 0.6s ease-out ${index * 0.1}s forwards`,
+              }}
             >
               <img
                 src={image.src}
                 alt={`Gallery image ${image.id}`}
-                className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
+                className="object-cover w-full h-full transition-all duration-300 group-hover:scale-110"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-marley-primary/0 group-hover:bg-marley-primary/20 transition-colors duration-300" />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
             </div>
           ))}
         </div>
