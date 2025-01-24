@@ -15,7 +15,7 @@ export const AboutSection = () => {
         </div>
 
         <div className="space-y-8 animate-fadeIn" style={{ animationDelay: "0.2s" }}>
-          <h3 className="text-3xl md:text-4xl font-sans text-[#FF5757] text-center font-bold">
+          <h3 className="text-3xl font-sans text-[#545454] text-center font-bold">
             A Vision of Style and Functionality
           </h3>
           <p className="text-xl text-marley-primary/80 leading-relaxed max-w-3xl mx-auto">
