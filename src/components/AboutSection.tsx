@@ -1,4 +1,5 @@
 import { EmailCapture } from "./EmailCapture";
+import { Gallery } from "./Gallery";
 
 export const AboutSection = () => {
   return (
@@ -21,6 +22,9 @@ export const AboutSection = () => {
             Inspired by the ever-changing demands of parenthood and today's upscale fashion trends, Marley Co. was born to offer a solution that looks as good as it performs. Our mission is simple: to create diaper bags that seamlessly blend rugged durability with chic design, empowering parents to feel confident, organized, and prepared wherever their journey takes them.
           </p>
         </div>
+
+        {/* Gallery moved here */}
+        <Gallery />
 
         <div className="space-y-8 animate-fadeIn" style={{ animationDelay: "0.4s" }}>
           <h3 className="text-3xl md:text-4xl font-serif text-marley-primary">
