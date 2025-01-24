@@ -4,9 +4,9 @@ import { Gallery } from "./Gallery";
 export const AboutSection = () => {
   return (
     <section className="py-32 px-4 bg-white">
-      <div className="max-w-4xl mx-auto space-y-24">
-        <div className="space-y-8 animate-fadeIn">
-          <h2 className="text-4xl md:text-5xl font-sans text-[#FF5757] text-center font-bold">
+      <div className="max-w-4xl mx-auto space-y-32">
+        <div className="space-y-10 animate-fadeIn">
+          <h2 className="text-4xl md:text-5xl font-sans text-[#FF5757] text-center font-bold tracking-wide">
             Welcome to Marley Co.
           </h2>
           <p className="text-xl text-marley-primary/80 leading-relaxed max-w-3xl mx-auto">
@@ -14,8 +14,8 @@ export const AboutSection = () => {
           </p>
         </div>
 
-        <div className="space-y-8 animate-fadeIn" style={{ animationDelay: "0.2s" }}>
-          <h3 className="text-3xl font-sans text-[#545454] text-center font-bold">
+        <div className="space-y-10 animate-fadeIn" style={{ animationDelay: "0.2s" }}>
+          <h3 className="text-3xl font-sans text-[#545454] text-center font-bold tracking-wide">
             A Vision of Style and Functionality
           </h3>
           <p className="text-xl text-marley-primary/80 leading-relaxed max-w-3xl mx-auto">
@@ -23,14 +23,13 @@ export const AboutSection = () => {
           </p>
         </div>
 
-        {/* Gallery moved here */}
         <Gallery />
 
-        <div className="space-y-8 animate-fadeIn" style={{ animationDelay: "0.4s" }}>
-          <h3 className="text-3xl md:text-4xl font-sans text-[#FF5757] text-center font-bold">
+        <div className="space-y-10 animate-fadeIn" style={{ animationDelay: "0.4s" }}>
+          <h3 className="text-3xl md:text-4xl font-sans text-[#FF5757] text-center font-bold tracking-wide">
             Premium Features
           </h3>
-          <div className="space-y-6 text-xl text-marley-primary/80 max-w-3xl mx-auto">
+          <div className="space-y-8 text-xl text-marley-primary/80 max-w-3xl mx-auto">
             <p className="leading-relaxed">
               Our diaper bags are built to meet the challenges of parenting in Canada's diverse climates while keeping your essentials secure and accessible:
             </p>
@@ -59,8 +58,8 @@ export const AboutSection = () => {
           </div>
         </div>
 
-        <div className="space-y-8 text-center animate-fadeIn" style={{ animationDelay: "0.6s" }}>
-          <h3 className="text-3xl md:text-4xl font-sans text-[#FF5757] font-bold">
+        <div className="space-y-10 text-center animate-fadeIn" style={{ animationDelay: "0.6s" }}>
+          <h3 className="text-3xl md:text-4xl font-sans text-[#FF5757] font-bold tracking-wide">
             Be the First to Know
           </h3>
           <p className="text-xl text-marley-primary/80 leading-relaxed max-w-2xl mx-auto">
