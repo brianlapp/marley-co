@@ -23,7 +23,7 @@ export const EmailCapture = () => {
       const response = await fetch(form.action, {
         method: 'POST',
         body: formData,
-        mode: 'no-cors', // Add this to handle CORS
+        mode: 'no-cors',
         headers: {
           'Accept': 'application/json',
         }
@@ -51,12 +51,12 @@ export const EmailCapture = () => {
   return (
     <form 
       onSubmit={handleSubmit} 
-      className="w-full max-w-md space-y-2"
+      className="w-full max-w-md mx-auto space-y-2"
       method="post"
       data-id="A61C50BEC994754B1D79C5819EC1255C780C82AB3D8F428CF1A5AF96133138DAB6CEDFFE80FFDA652C40DF149AC51EF7E1005C93B2DF3FE45E54B61B3F985E93"
       action="https://www.createsend.com/t/subscribeerror?description="
     >
-      <div className="flex w-full max-w-sm items-center space-x-2">
+      <div className="flex w-full max-w-sm mx-auto items-center space-x-2">
         <Input
           type="email"
           name="cm-tjdlthk-tjdlthk"
@@ -77,7 +77,7 @@ export const EmailCapture = () => {
           {isLoading ? "Subscribing..." : "Subscribe"}
         </Button>
       </div>
-      <p className="text-sm text-white/80">
+      <p className="text-sm text-white/80 whitespace-nowrap">
         Signup today & Get 25% off your first purchase when we launch!
       </p>
     </form>
