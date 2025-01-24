@@ -10,10 +10,11 @@ export const EmailCapture = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    
+
     try {
-      // Submit to Campaign Monitor using their standard form submission
       const form = e.target as HTMLFormElement;
+      
+      // Use the native form submission to Campaign Monitor
       form.submit();
       
       toast({
@@ -45,7 +46,7 @@ export const EmailCapture = () => {
         <Input
           type="email"
           name="cm-tjdlthk-tjdlthk"
-          id="email-capture"
+          id="cm-tjdlthk-tjdlthk"
           placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
