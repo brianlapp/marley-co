@@ -1,6 +1,23 @@
 import { EmailCapture } from "./EmailCapture";
+import { useEffect } from "react";
 
 export const HeroSection = () => {
+  useEffect(() => {
+    // Create an image object to test loading
+    const img = new Image();
+    img.src = '/lovable-uploads/768adfd4-910f-4d6e-a1b8-3bdfb9878afe.png';
+    
+    img.onload = () => {
+      console.log('Background image loaded successfully');
+      console.log('Image dimensions:', img.width, 'x', img.height);
+    };
+    
+    img.onerror = (error) => {
+      console.error('Error loading background image:', error);
+      console.log('Attempted image path:', img.src);
+    };
+  }, []);
+
   return (
     <section className="min-h-screen flex flex-col items-center justify-center px-4 relative overflow-hidden">
       {/* Background Image */}
@@ -19,6 +36,7 @@ export const HeroSection = () => {
           src="/lovable-uploads/cab34784-9e56-4008-8fd0-49fbefe2dedd.png" 
           alt="Marley Co. Logo" 
           className="w-full h-auto"
+          onError={(e) => console.error('Logo image failed to load:', e)}
         />
       </div>
 
