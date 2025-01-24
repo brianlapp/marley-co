@@ -13,8 +13,6 @@ export const EmailCapture = () => {
 
     try {
       const form = e.target as HTMLFormElement;
-      
-      // Use the native form submission to Campaign Monitor
       form.submit();
       
       toast({
@@ -45,8 +43,8 @@ export const EmailCapture = () => {
       <div className="flex flex-col sm:flex-row w-full max-w-sm mx-auto items-center space-y-2 sm:space-y-0 sm:space-x-2">
         <Input
           type="email"
-          name="cm-tjdlthk-tjdlthk"
-          id="cm-tjdlthk-tjdlthk"
+          name="fieldEmail"
+          id="fieldEmail"
           placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
