@@ -11,22 +11,46 @@ export const EmailCapture = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    // TODO: Integrate with Mailchimp
-    setTimeout(() => {
+    try {
+      const form = e.target as HTMLFormElement;
+      const formData = new FormData(form);
+      
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors'
+      });
+
       toast({
         title: "Thank you for subscribing!",
         description: "We'll keep you updated on our launch.",
       });
       setEmail("");
+    } catch (error) {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
       setIsLoading(false);
-    }, 1000);
+    }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-md space-y-2">
+    <form 
+      onSubmit={handleSubmit} 
+      className="w-full max-w-md space-y-2"
+      method="post"
+      data-id="A61C50BEC994754B1D79C5819EC1255C780C82AB3D8F428CF1A5AF96133138DAB6CEDFFE80FFDA652C40DF149AC51EF7E1005C93B2DF3FE45E54B61B3F985E93"
+      action="https://gmail.us21.list-manage.com/subscribe/post"
+    >
+      <input type="hidden" name="u" value="your-u-value" />
+      <input type="hidden" name="id" value="your-id-value" />
       <div className="flex w-full max-w-sm items-center space-x-2">
         <Input
           type="email"
+          name="EMAIL"
           placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
