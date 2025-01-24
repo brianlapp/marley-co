@@ -20,22 +20,28 @@ export const EmailCapture = () => {
       console.log("Form data:", Object.fromEntries(formData.entries()));
       console.log("Submitting to:", form.action);
 
-      const response = await fetch(form.action, {
+      // Use fetch with proper CORS settings
+      const response = await fetch("https://www.createsend.com/t/subscribeerror?description=", {
         method: 'POST',
         body: formData,
-        mode: 'no-cors',
         headers: {
           'Accept': 'application/json',
-        }
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        credentials: 'include',
       });
 
       console.log("Form submission response:", response);
 
-      toast({
-        title: "Thank you for subscribing!",
-        description: "We'll keep you updated on our launch.",
-      });
-      setEmail("");
+      if (response.ok) {
+        toast({
+          title: "Thank you for subscribing!",
+          description: "We'll keep you updated on our launch.",
+        });
+        setEmail("");
+      } else {
+        throw new Error('Subscription failed');
+      }
     } catch (error) {
       console.error("Form submission error:", error);
       toast({
@@ -60,19 +66,21 @@ export const EmailCapture = () => {
         <Input
           type="email"
           name="cm-tjdlthk-tjdlthk"
-          id="fieldEmail"
+          id="email-capture"
           placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           className="h-12 bg-white/90 backdrop-blur-sm border-marley-primary/20 w-full"
           required
           maxLength={200}
-          autoComplete="Email"
+          autoComplete="email"
+          aria-label="Email subscription"
         />
         <Button
           type="submit"
           className="h-12 bg-[#FF5757] hover:bg-[#FF5757]/90 text-white w-full sm:w-auto whitespace-nowrap"
           disabled={isLoading}
+          aria-label={isLoading ? "Subscribing..." : "Subscribe to newsletter"}
         >
           {isLoading ? "Subscribing..." : "Subscribe"}
         </Button>

@@ -28,9 +28,11 @@ export const BackToTop = () => {
     <>
       {isVisible && (
         <button
+          type="button"
           onClick={scrollToTop}
           className="fixed bottom-8 right-8 p-4 bg-[#FF5757] hover:bg-[#FF5757]/90 text-white rounded-full shadow-lg transition-all duration-300 z-50"
           aria-label="Back to top"
+          title="Scroll back to top"
         >
           <ArrowUp className="h-6 w-6" />
         </button>
