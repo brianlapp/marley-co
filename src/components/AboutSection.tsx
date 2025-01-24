@@ -6,7 +6,7 @@ export const AboutSection = () => {
     <section className="py-32 px-4 bg-white">
       <div className="max-w-4xl mx-auto space-y-24">
         <div className="space-y-8 animate-fadeIn">
-          <h2 className="text-4xl md:text-5xl font-serif text-marley-primary text-center">
+          <h2 className="text-4xl md:text-5xl font-sans text-[#FF5757] text-center font-bold">
             Welcome to Marley Co.
           </h2>
           <p className="text-xl text-marley-primary/80 leading-relaxed">
@@ -15,7 +15,7 @@ export const AboutSection = () => {
         </div>
 
         <div className="space-y-8 animate-fadeIn" style={{ animationDelay: "0.2s" }}>
-          <h3 className="text-3xl md:text-4xl font-serif text-marley-primary">
+          <h3 className="text-3xl md:text-4xl font-sans text-[#FF5757] font-bold">
             A Vision of Style and Functionality
           </h3>
           <p className="text-xl text-marley-primary/80 leading-relaxed">
@@ -27,7 +27,7 @@ export const AboutSection = () => {
         <Gallery />
 
         <div className="space-y-8 animate-fadeIn" style={{ animationDelay: "0.4s" }}>
-          <h3 className="text-3xl md:text-4xl font-serif text-marley-primary">
+          <h3 className="text-3xl md:text-4xl font-sans text-[#FF5757] font-bold">
             Premium Features
           </h3>
           <div className="space-y-6 text-xl text-marley-primary/80">
@@ -60,7 +60,7 @@ export const AboutSection = () => {
         </div>
 
         <div className="space-y-8 text-center animate-fadeIn" style={{ animationDelay: "0.6s" }}>
-          <h3 className="text-3xl md:text-4xl font-serif text-marley-primary">
+          <h3 className="text-3xl md:text-4xl font-sans text-[#FF5757] font-bold">
             Be the First to Know
           </h3>
           <p className="text-xl text-marley-primary/80 leading-relaxed">
