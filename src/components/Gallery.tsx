@@ -56,7 +56,7 @@ export const Gallery = () => {
   }
 
   return (
-    <section className="bg-[#FF5757] py-16">
+    <section className="bg-marley-primary py-16">
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 max-w-7xl mx-auto">
         {images.map((image) => (
           <div

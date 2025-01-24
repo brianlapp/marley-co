@@ -30,7 +30,7 @@ export const HeroSection = () => {
       </div>
 
       {/* Logo */}
-      <div className="w-48 md:w-64 mb-12 animate-fadeIn relative z-10">
+      <div className="w-96 md:w-[512px] mb-12 animate-fadeIn relative z-10">
         <img 
           src="/lovable-uploads/cab34784-9e56-4008-8fd0-49fbefe2dedd.png" 
           alt="Marley Co. Logo" 
