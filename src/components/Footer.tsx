@@ -1,4 +1,4 @@
-import { EmailCapture } from "./EmailCapture";
+import React from "react";
 
 export const Footer = () => {
   return (
@@ -10,9 +10,6 @@ export const Footer = () => {
             alt="Marley Co. Logo" 
             className="w-48 h-auto"
           />
-          <div className="max-w-md w-full">
-            <EmailCapture />
-          </div>
         </div>
         <div className="text-center text-white/80 pt-8 border-t border-white/20">
           <p>© {new Date().getFullYear()} Marley Co. All rights reserved.</p>
