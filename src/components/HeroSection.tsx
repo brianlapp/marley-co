@@ -3,18 +3,30 @@ import { EmailCapture } from "./EmailCapture";
 export const HeroSection = () => {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center px-4 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-marley-light to-white/50 -z-10" />
-      <div className="w-32 h-32 mb-8 animate-fadeIn">
-        {/* Replace with actual logo */}
-        <div className="w-full h-full bg-marley-primary/10 rounded-full flex items-center justify-center">
-          <span className="text-2xl font-serif text-marley-primary">Marley Co.</span>
-        </div>
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat -z-10" 
+        style={{ 
+          backgroundImage: 'url(https://images.pixieset.com/28710138/304905d7824a4a4af8d81b7d4ad76875-cover.jpg)',
+        }}
+      >
+        <div className="absolute inset-0 bg-black/30" /> {/* Overlay for better text readability */}
       </div>
+
+      {/* Logo */}
+      <div className="w-64 md:w-80 mb-12 animate-fadeIn">
+        <img 
+          src="/lovable-uploads/cab34784-9e56-4008-8fd0-49fbefe2dedd.png" 
+          alt="Marley Co. Logo" 
+          className="w-full h-auto"
+        />
+      </div>
+
       <div className="text-center space-y-6 max-w-2xl animate-slideUp" style={{ animationDelay: "0.2s" }}>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-marley-primary leading-tight">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-tight">
           ONLINE STORE COMING SOON!
         </h1>
-        <p className="text-xl md:text-2xl text-marley-primary/80">
+        <p className="text-xl md:text-2xl text-white/90">
           Get In Early! Register Today for a 25% Coupon
         </p>
         <div className="flex justify-center pt-4">
