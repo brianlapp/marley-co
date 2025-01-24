@@ -7,7 +7,7 @@ export const HeroSection = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat -z-10" 
         style={{ 
-          backgroundImage: 'url(/lovable-uploads/768adfd4-910f-4d6e-a1b8-3bdfb9878afe.png)',
+          backgroundImage: `url('/lovable-uploads/768adfd4-910f-4d6e-a1b8-3bdfb9878afe.png')`,
         }}
       >
         <div className="absolute inset-0 bg-black/30" /> {/* Overlay for better text readability */}
