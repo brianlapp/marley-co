@@ -56,23 +56,25 @@ export const Gallery = () => {
   }
 
   return (
-    <section className="bg-marley-primary py-16">
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 max-w-7xl mx-auto">
-        {images.map((image) => (
-          <div
-            key={image.id}
-            className="relative aspect-square overflow-hidden rounded-lg group animate-fadeIn"
-            style={{ animationDelay: `${image.id * 0.1}s` }}
-          >
-            <img
-              src={image.src}
-              alt={`Gallery image ${image.id}`}
-              className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
-              loading="lazy"
-            />
-            <div className="absolute inset-0 bg-marley-primary/0 group-hover:bg-marley-primary/20 transition-colors duration-300" />
-          </div>
-        ))}
+    <section className="w-screen relative left-[50%] right-[50%] ml-[-50vw] mr-[-50vw] bg-[#545454] py-16">
+      <div className="max-w-[2000px] mx-auto px-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {images.map((image) => (
+            <div
+              key={image.id}
+              className="relative aspect-square overflow-hidden rounded-lg group animate-fadeIn"
+              style={{ animationDelay: `${image.id * 0.1}s` }}
+            >
+              <img
+                src={image.src}
+                alt={`Gallery image ${image.id}`}
+                className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-marley-primary/0 group-hover:bg-marley-primary/20 transition-colors duration-300" />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
