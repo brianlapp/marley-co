@@ -63,10 +63,10 @@ export const Gallery = () => {
           {images.map((image, index) => (
             <div
               key={image.id}
-              className="relative aspect-square overflow-hidden rounded-lg group"
+              className={`relative aspect-square overflow-hidden rounded-lg group opacity-0 animate-fadeIn md:last:hidden lg:last:block`}
               style={{
-                opacity: 0,
-                animation: `fadeIn 0.6s ease-out ${index * 0.1}s forwards`,
+                animationDelay: `${index * 0.05}s`,
+                animationFillMode: 'forwards'
               }}
             >
               <img
