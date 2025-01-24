@@ -25,10 +25,13 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         marley: {
-          primary: "#545454",
-          accent: "#FF5757",
-          light: "#F5F5F5",
-          dark: "#333333",
+          primary: "#545454",    // Muted dark gray for text
+          accent: "#8E9196",     // Soft accent color
+          light: "#F5F5F5",      // Light background
+          dark: "#333333",       // Dark text
+          muted: "#E5E5E5",      // Muted background
+          warm: "#E2D1C3",       // Warm accent
+          cool: "#D3E4FD",       // Cool accent
         },
         primary: {
           DEFAULT: "hsl(var(--primary))",
@@ -58,6 +61,10 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+      },
+      fontFamily: {
+        serif: ['Playfair Display', 'serif'],
+        sans: ['Inter', 'sans-serif'],
       },
       keyframes: {
         "accordion-down": {
