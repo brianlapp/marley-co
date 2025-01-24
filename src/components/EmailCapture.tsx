@@ -23,6 +23,7 @@ export const EmailCapture = () => {
       const response = await fetch(form.action, {
         method: 'POST',
         body: formData,
+        mode: 'no-cors', // Add this to handle CORS
         headers: {
           'Accept': 'application/json',
         }
