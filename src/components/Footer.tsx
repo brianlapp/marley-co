@@ -1,7 +1,4 @@
-import { EmailCapture } from "./EmailCapture";
 
-export const Footer = () => {
-  return (
     <footer className="bg-marley-primary text-white py-16">
       <div className="max-w-6xl mx-auto px-4 space-y-12">
         <div className="flex flex-col items-center space-y-8">
