@@ -34,17 +34,19 @@ export const EmailCapture = () => {
 
   return (
     <form 
-      onSubmit={handleSubmit} 
+      onSubmit={handleSubmit}
       className="w-full max-w-md mx-auto space-y-2 px-4 sm:px-0"
+      action="https://marleyco.us21.list-manage.com/subscribe/post?u=REPLACE_WITH_U_VALUE&amp;id=REPLACE_WITH_ID"
       method="post"
-      action="https://marleyco.createsend.com/t/t/s/tjdlthk/"
-      id="subForm"
+      id="mc-embedded-subscribe-form"
+      name="mc-embedded-subscribe-form"
+      target="_blank"
     >
       <div className="flex flex-col sm:flex-row w-full max-w-sm mx-auto items-center space-y-2 sm:space-y-0 sm:space-x-2">
         <Input
           type="email"
-          name="fieldEmail"
-          id="fieldEmail"
+          name="EMAIL"
+          id="mce-EMAIL"
           placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -66,6 +68,11 @@ export const EmailCapture = () => {
       <p className="text-sm text-white/80 text-center sm:whitespace-nowrap">
         Signup today & Get 25% off your first purchase when we launch!
       </p>
+      
+      {/* Real people should not fill this in and expect good things - do not remove this or risk form bot signups */}
+      <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden="true">
+        <input type="text" name="b_REPLACE_WITH_U_VALUE_AGAIN_HERE" tabIndex={-1} />
+      </div>
     </form>
   );
 };
