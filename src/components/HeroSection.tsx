@@ -21,7 +21,7 @@ export const HeroSection = () => {
     <section className="min-h-screen flex flex-col items-center justify-center px-4 relative overflow-hidden bg-marley-light">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-90" 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80" 
         style={{ 
           backgroundImage: `url('/lovable-uploads/768adfd4-910f-4d6e-a1b8-3bdfb9878afe.png')`,
         }}
