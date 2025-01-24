@@ -35,22 +35,21 @@ export const EmailCapture = () => {
   return (
     <form 
       onSubmit={handleSubmit}
-      className="w-full max-w-md mx-auto space-y-2 px-4 sm:px-0"
-      action="https://marleyco.us21.list-manage.com/subscribe/post?u=REPLACE_WITH_U_VALUE&amp;id=REPLACE_WITH_ID"
+      className="w-full max-w-md mx-auto space-y-2 px-4 sm:px-0 js-cm-form"
+      action="https://www.createsend.com/t/subscribeerror?description="
       method="post"
-      id="mc-embedded-subscribe-form"
-      name="mc-embedded-subscribe-form"
-      target="_blank"
+      id="subForm"
+      data-id="A61C50BEC994754B1D79C5819EC1255C780C82AB3D8F428CF1A5AF96133138DAB6CEDFFE80FFDA652C40DF149AC51EF7E1005C93B2DF3FE45E54B61B3F985E93"
     >
       <div className="flex flex-col sm:flex-row w-full max-w-sm mx-auto items-center space-y-2 sm:space-y-0 sm:space-x-2">
         <Input
           type="email"
-          name="EMAIL"
-          id="mce-EMAIL"
+          name="cm-tjdlthk-tjdlthk"
+          id="fieldEmail"
           placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="h-12 bg-white/90 backdrop-blur-sm border-marley-primary/20 w-full"
+          className="h-12 bg-white/90 backdrop-blur-sm border-marley-primary/20 w-full js-cm-email-input qa-input-email"
           required
           maxLength={200}
           autoComplete="email"
@@ -58,7 +57,7 @@ export const EmailCapture = () => {
         />
         <Button
           type="submit"
-          className="h-12 bg-[#FF5757] hover:bg-[#FF5757]/90 text-white w-full sm:w-auto whitespace-nowrap"
+          className="js-cm-submit-button h-12 bg-[#FF5757] hover:bg-[#FF5757]/90 text-white w-full sm:w-auto whitespace-nowrap"
           disabled={isLoading}
           aria-label={isLoading ? "Subscribing..." : "Subscribe to newsletter"}
         >
@@ -68,11 +67,6 @@ export const EmailCapture = () => {
       <p className="text-sm text-white/80 text-center sm:whitespace-nowrap">
         Signup today & Get 25% off your first purchase when we launch!
       </p>
-      
-      {/* Real people should not fill this in and expect good things - do not remove this or risk form bot signups */}
-      <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden="true">
-        <input type="text" name="b_REPLACE_WITH_U_VALUE_AGAIN_HERE" tabIndex={-1} />
-      </div>
     </form>
   );
 };
