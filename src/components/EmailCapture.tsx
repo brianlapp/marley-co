@@ -43,19 +43,20 @@ export const EmailCapture = () => {
       className="w-full max-w-md space-y-2"
       method="post"
       data-id="A61C50BEC994754B1D79C5819EC1255C780C82AB3D8F428CF1A5AF96133138DAB6CEDFFE80FFDA652C40DF149AC51EF7E1005C93B2DF3FE45E54B61B3F985E93"
-      action="https://gmail.us21.list-manage.com/subscribe/post"
+      action="https://www.createsend.com/t/subscribeerror?description="
     >
-      <input type="hidden" name="u" value="your-u-value" />
-      <input type="hidden" name="id" value="your-id-value" />
       <div className="flex w-full max-w-sm items-center space-x-2">
         <Input
           type="email"
-          name="EMAIL"
+          name="cm-tjdlthk-tjdlthk"
+          id="fieldEmail"
           placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           className="h-12 bg-white/90 backdrop-blur-sm border-marley-primary/20"
           required
+          maxLength={200}
+          autoComplete="Email"
         />
         <Button
           type="submit"
