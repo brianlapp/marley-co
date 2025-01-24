@@ -78,7 +78,7 @@ export const EmailCapture = () => {
         </Button>
       </div>
       <p className="text-sm text-white/80">
-        Get 25% off your first purchase when we launch!
+        Signup today & Get 25% off your first purchase when we launch!
       </p>
     </form>
   );
