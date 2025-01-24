@@ -10,16 +10,25 @@ export const EmailCapture = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
+    console.log("Form submission started");
+    console.log("Email value:", email);
 
     try {
       const form = e.target as HTMLFormElement;
       const formData = new FormData(form);
       
+      console.log("Form data:", Object.fromEntries(formData.entries()));
+      console.log("Submitting to:", form.action);
+
       const response = await fetch(form.action, {
         method: 'POST',
         body: formData,
-        mode: 'no-cors'
+        headers: {
+          'Accept': 'application/json',
+        }
       });
+
+      console.log("Form submission response:", response);
 
       toast({
         title: "Thank you for subscribing!",
@@ -27,6 +36,7 @@ export const EmailCapture = () => {
       });
       setEmail("");
     } catch (error) {
+      console.error("Form submission error:", error);
       toast({
         title: "Something went wrong",
         description: "Please try again later.",
