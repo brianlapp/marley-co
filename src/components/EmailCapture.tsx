@@ -35,13 +35,13 @@ export const EmailCapture = () => {
         />
         <Button
           type="submit"
-          className="h-12 bg-marley-accent hover:bg-marley-accent/90 text-white"
+          className="h-12 bg-[#F97316] hover:bg-[#F97316]/90 text-white"
           disabled={isLoading}
         >
           {isLoading ? "Subscribing..." : "Subscribe"}
         </Button>
       </div>
-      <p className="text-sm text-marley-primary/60">
+      <p className="text-sm text-white/80">
         Get 25% off your first purchase when we launch!
       </p>
     </form>

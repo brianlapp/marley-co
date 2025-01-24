@@ -3,7 +3,6 @@ import { useEffect } from "react";
 
 export const HeroSection = () => {
   useEffect(() => {
-    // Create an image object to test loading
     const img = new Image();
     img.src = '/lovable-uploads/768adfd4-910f-4d6e-a1b8-3bdfb9878afe.png';
     
@@ -27,7 +26,7 @@ export const HeroSection = () => {
           backgroundImage: `url('/lovable-uploads/768adfd4-910f-4d6e-a1b8-3bdfb9878afe.png')`,
         }}
       >
-        <div className="absolute inset-0 bg-black/20" /> {/* Lighter overlay for softer look */}
+        <div className="absolute inset-0 bg-black/50" /> {/* Darker overlay for better contrast */}
       </div>
 
       {/* Logo */}
@@ -41,10 +40,10 @@ export const HeroSection = () => {
       </div>
 
       <div className="text-center space-y-6 max-w-2xl animate-slideUp relative z-10" style={{ animationDelay: "0.2s" }}>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-marley-dark leading-tight tracking-wide">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-tight tracking-wide">
           ONLINE STORE COMING SOON!
         </h1>
-        <p className="text-xl md:text-2xl text-marley-primary font-light tracking-wider">
+        <p className="text-xl md:text-2xl text-white/90 font-light tracking-wider">
           Get In Early! Register Today for a 25% Coupon
         </p>
         <div className="flex justify-center pt-4">
