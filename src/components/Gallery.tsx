@@ -49,16 +49,16 @@ export const Gallery = () => {
 
   if (loading) {
     return (
-      <div className="w-full h-96 flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-marley-accent"></div>
+      <div className="w-full h-64 sm:h-96 flex items-center justify-center">
+        <div className="animate-spin rounded-full h-8 sm:h-12 w-8 sm:w-12 border-b-2 border-marley-accent"></div>
       </div>
     );
   }
 
   return (
-    <section className="w-screen relative left-[50%] right-[50%] ml-[-50vw] mr-[-50vw] bg-[#545454] py-16">
+    <section className="w-screen relative left-[50%] right-[50%] ml-[-50vw] mr-[-50vw] bg-[#545454] py-8 sm:py-12 md:py-16">
       <div className="max-w-[2000px] mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {images.map((image) => (
             <div
               key={image.id}
