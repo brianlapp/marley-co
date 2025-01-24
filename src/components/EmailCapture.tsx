@@ -10,38 +10,17 @@ export const EmailCapture = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    console.log("Form submission started");
-    console.log("Email value:", email);
-
+    
     try {
+      // Submit to Campaign Monitor using their standard form submission
       const form = e.target as HTMLFormElement;
-      const formData = new FormData(form);
+      form.submit();
       
-      console.log("Form data:", Object.fromEntries(formData.entries()));
-      console.log("Submitting to:", form.action);
-
-      // Use fetch with proper CORS settings
-      const response = await fetch("https://www.createsend.com/t/subscribeerror?description=", {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        credentials: 'include',
+      toast({
+        title: "Thank you for subscribing!",
+        description: "We'll keep you updated on our launch.",
       });
-
-      console.log("Form submission response:", response);
-
-      if (response.ok) {
-        toast({
-          title: "Thank you for subscribing!",
-          description: "We'll keep you updated on our launch.",
-        });
-        setEmail("");
-      } else {
-        throw new Error('Subscription failed');
-      }
+      setEmail("");
     } catch (error) {
       console.error("Form submission error:", error);
       toast({
@@ -59,8 +38,8 @@ export const EmailCapture = () => {
       onSubmit={handleSubmit} 
       className="w-full max-w-md mx-auto space-y-2 px-4 sm:px-0"
       method="post"
-      data-id="A61C50BEC994754B1D79C5819EC1255C780C82AB3D8F428CF1A5AF96133138DAB6CEDFFE80FFDA652C40DF149AC51EF7E1005C93B2DF3FE45E54B61B3F985E93"
-      action="https://www.createsend.com/t/subscribeerror?description="
+      action="https://marleyco.createsend.com/t/t/s/tjdlthk/"
+      id="subForm"
     >
       <div className="flex flex-col sm:flex-row w-full max-w-sm mx-auto items-center space-y-2 sm:space-y-0 sm:space-x-2">
         <Input
