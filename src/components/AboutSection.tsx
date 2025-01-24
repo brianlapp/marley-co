@@ -9,16 +9,16 @@ export const AboutSection = () => {
           <h2 className="text-4xl md:text-5xl font-sans text-[#FF5757] text-center font-bold">
             Welcome to Marley Co.
           </h2>
-          <p className="text-xl text-marley-primary/80 leading-relaxed">
+          <p className="text-xl text-marley-primary/80 leading-relaxed max-w-3xl mx-auto">
             At Marley Co., we believe that parenting shouldn't mean compromising on style or functionality. That's why we're proud to introduce our premium line of diaper bag backpacks, thoughtfully designed for modern parents who value elegance and practicality.
           </p>
         </div>
 
         <div className="space-y-8 animate-fadeIn" style={{ animationDelay: "0.2s" }}>
-          <h3 className="text-3xl md:text-4xl font-sans text-[#FF5757] font-bold">
+          <h3 className="text-3xl md:text-4xl font-sans text-[#FF5757] text-center font-bold">
             A Vision of Style and Functionality
           </h3>
-          <p className="text-xl text-marley-primary/80 leading-relaxed">
+          <p className="text-xl text-marley-primary/80 leading-relaxed max-w-3xl mx-auto">
             Inspired by the ever-changing demands of parenthood and today's upscale fashion trends, Marley Co. was born to offer a solution that looks as good as it performs. Our mission is simple: to create diaper bags that seamlessly blend rugged durability with chic design, empowering parents to feel confident, organized, and prepared wherever their journey takes them.
           </p>
         </div>
@@ -27,10 +27,10 @@ export const AboutSection = () => {
         <Gallery />
 
         <div className="space-y-8 animate-fadeIn" style={{ animationDelay: "0.4s" }}>
-          <h3 className="text-3xl md:text-4xl font-sans text-[#FF5757] font-bold">
+          <h3 className="text-3xl md:text-4xl font-sans text-[#FF5757] text-center font-bold">
             Premium Features
           </h3>
-          <div className="space-y-6 text-xl text-marley-primary/80">
+          <div className="space-y-6 text-xl text-marley-primary/80 max-w-3xl mx-auto">
             <p className="leading-relaxed">
               Our diaper bags are built to meet the challenges of parenting in Canada's diverse climates while keeping your essentials secure and accessible:
             </p>
@@ -63,7 +63,7 @@ export const AboutSection = () => {
           <h3 className="text-3xl md:text-4xl font-sans text-[#FF5757] font-bold">
             Be the First to Know
           </h3>
-          <p className="text-xl text-marley-primary/80 leading-relaxed">
+          <p className="text-xl text-marley-primary/80 leading-relaxed max-w-2xl mx-auto">
             We're thrilled to announce that our online store will be launching soon! Don't miss your chance to own one of these game-changing diaper bags.
           </p>
           <div className="flex justify-center pt-8">
