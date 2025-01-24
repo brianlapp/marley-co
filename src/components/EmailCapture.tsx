@@ -34,7 +34,6 @@ export const EmailCapture = () => {
 
   return (
     <form 
-      onSubmit={handleSubmit}
       className="w-full max-w-md mx-auto space-y-2 px-4 sm:px-0 js-cm-form"
       action="https://www.createsend.com/t/subscribeerror?description="
       method="post"
