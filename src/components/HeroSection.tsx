@@ -26,7 +26,7 @@ export const HeroSection = () => {
           backgroundImage: `url('/lovable-uploads/768adfd4-910f-4d6e-a1b8-3bdfb9878afe.png')`,
         }}
       >
-        <div className="absolute inset-0 bg-black/50" /> {/* Darker overlay for better contrast */}
+        <div className="absolute inset-0 bg-black/70" /> {/* Increased overlay darkness */}
       </div>
 
       {/* Logo */}
@@ -40,7 +40,7 @@ export const HeroSection = () => {
       </div>
 
       <div className="text-center space-y-6 max-w-2xl animate-slideUp relative z-10" style={{ animationDelay: "0.2s" }}>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-tight tracking-wide">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-sans text-white leading-tight tracking-wide font-bold">
           ONLINE STORE COMING SOON!
         </h1>
         <p className="text-xl md:text-2xl text-white/90 font-light tracking-wider">

@@ -35,7 +35,7 @@ export const EmailCapture = () => {
         />
         <Button
           type="submit"
-          className="h-12 bg-[#F97316] hover:bg-[#F97316]/90 text-white"
+          className="h-12 bg-[#FF5757] hover:bg-[#FF5757]/90 text-white"
           disabled={isLoading}
         >
           {isLoading ? "Subscribing..." : "Subscribe"}
