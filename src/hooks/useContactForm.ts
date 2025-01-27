@@ -32,8 +32,7 @@ export const useContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      // Submit to Netlify forms
-      const netlifyResponse = await fetch('/', {
+      const response = await fetch('/', {
         method: "POST",
         headers: { 
           "Content-Type": "application/x-www-form-urlencoded",
@@ -45,27 +44,8 @@ export const useContactForm = () => {
         })
       });
 
-      if (!netlifyResponse.ok) {
+      if (!response.ok) {
         throw new Error('Form submission failed');
-      }
-
-      // If newsletter checkbox is checked, submit to Campaign Monitor
-      if (formData.newsletter) {
-        const campaignMonitorResponse = await fetch('/.netlify/functions/subscribe-campaign-monitor', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            email: formData.email,
-            name: formData.name,
-          }),
-        });
-
-        if (!campaignMonitorResponse.ok) {
-          const error = await campaignMonitorResponse.json();
-          throw new Error(error.message || 'Newsletter subscription failed');
-        }
       }
 
       toast({
