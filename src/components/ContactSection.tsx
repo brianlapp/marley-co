@@ -25,21 +25,21 @@ export const ContactSection = () => {
         body: new URLSearchParams(formData as any).toString()
       });
 
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
+      if (response.ok) {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for contacting us. We'll get back to you soon.",
+        });
+        
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          message: ""
+        });
+      } else {
+        throw new Error('Form submission failed');
       }
-
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for contacting us. We'll get back to you soon.",
-      });
-      
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        message: ""
-      });
     } catch (error) {
       console.error('Form submission error:', error);
       toast({
@@ -86,14 +86,29 @@ export const ContactSection = () => {
               </div>
             </div>
 
+            {/* Hidden Netlify Form */}
+            <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+              <input type="text" name="name" />
+              <input type="email" name="email" />
+              <input type="tel" name="phone" />
+              <textarea name="message"></textarea>
+            </form>
+
+            {/* Visible Contact Form */}
             <form 
-              name="contact" 
+              name="contact"
               method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
               onSubmit={handleSubmit}
               className="space-y-4 md:space-y-6 bg-white p-6 md:p-8 rounded-lg shadow-sm"
-              data-netlify="true"
             >
               <input type="hidden" name="form-name" value="contact" />
+              <p hidden>
+                <label>
+                  Don't fill this out if you're human: <input name="bot-field" />
+                </label>
+              </p>
               
               <Input
                 name="name"
