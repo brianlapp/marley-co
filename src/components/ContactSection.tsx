@@ -32,7 +32,8 @@ export const ContactSection = () => {
         },
         body: encode({ 
           "form-name": "contact",
-          ...formData
+          ...formData,
+          "bot-field": ""
         })
       });
 
