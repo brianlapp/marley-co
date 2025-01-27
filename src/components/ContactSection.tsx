@@ -96,7 +96,7 @@ export const ContactSection = () => {
             </div>
 
             {/* Static Form for Netlify Detection */}
-            <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+            <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
               <input type="text" name="name" />
               <input type="email" name="email" />
               <input type="tel" name="phone" />
@@ -107,8 +107,8 @@ export const ContactSection = () => {
             <form 
               name="contact"
               method="POST"
-              netlify="true"
-              netlify-honeypot="bot-field"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
               onSubmit={handleSubmit}
               className="space-y-4 md:space-y-6 bg-white p-6 md:p-8 rounded-lg shadow-sm"
             >
