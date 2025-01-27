@@ -16,8 +16,17 @@ export const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex-1 flex justify-center sm:justify-start">
+        <div className="flex justify-between items-center h-16 relative">
+          {/* Mobile menu button - positioned absolutely */}
+          <button 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="absolute left-0 sm:hidden p-2 rounded-md text-marley-primary hover:text-marley-accent"
+          >
+            <Menu className="h-6 w-6" />
+          </button>
+
+          {/* Logo container - centered regardless of menu button */}
+          <div className="flex-1 flex justify-center">
             <img 
               src="/lovable-uploads/32dc9097-70f7-413a-b918-743a39b81fac.png" 
               alt="Marley Co. Logo" 
@@ -25,7 +34,8 @@ export const Navigation = () => {
             />
           </div>
           
-          <div className="hidden sm:flex sm:space-x-8">
+          {/* Desktop navigation - hidden on mobile */}
+          <div className="hidden sm:flex sm:space-x-8 absolute right-0">
             <button 
               onClick={() => scrollToSection('about')} 
               className="text-marley-primary hover:text-marley-accent px-3 py-2 text-sm font-medium"
@@ -42,13 +52,6 @@ export const Navigation = () => {
               Contact
             </Link>
           </div>
-
-          <button 
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="sm:hidden p-2 rounded-md text-marley-primary hover:text-marley-accent"
-          >
-            <Menu className="h-6 w-6" />
-          </button>
         </div>
 
         {/* Mobile menu */}
