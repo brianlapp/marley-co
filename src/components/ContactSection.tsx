@@ -19,33 +19,23 @@ export const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
+      // Let the form submit naturally - Netlify will handle it
       const form = e.currentTarget;
-      const data = new FormData(form);
+      form.submit();
       
-      // Let the form submit naturally - Netlify will intercept this
-      const response = await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(data as any).toString(),
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for contacting us. We'll get back to you soon.",
       });
-
-      if (response.ok) {
-        toast({
-          title: "Message Sent!",
-          description: "Thank you for contacting us. We'll get back to you soon.",
-        });
-        
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          message: ""
-        });
-        
-        form.reset();
-      } else {
-        throw new Error('Form submission failed');
-      }
+      
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: ""
+      });
+      
+      form.reset();
     } catch (error) {
       console.error('Form submission error:', error);
       toast({
@@ -94,30 +84,13 @@ export const ContactSection = () => {
               </div>
             </div>
 
-            {/* Static Form for Netlify Detection */}
-            <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
-              <input type="text" name="name" />
-              <input type="email" name="email" />
-              <input type="tel" name="phone" />
-              <textarea name="message"></textarea>
-            </form>
-
-            {/* Active Form */}
             <form 
               name="contact"
               method="POST"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
-              onSubmit={handleSubmit}
+              netlify="true"
               className="space-y-4 md:space-y-6 bg-white p-6 md:p-8 rounded-lg shadow-sm"
+              onSubmit={handleSubmit}
             >
-              <input type="hidden" name="form-name" value="contact" />
-              <div hidden>
-                <label>
-                  Don't fill this out if you're human: <input name="bot-field" />
-                </label>
-              </div>
-              
               <Input
                 name="name"
                 placeholder="Name"
