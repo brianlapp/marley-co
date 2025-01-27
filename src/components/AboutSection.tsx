@@ -5,7 +5,7 @@ export const AboutSection = () => {
   return (
     <section className="py-16 md:py-24 lg:py-32 px-4 md:px-8 bg-white">
       <div className="max-w-4xl mx-auto space-y-16 md:space-y-24 lg:space-y-32">
-        <div className="space-y-6 md:space-y-8 lg:space-y-10 animate-fadeIn">
+        <div id="about" className="space-y-6 md:space-y-8 lg:space-y-10 animate-fadeIn">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans text-[#FF5757] text-center font-bold tracking-wide">
             Welcome to Marley Co.
           </h2>
@@ -25,7 +25,7 @@ export const AboutSection = () => {
 
         <Gallery />
 
-        <div className="space-y-6 md:space-y-8 lg:space-y-10 animate-fadeIn" style={{ animationDelay: "0.4s" }}>
+        <div id="features" className="space-y-6 md:space-y-8 lg:space-y-10 animate-fadeIn" style={{ animationDelay: "0.4s" }}>
           <h3 className="text-2xl sm:text-3xl md:text-4xl font-sans text-[#FF5757] text-center font-bold tracking-wide">
             Premium Features
           </h3>

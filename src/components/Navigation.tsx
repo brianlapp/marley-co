@@ -1,6 +1,13 @@
 import { Link } from "react-router-dom";
 
 export const Navigation = () => {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,13 +21,19 @@ export const Navigation = () => {
           </div>
           
           <div className="hidden sm:flex sm:space-x-8">
-            <Link to="/" className="text-marley-primary hover:text-marley-accent px-3 py-2 text-sm font-medium">
+            <button 
+              onClick={() => scrollToSection('about')} 
+              className="text-marley-primary hover:text-marley-accent px-3 py-2 text-sm font-medium"
+            >
               About
-            </Link>
-            <Link to="/" className="text-marley-primary hover:text-marley-accent px-3 py-2 text-sm font-medium">
+            </button>
+            <button 
+              onClick={() => scrollToSection('features')} 
+              className="text-marley-primary hover:text-marley-accent px-3 py-2 text-sm font-medium"
+            >
               Features
-            </Link>
-            <Link to="/" className="text-marley-primary hover:text-marley-accent px-3 py-2 text-sm font-medium">
+            </button>
+            <Link to="/contact" className="text-marley-primary hover:text-marley-accent px-3 py-2 text-sm font-medium">
               Contact
             </Link>
           </div>
