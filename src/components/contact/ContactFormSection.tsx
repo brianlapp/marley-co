@@ -10,7 +10,7 @@ export const ContactFormSection = () => {
   return (
     <section className="py-8 md:py-16 lg:py-24 bg-marley-cool">
       {/* Hidden form for Netlify form detection */}
-      <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
         <input type="text" name="name" />
         <input type="email" name="email" />
         <input type="tel" name="phone" />
@@ -40,7 +40,7 @@ export const ContactFormSection = () => {
             name="contact"
             method="POST"
             data-netlify="true"
-            netlify-honeypot="bot-field"
+            data-netlify-honeypot="bot-field"
             className="space-y-4 md:space-y-6 bg-white p-6 md:p-8 rounded-lg shadow-sm"
             onSubmit={handleSubmit}
           >
