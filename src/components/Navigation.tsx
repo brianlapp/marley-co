@@ -1,14 +1,20 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu } from "lucide-react";
 import { useState } from "react";
 
 export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const isContactPage = location.pathname === '/contact';
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  const handleNavigation = (id: string) => {
+    if (isContactPage) {
+      window.location.href = `/#${id}`;
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
     setIsMenuOpen(false);
   };
@@ -27,23 +33,25 @@ export const Navigation = () => {
 
           {/* Logo container - centered on mobile, left-aligned on desktop */}
           <div className="absolute left-1/2 transform -translate-x-1/2 sm:relative sm:left-0 sm:transform-none">
-            <img 
-              src="/lovable-uploads/32dc9097-70f7-413a-b918-743a39b81fac.png" 
-              alt="Marley Co. Logo" 
-              className="h-8 w-auto"
-            />
+            <Link to="/">
+              <img 
+                src="/lovable-uploads/32dc9097-70f7-413a-b918-743a39b81fac.png" 
+                alt="Marley Co. Logo" 
+                className="h-8 w-auto"
+              />
+            </Link>
           </div>
           
           {/* Desktop navigation */}
           <div className="hidden sm:flex sm:space-x-8">
             <button 
-              onClick={() => scrollToSection('about')} 
+              onClick={() => handleNavigation('about')} 
               className="text-marley-primary hover:text-marley-accent px-3 py-2 text-sm font-medium"
             >
               About
             </button>
             <button 
-              onClick={() => scrollToSection('features')} 
+              onClick={() => handleNavigation('features')} 
               className="text-marley-primary hover:text-marley-accent px-3 py-2 text-sm font-medium"
             >
               Features
@@ -62,13 +70,13 @@ export const Navigation = () => {
           <div className="sm:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1">
               <button
-                onClick={() => scrollToSection('about')}
+                onClick={() => handleNavigation('about')}
                 className="block w-full text-left px-3 py-2 text-base font-medium text-marley-primary hover:text-marley-accent"
               >
                 About
               </button>
               <button
-                onClick={() => scrollToSection('features')}
+                onClick={() => handleNavigation('features')}
                 className="block w-full text-left px-3 py-2 text-base font-medium text-marley-primary hover:text-marley-accent"
               >
                 Features
