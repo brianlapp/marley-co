@@ -14,15 +14,31 @@ export const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Let Netlify handle the form submission
-    const form = e.target as HTMLFormElement;
-    form.submit();
     
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for contacting us. We'll get back to you soon.",
-    });
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    // Get form data
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    
+    // Submit to Netlify
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData as any).toString(),
+    })
+      .then(() => {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for contacting us. We'll get back to you soon.",
+        });
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      })
+      .catch((error) => {
+        toast({
+          title: "Error",
+          description: "There was a problem sending your message. Please try again.",
+          variant: "destructive",
+        });
+      });
   };
 
   return (
@@ -61,7 +77,7 @@ export const ContactSection = () => {
               </div>
             </div>
 
-            {/* This hidden form is for Netlify's form detection */}
+            {/* Hidden form for Netlify */}
             <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
               <input type="text" name="name" />
               <input type="email" name="email" />
