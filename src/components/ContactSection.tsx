@@ -14,26 +14,20 @@ export const ContactSection = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const encode = (data: Record<string, string>) => {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("/.netlify/forms/contact", {
+      const form = e.target as HTMLFormElement;
+      const formData = new FormData(form);
+      
+      const response = await fetch("/", {
         method: "POST",
-        headers: { 
-          "Content-Type": "application/x-www-form-urlencoded"
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
         },
-        body: encode({
-          "form-name": "contact",
-          ...formData
-        })
+        body: new URLSearchParams(formData as any).toString(),
       });
 
       if (response.ok) {
@@ -48,6 +42,8 @@ export const ContactSection = () => {
           phone: "",
           message: ""
         });
+        
+        form.reset();
       } else {
         throw new Error('Form submission failed');
       }
@@ -100,7 +96,7 @@ export const ContactSection = () => {
             </div>
 
             {/* Static Form for Netlify Detection */}
-            <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+            <form name="contact" netlify netlify-honeypot="bot-field" hidden>
               <input type="text" name="name" />
               <input type="email" name="email" />
               <input type="tel" name="phone" />
@@ -111,9 +107,8 @@ export const ContactSection = () => {
             <form 
               name="contact"
               method="POST"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
-              action="/contact/?success=true"
+              netlify="true"
+              netlify-honeypot="bot-field"
               onSubmit={handleSubmit}
               className="space-y-4 md:space-y-6 bg-white p-6 md:p-8 rounded-lg shadow-sm"
             >
