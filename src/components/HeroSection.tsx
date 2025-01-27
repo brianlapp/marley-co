@@ -16,7 +16,7 @@ export const HeroSection = () => {
       setCurrentImageIndex((prevIndex) => 
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 3000); // Faster transition (3 seconds instead of 5)
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
@@ -53,11 +53,11 @@ export const HeroSection = () => {
 
       {/* Hero Content */}
       <div className="max-w-4xl mx-auto px-4 py-16 text-center">
-        <div className="flex flex-col items-center space-y-2">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-sans font-bold tracking-tight text-marley-primary leading-none">
+        <div className="flex flex-col items-center space-y-0">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-sans font-bold tracking-tight text-marley-primary leading-[0.95]">
             ONLINE STORE
           </h1>
-          <p className="text-4xl md:text-6xl lg:text-7xl font-sans font-medium tracking-tight text-marley-primary/90">
+          <p className="text-4xl md:text-6xl lg:text-7xl font-sans font-medium tracking-tight text-marley-primary/90 mt-[-0.2em]">
             Coming Soon
           </p>
         </div>
