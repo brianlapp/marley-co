@@ -21,11 +21,17 @@ export const ContactSection = () => {
     try {
       const form = e.target as HTMLFormElement;
       const formData = new FormData(form);
+      const searchParams = new URLSearchParams();
+      
+      // Convert FormData to URLSearchParams
+      for (const [key, value] of formData.entries()) {
+        searchParams.append(key, value.toString());
+      }
       
       const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString()
+        body: searchParams.toString()
       });
 
       if (response.ok) {
@@ -96,7 +102,6 @@ export const ContactSection = () => {
             <form 
               name="contact"
               method="POST"
-              netlify="true"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               className="space-y-4 md:space-y-6 bg-white p-6 md:p-8 rounded-lg shadow-sm"
