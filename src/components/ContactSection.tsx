@@ -87,7 +87,7 @@ export const ContactSection = () => {
             <form 
               name="contact"
               method="POST"
-              netlify="true"
+              data-netlify="true"
               className="space-y-4 md:space-y-6 bg-white p-6 md:p-8 rounded-lg shadow-sm"
               onSubmit={handleSubmit}
             >
