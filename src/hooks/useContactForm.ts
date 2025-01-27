@@ -32,12 +32,9 @@ export const useContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/', {
+      const response = await fetch("/", {
         method: "POST",
-        headers: { 
-          "Content-Type": "application/x-www-form-urlencoded",
-          "Accept": "application/json"
-        },
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({ 
           "form-name": "contact",
           ...formData
@@ -45,19 +42,21 @@ export const useContactForm = () => {
       });
 
       if (!response.ok) {
-        throw new Error('Form submission failed');
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
 
       toast({
         title: "Message Sent!",
         description: "Thank you for contacting us. We'll get back to you soon.",
       });
+      
       setFormData(initialFormData);
+      
     } catch (error) {
-      console.error('Form submission error:', error);
+      console.error("Form submission error:", error);
       toast({
         title: "Error",
-        description: error instanceof Error ? error.message : "There was a problem sending your message. Please try again.",
+        description: "There was a problem sending your message. Please try again.",
         variant: "destructive",
       });
     } finally {
