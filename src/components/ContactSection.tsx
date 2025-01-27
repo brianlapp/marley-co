@@ -19,15 +19,14 @@ export const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      const form = e.target as HTMLFormElement;
-      const formData = new FormData(form);
+      const form = e.currentTarget;
+      const data = new FormData(form);
       
+      // Let the form submit naturally - Netlify will intercept this
       const response = await fetch("/", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: new URLSearchParams(formData as any).toString(),
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(data as any).toString(),
       });
 
       if (response.ok) {
