@@ -86,26 +86,15 @@ export const ContactSection = () => {
               </div>
             </div>
 
-            {/* Hidden form for Netlify */}
-            <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
-              <input type="text" name="name" />
-              <input type="email" name="email" />
-              <input type="tel" name="phone" />
-              <textarea name="message"></textarea>
-            </form>
-
             <form 
-              name="contact"
-              method="post"
+              name="contact" 
+              method="POST"
               onSubmit={handleSubmit}
               className="space-y-4 md:space-y-6 bg-white p-6 md:p-8 rounded-lg shadow-sm"
               data-netlify="true"
-              data-netlify-honeypot="bot-field"
             >
               <input type="hidden" name="form-name" value="contact" />
-              <div hidden>
-                <input name="bot-field" />
-              </div>
+              
               <Input
                 name="name"
                 placeholder="Name"
