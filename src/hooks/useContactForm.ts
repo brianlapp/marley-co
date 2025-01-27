@@ -6,15 +6,19 @@ interface FormData {
   email: string;
   phone: string;
   message: string;
-  newsletter: boolean;
 }
 
 const initialFormData: FormData = {
   name: "",
   email: "",
   phone: "",
-  message: "",
-  newsletter: false
+  message: ""
+};
+
+const encode = (data: Record<string, string>) => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
 };
 
 export const useContactForm = () => {
@@ -22,18 +26,35 @@ export const useContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
-      // Let the form submit naturally to Netlify
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for contacting us. We'll get back to you soon.",
+      const response = await fetch('/', {
+        method: "POST",
+        headers: { 
+          "Content-Type": "application/x-www-form-urlencoded",
+          "Accept": "application/json"
+        },
+        body: encode({ 
+          "form-name": "contact",
+          ...formData
+        })
       });
-      
-      setFormData(initialFormData);
+
+      console.log('Response:', response);
+
+      if (response.ok) {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for contacting us. We'll get back to you soon.",
+        });
+        setFormData(initialFormData);
+      } else {
+        throw new Error('Form submission failed');
+      }
     } catch (error) {
-      console.error("Form submission error:", error);
+      console.error('Form submission error:', error);
       toast({
         title: "Error",
         description: "There was a problem sending your message. Please try again.",
