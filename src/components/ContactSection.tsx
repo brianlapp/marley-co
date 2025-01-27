@@ -25,21 +25,14 @@ export const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      const form = e.target as HTMLFormElement;
-      const formData = new FormData(form);
-      const data: Record<string, string> = {};
-      formData.forEach((value, key) => {
-        data[key] = value.toString();
-      });
-
-      const response = await fetch("/", {
+      const response = await fetch("/.netlify/forms/contact", {
         method: "POST",
         headers: { 
           "Content-Type": "application/x-www-form-urlencoded"
         },
         body: encode({
           "form-name": "contact",
-          ...data
+          ...formData
         })
       });
 
@@ -55,8 +48,6 @@ export const ContactSection = () => {
           phone: "",
           message: ""
         });
-        
-        form.reset();
       } else {
         throw new Error('Form submission failed');
       }
@@ -122,6 +113,7 @@ export const ContactSection = () => {
               method="POST"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
+              action="/contact/?success=true"
               onSubmit={handleSubmit}
               className="space-y-4 md:space-y-6 bg-white p-6 md:p-8 rounded-lg shadow-sm"
             >
