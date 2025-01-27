@@ -53,11 +53,16 @@ export const HeroSection = () => {
 
       {/* Hero Content */}
       <div className="max-w-4xl mx-auto px-4 py-16 text-center">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-sans font-bold tracking-tight text-marley-primary mb-8 uppercase">
-          Online Store Coming Soon!
-        </h1>
+        <div className="flex flex-col items-center space-y-2">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-sans font-bold tracking-tight text-marley-primary leading-none">
+            ONLINE STORE
+          </h1>
+          <p className="text-4xl md:text-6xl lg:text-7xl font-sans font-medium tracking-tight text-marley-primary/90">
+            Coming Soon
+          </p>
+        </div>
         
-        <div className="space-y-6">
+        <div className="space-y-6 mt-12">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-sans font-bold text-[#FF5757] uppercase">
             $15 Sign Up Bonus
           </h2>
