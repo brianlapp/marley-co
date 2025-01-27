@@ -3,6 +3,8 @@ import { EmailCapture } from "./EmailCapture";
 
 export const HeroSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+  
   const images = [
     'DSC_9898-positive.jpg',
     'DSC_9900-positive.jpg',
@@ -10,6 +12,17 @@ export const HeroSection = () => {
     'DSC_9910-positive.jpg',
     'DSC_9911-positive.jpg'
   ];
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -23,7 +36,9 @@ export const HeroSection = () => {
 
   const getNextImages = () => {
     const nextImages = [];
-    for (let i = 0; i < 3; i++) {
+    const numImages = isMobile ? 2 : 3; // Show 2 images on mobile, 3 on desktop
+    
+    for (let i = 0; i < numImages; i++) {
       const index = (currentImageIndex + i) % images.length;
       nextImages.push(images[index]);
     }
@@ -33,7 +48,7 @@ export const HeroSection = () => {
   return (
     <section className="pt-8 md:pt-16">
       <div className="relative h-[50vh] md:h-[70vh] overflow-hidden">
-        <div className="grid grid-cols-1 md:grid-cols-3 h-full gap-1">
+        <div className={`grid ${isMobile ? 'grid-cols-2' : 'grid-cols-3'} h-full gap-1`}>
           {getNextImages().map((image, index) => (
             <div
               key={`${image}-${index}`}
