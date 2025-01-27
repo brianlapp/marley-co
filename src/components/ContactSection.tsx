@@ -12,17 +12,33 @@ export const ContactSection = () => {
     message: ""
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const encode = (data: Record<string, string>) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+    setIsSubmitting(true);
+
     try {
       const form = e.target as HTMLFormElement;
       const formData = new FormData(form);
-      
+      const data: Record<string, string> = {};
+      formData.forEach((value, key) => {
+        data[key] = value.toString();
+      });
+
       const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData as any).toString()
+        body: encode({
+          "form-name": "contact",
+          ...data
+        })
       });
 
       if (response.ok) {
@@ -37,6 +53,8 @@ export const ContactSection = () => {
           phone: "",
           message: ""
         });
+        
+        form.reset();
       } else {
         throw new Error('Form submission failed');
       }
@@ -47,6 +65,8 @@ export const ContactSection = () => {
         description: "There was a problem sending your message. Please try again.",
         variant: "destructive",
       });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -86,31 +106,29 @@ export const ContactSection = () => {
               </div>
             </div>
 
-            {/* Hidden Netlify Form */}
-            <form data-netlify="true" data-netlify-honeypot="bot-field" hidden name="contact">
+            {/* Static Netlify Form */}
+            <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
               <input type="text" name="name" />
               <input type="email" name="email" />
               <input type="tel" name="phone" />
               <textarea name="message"></textarea>
             </form>
 
-            {/* Visible Contact Form */}
+            {/* Active Form */}
             <form 
               name="contact"
               method="POST"
-              action="/contact/?success=true"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               onSubmit={handleSubmit}
               className="space-y-4 md:space-y-6 bg-white p-6 md:p-8 rounded-lg shadow-sm"
-              encType="application/x-www-form-urlencoded"
             >
               <input type="hidden" name="form-name" value="contact" />
-              <p hidden>
+              <div hidden>
                 <label>
                   Don't fill this out if you're human: <input name="bot-field" />
                 </label>
-              </p>
+              </div>
               
               <Input
                 name="name"
@@ -145,8 +163,12 @@ export const ContactSection = () => {
                 required
                 className="min-h-[120px] md:min-h-[150px] bg-white border-marley-primary/20"
               />
-              <Button type="submit" className="w-full h-12 bg-[#FF5757] hover:bg-[#FF5757]/90 text-white">
-                Send Message
+              <Button 
+                type="submit" 
+                className="w-full h-12 bg-[#FF5757] hover:bg-[#FF5757]/90 text-white"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>
           </div>
