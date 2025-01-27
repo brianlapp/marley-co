@@ -20,7 +20,7 @@ export const Navigation = () => {
           {/* Mobile menu button */}
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="sm:hidden p-2 rounded-md text-marley-primary hover:text-marley-accent"
+            className="sm:hidden p-2 pl-4 rounded-md text-marley-primary hover:text-marley-accent"
           >
             <Menu className="h-6 w-6" />
           </button>

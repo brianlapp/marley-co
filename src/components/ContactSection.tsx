@@ -12,33 +12,42 @@ export const ContactSection = () => {
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Get form data
-    const form = e.target as HTMLFormElement;
-    const formData = new FormData(form);
-    
-    // Submit to Netlify
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData as any).toString(),
-    })
-      .then(() => {
-        toast({
-          title: "Message Sent!",
-          description: "Thank you for contacting us. We'll get back to you soon.",
-        });
-        setFormData({ name: "", email: "", phone: "", message: "" });
-      })
-      .catch((error) => {
-        toast({
-          title: "Error",
-          description: "There was a problem sending your message. Please try again.",
-          variant: "destructive",
-        });
+    try {
+      const form = e.target as HTMLFormElement;
+      const formData = new FormData(form);
+      
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as any).toString()
       });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for contacting us. We'll get back to you soon.",
+      });
+      
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: ""
+      });
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast({
+        title: "Error",
+        description: "There was a problem sending your message. Please try again.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
@@ -78,7 +87,7 @@ export const ContactSection = () => {
             </div>
 
             {/* Hidden form for Netlify */}
-            <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+            <form name="contact" netlify netlify-honeypot="bot-field" hidden>
               <input type="text" name="name" />
               <input type="email" name="email" />
               <input type="tel" name="phone" />
@@ -87,18 +96,16 @@ export const ContactSection = () => {
 
             <form 
               name="contact"
-              method="POST"
+              method="post"
               onSubmit={handleSubmit}
               className="space-y-4 md:space-y-6 bg-white p-6 md:p-8 rounded-lg shadow-sm"
               data-netlify="true"
-              data-netlify-honeypot="bot-field"
+              netlify-honeypot="bot-field"
             >
               <input type="hidden" name="form-name" value="contact" />
-              <p className="hidden">
-                <label>
-                  Don't fill this out if you're human: <input name="bot-field" />
-                </label>
-              </p>
+              <div hidden>
+                <input name="bot-field" />
+              </div>
               <Input
                 name="name"
                 placeholder="Name"
