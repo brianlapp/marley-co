@@ -14,7 +14,7 @@ export const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
             <img 
-              src="/lovable-uploads/cab34784-9e56-4008-8fd0-49fbefe2dedd.png" 
+              src="/lovable-uploads/32dc9097-70f7-413a-b918-743a39b81fac.png" 
               alt="Marley Co. Logo" 
               className="h-8 w-auto"
             />

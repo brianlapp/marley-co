@@ -14,6 +14,10 @@ export const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // Let Netlify handle the form submission
+    const form = e.target as HTMLFormElement;
+    form.submit();
+    
     toast({
       title: "Message Sent!",
       description: "Thank you for contacting us. We'll get back to you soon.",
@@ -57,8 +61,22 @@ export const ContactSection = () => {
               </div>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-6 bg-white p-8 rounded-lg shadow-sm">
+            <form 
+              onSubmit={handleSubmit} 
+              className="space-y-6 bg-white p-8 rounded-lg shadow-sm"
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+            >
+              <input type="hidden" name="form-name" value="contact" />
+              <p className="hidden">
+                <label>
+                  Don't fill this out if you're human: <input name="bot-field" />
+                </label>
+              </p>
               <Input
+                name="name"
                 placeholder="Name"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -67,6 +85,7 @@ export const ContactSection = () => {
               />
               <Input
                 type="email"
+                name="email"
                 placeholder="Email"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -75,12 +94,14 @@ export const ContactSection = () => {
               />
               <Input
                 type="tel"
+                name="phone"
                 placeholder="Phone (optional)"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                 className="h-12 bg-white border-marley-primary/20"
               />
               <Textarea
+                name="message"
                 placeholder="Message"
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
