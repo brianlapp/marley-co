@@ -25,12 +25,13 @@ export const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("/", {
+      const response = await fetch(e.currentTarget.action, {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({ 
           "form-name": "contact",
-          ...formData 
+          ...formData,
+          "bot-field": "" 
         })
       });
 
@@ -40,7 +41,6 @@ export const ContactSection = () => {
           description: "Thank you for contacting us. We'll get back to you soon.",
         });
         
-        // Reset form
         setFormData({
           name: "",
           email: "",
