@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
 import { useContactForm } from "@/hooks/useContactForm";
 
 export const ContactFormSection = () => {
@@ -71,6 +72,22 @@ export const ContactFormSection = () => {
               required
               className="min-h-[120px] md:min-h-[150px] bg-white border-marley-primary/20"
             />
+            <div className="flex items-center space-x-2">
+              <Checkbox
+                id="newsletter"
+                name="newsletter"
+                checked={formData.newsletter}
+                onCheckedChange={(checked) => 
+                  setFormData({ ...formData, newsletter: checked === true })
+                }
+              />
+              <label
+                htmlFor="newsletter"
+                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-marley-primary"
+              >
+                Subscribe to our newsletter for updates and exclusive offers
+              </label>
+            </div>
             <Button 
               type="submit" 
               className="w-full h-12 bg-[#FF5757] hover:bg-[#FF5757]/90 text-white"

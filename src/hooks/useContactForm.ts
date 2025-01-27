@@ -6,18 +6,20 @@ interface FormData {
   email: string;
   phone: string;
   message: string;
+  newsletter: boolean;
 }
 
 const initialFormData: FormData = {
   name: "",
   email: "",
   phone: "",
-  message: ""
+  message: "",
+  newsletter: false
 };
 
-const encode = (data: Record<string, string>) => {
+const encode = (data: Record<string, string | boolean>) => {
   return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(String(data[key])))
     .join("&");
 };
 
