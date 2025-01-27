@@ -22,38 +22,41 @@ export const ContactSection = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-16 md:py-24 bg-marley-light">
       <div className="max-w-4xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-marley-primary mb-6">
-            Contact Us
+        <div className="text-center mb-16 animate-fadeIn">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-marley-primary mb-6 leading-[0.95]">
+            GET IN TOUCH
           </h2>
-          <p className="text-lg text-marley-primary/80 mb-8">
+          <p className="text-lg text-marley-primary/80 mb-8 max-w-2xl mx-auto">
             Thank you for visiting Marley Co.! We're so excited to have you here as we prepare to launch our premium diaper bag collection. The overwhelming support and enthusiasm from our fans have been truly incredible—your excitement fuels our passion to deliver the very best for modern parents.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
-          <div>
-            <h3 className="text-2xl font-semibold mb-4">Stay in Touch</h3>
-            <p className="mb-6">
-              Have questions, feedback, or just want to say hi? We'd love to hear from you! Please feel free to reach out using the contact form.
-            </p>
+        <div className="grid md:grid-cols-2 gap-12 animate-fadeIn" style={{ animationDelay: "0.2s" }}>
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-2xl font-serif text-marley-primary mb-4">Stay in Touch</h3>
+              <p className="text-marley-primary/80">
+                Have questions, feedback, or just want to say hi? We'd love to hear from you! Please feel free to reach out using the contact form.
+              </p>
+            </div>
             
             <div className="space-y-4">
-              <h3 className="text-2xl font-semibold">Shipping Across Canada</h3>
-              <p>
+              <h3 className="text-2xl font-serif text-marley-primary">Shipping Across Canada</h3>
+              <p className="text-marley-primary/80">
                 We're thrilled to announce that once our online store is live, we're hoping to offer shipping across Canada! Whether you're in bustling Toronto, the serene prairies of Saskatchewan, or the scenic coasts of British Columbia, Marley Co. will be there for you.
               </p>
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-6 bg-white p-8 rounded-lg shadow-sm">
             <Input
               placeholder="Name"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               required
+              className="h-12 bg-white border-marley-primary/20"
             />
             <Input
               type="email"
@@ -61,47 +64,51 @@ export const ContactSection = () => {
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               required
+              className="h-12 bg-white border-marley-primary/20"
             />
             <Input
               type="tel"
               placeholder="Phone (optional)"
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+              className="h-12 bg-white border-marley-primary/20"
             />
             <Textarea
               placeholder="Message"
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               required
-              className="min-h-[150px]"
+              className="min-h-[150px] bg-white border-marley-primary/20"
             />
-            <Button type="submit" className="w-full bg-[#FF5757] hover:bg-[#FF5757]/90">
+            <Button type="submit" className="w-full h-12 bg-[#FF5757] hover:bg-[#FF5757]/90 text-white">
               Send Message
             </Button>
           </form>
         </div>
 
-        <div className="text-center mt-16">
-          <h3 className="text-2xl font-semibold mb-4">Stay Updated</h3>
-          <p className="mb-6">
-            If you haven't already, don't forget to sign up for our mailing list to be the first to know about our launch, exclusive promotions, and parenting tips. Plus, get your $15 off coupon when you join the Marley Co. family!
-          </p>
-          <Button 
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="bg-[#FF5757] hover:bg-[#FF5757]/90"
-          >
-            Sign Up for Updates
-          </Button>
-        </div>
+        <div className="text-center mt-16 space-y-8 animate-fadeIn" style={{ animationDelay: "0.4s" }}>
+          <div>
+            <h3 className="text-2xl font-serif text-marley-primary mb-4">Stay Updated</h3>
+            <p className="text-marley-primary/80 mb-6">
+              If you haven't already, don't forget to sign up for our mailing list to be the first to know about our launch, exclusive promotions, and parenting tips. Plus, get your $15 off coupon when you join the Marley Co. family!
+            </p>
+            <Button 
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="bg-[#FF5757] hover:bg-[#FF5757]/90 text-white h-12 px-8"
+            >
+              Sign Up for Updates
+            </Button>
+          </div>
 
-        <div className="text-center mt-16">
-          <p className="text-lg">
-            Thank you for your patience as we work hard to bring you diaper bags that redefine style and functionality. We're beyond excited to grow this journey together with you.
-          </p>
-          <p className="mt-4 font-semibold">
-            With love,<br />
-            The Marley Co. Team
-          </p>
+          <div className="pt-8 border-t border-marley-primary/10">
+            <p className="text-lg text-marley-primary/80">
+              Thank you for your patience as we work hard to bring you diaper bags that redefine style and functionality. We're beyond excited to grow this journey together with you.
+            </p>
+            <p className="mt-4 font-serif text-marley-primary">
+              With love,<br />
+              The Marley Co. Team
+            </p>
+          </div>
         </div>
       </div>
     </section>
