@@ -19,23 +19,32 @@ export const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      // Let the form submit naturally - Netlify will handle it
-      const form = e.currentTarget;
-      form.submit();
+      const formElement = e.target as HTMLFormElement;
+      const formData = new FormData(formElement);
       
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for contacting us. We'll get back to you soon.",
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as any).toString()
       });
-      
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        message: ""
-      });
-      
-      form.reset();
+
+      if (response.ok) {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for contacting us. We'll get back to you soon.",
+        });
+        
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          message: ""
+        });
+        
+        formElement.reset();
+      } else {
+        throw new Error('Form submission failed');
+      }
     } catch (error) {
       console.error('Form submission error:', error);
       toast({
@@ -91,6 +100,7 @@ export const ContactSection = () => {
               className="space-y-4 md:space-y-6 bg-white p-6 md:p-8 rounded-lg shadow-sm"
               onSubmit={handleSubmit}
             >
+              <input type="hidden" name="form-name" value="contact" />
               <Input
                 name="name"
                 placeholder="Name"
