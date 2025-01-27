@@ -62,7 +62,7 @@ export const ContactSection = () => {
             </div>
 
             {/* This hidden form is for Netlify's form detection */}
-            <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+            <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
               <input type="text" name="name" />
               <input type="email" name="email" />
               <input type="tel" name="phone" />
@@ -75,7 +75,7 @@ export const ContactSection = () => {
               onSubmit={handleSubmit}
               className="space-y-6 bg-white p-8 rounded-lg shadow-sm"
               data-netlify="true"
-              netlify-honeypot="bot-field"
+              data-netlify-honeypot="bot-field"
             >
               <input type="hidden" name="form-name" value="contact" />
               <p className="hidden">
