@@ -28,13 +28,13 @@ export const ContactSection = () => {
   return (
     <div className="min-h-screen">
       {/* Section 1: Get in Touch */}
-      <section className="py-16 md:py-24 bg-marley-light">
+      <section className="py-8 md:py-16 lg:py-24 bg-marley-light">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="text-center mb-16 animate-fadeIn">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-sans text-marley-primary mb-6 leading-[0.95]">
+          <div className="text-center mb-8 md:mb-16 animate-fadeIn">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-sans text-marley-primary mb-4 md:mb-6 leading-[0.95]">
               GET IN TOUCH
             </h2>
-            <p className="text-lg font-sans text-marley-primary/80 mb-8 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg font-sans text-marley-primary/80 mb-6 md:mb-8 max-w-2xl mx-auto">
               Thank you for visiting Marley Co.! We're so excited to have you here as we prepare to launch our premium diaper bag collection. The overwhelming support and enthusiasm from our fans have been truly incredible—your excitement fuels our passion to deliver the very best for modern parents.
             </p>
           </div>
@@ -42,19 +42,19 @@ export const ContactSection = () => {
       </section>
 
       {/* Section 2: Contact Form */}
-      <section className="py-16 md:py-24 bg-marley-cool">
+      <section className="py-8 md:py-16 lg:py-24 bg-marley-cool">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 animate-fadeIn" style={{ animationDelay: "0.2s" }}>
-            <div className="space-y-8">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 animate-fadeIn" style={{ animationDelay: "0.2s" }}>
+            <div className="space-y-6 md:space-y-8">
               <div>
-                <h3 className="text-2xl font-sans text-marley-primary mb-4">Stay in Touch</h3>
+                <h3 className="text-xl md:text-2xl font-sans text-marley-primary mb-3 md:mb-4">Stay in Touch</h3>
                 <p className="font-sans text-marley-primary/80">
                   Have questions, feedback, or just want to say hi? We'd love to hear from you! Please feel free to reach out using the contact form.
                 </p>
               </div>
               
-              <div className="space-y-4">
-                <h3 className="text-2xl font-sans text-marley-primary">Shipping Across Canada</h3>
+              <div className="space-y-3 md:space-y-4">
+                <h3 className="text-xl md:text-2xl font-sans text-marley-primary">Shipping Across Canada</h3>
                 <p className="font-sans text-marley-primary/80">
                   We're thrilled to announce that once our online store is live, we're hoping to offer shipping across Canada! Whether you're in bustling Toronto, the serene prairies of Saskatchewan, or the scenic coasts of British Columbia, Marley Co. will be there for you.
                 </p>
@@ -73,7 +73,7 @@ export const ContactSection = () => {
               name="contact"
               method="POST"
               onSubmit={handleSubmit}
-              className="space-y-6 bg-white p-8 rounded-lg shadow-sm"
+              className="space-y-4 md:space-y-6 bg-white p-6 md:p-8 rounded-lg shadow-sm"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
             >
@@ -114,7 +114,7 @@ export const ContactSection = () => {
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 required
-                className="min-h-[150px] bg-white border-marley-primary/20"
+                className="min-h-[120px] md:min-h-[150px] bg-white border-marley-primary/20"
               />
               <Button type="submit" className="w-full h-12 bg-[#FF5757] hover:bg-[#FF5757]/90 text-white">
                 Send Message
@@ -125,27 +125,27 @@ export const ContactSection = () => {
       </section>
 
       {/* Section 3: Stay Updated */}
-      <section className="py-16 md:py-24 bg-marley-light">
+      <section className="py-8 md:py-16 lg:py-24 bg-marley-light">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="text-center space-y-8 animate-fadeIn" style={{ animationDelay: "0.4s" }}>
+          <div className="text-center space-y-6 md:space-y-8 animate-fadeIn" style={{ animationDelay: "0.4s" }}>
             <div>
-              <h3 className="text-2xl font-sans text-marley-primary mb-4">Stay Updated</h3>
-              <p className="font-sans text-marley-primary/80 mb-6">
+              <h3 className="text-xl md:text-2xl font-sans text-marley-primary mb-3 md:mb-4">Stay Updated</h3>
+              <p className="font-sans text-marley-primary/80 mb-4 md:mb-6">
                 If you haven't already, don't forget to sign up for our mailing list to be the first to know about our launch, exclusive promotions, and parenting tips. Plus, get your $15 off coupon when you join the Marley Co. family!
               </p>
               <Button 
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                className="bg-[#FF5757] hover:bg-[#FF5757]/90 text-white h-12 px-8"
+                className="bg-[#FF5757] hover:bg-[#FF5757]/90 text-white h-10 md:h-12 px-6 md:px-8"
               >
                 Sign Up for Updates
               </Button>
             </div>
 
-            <div className="pt-8 border-t border-marley-primary/10">
-              <p className="text-lg font-sans text-marley-primary/80">
+            <div className="pt-6 md:pt-8 border-t border-marley-primary/10">
+              <p className="text-base md:text-lg font-sans text-marley-primary/80">
                 Thank you for your patience as we work hard to bring you diaper bags that redefine style and functionality. We're beyond excited to grow this journey together with you.
               </p>
-              <p className="mt-4 font-sans text-marley-primary">
+              <p className="mt-3 md:mt-4 font-sans text-marley-primary">
                 With love,<br />
                 The Marley Co. Team
               </p>

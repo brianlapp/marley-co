@@ -31,9 +31,9 @@ export const HeroSection = () => {
   };
 
   return (
-    <section className="pt-16">
-      <div className="relative h-[70vh] overflow-hidden">
-        <div className="grid grid-cols-3 h-full gap-1">
+    <section className="pt-8 md:pt-16">
+      <div className="relative h-[50vh] md:h-[70vh] overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-3 h-full gap-1">
           {getNextImages().map((image, index) => (
             <div
               key={`${image}-${index}`}
@@ -50,18 +50,18 @@ export const HeroSection = () => {
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 py-16 text-center">
+      <div className="max-w-4xl mx-auto px-4 py-8 md:py-16 text-center">
         <div className="flex flex-col items-center">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-sans font-bold tracking-tight text-marley-primary leading-[0.85]">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-sans font-bold tracking-tight text-marley-primary leading-[0.85]">
             ONLINE STORE
           </h1>
-          <p className="text-4xl md:text-6xl lg:text-7xl font-sans font-bold tracking-tight text-marley-primary mt-[-0.3em]">
+          <p className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-sans font-bold tracking-tight text-marley-primary mt-[-0.3em]">
             COMING SOON
           </p>
         </div>
         
-        <div className="space-y-6 mt-2">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-sans font-bold text-[#FF5757] uppercase">
+        <div className="space-y-4 md:space-y-6 mt-2">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-sans font-bold text-[#FF5757] uppercase">
             $15 Sign Up Bonus
           </h2>
           <EmailCapture />
