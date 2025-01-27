@@ -57,6 +57,8 @@ export const ContactSection = () => {
     }
   };
 
+  // ... keep existing code (section 1: Get in Touch)
+
   return (
     <div className="min-h-screen">
       {/* Section 1: Get in Touch */}
@@ -97,10 +99,12 @@ export const ContactSection = () => {
               name="contact"
               method="POST"
               data-netlify="true"
+              data-netlify-honeypot="bot-field"
               className="space-y-4 md:space-y-6 bg-white p-6 md:p-8 rounded-lg shadow-sm"
               onSubmit={handleSubmit}
             >
               <input type="hidden" name="form-name" value="contact" />
+              <input type="hidden" name="bot-field" />
               <Input
                 name="name"
                 placeholder="Name"
