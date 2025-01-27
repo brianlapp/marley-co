@@ -60,7 +60,7 @@ export const HeroSection = () => {
           </p>
         </div>
         
-        <div className="space-y-6 mt-12">
+        <div className="space-y-6 mt-2">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-sans font-bold text-[#FF5757] uppercase">
             $15 Sign Up Bonus
           </h2>
