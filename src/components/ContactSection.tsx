@@ -25,17 +25,22 @@ export const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("/", {
+      const response = await fetch('/', {
         method: "POST",
         headers: { 
-          "Content-Type": "application/x-www-form-urlencoded" 
+          "Content-Type": "application/x-www-form-urlencoded",
+          "Accept": "application/json"
         },
         body: encode({ 
           "form-name": "contact",
-          ...formData,
-          "bot-field": ""
+          "name": formData.name,
+          "email": formData.email,
+          "phone": formData.phone,
+          "message": formData.message
         })
       });
+
+      console.log('Response:', response); // Debug line
 
       if (response.ok) {
         toast({
