@@ -30,7 +30,7 @@ export const ContactSection = () => {
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-marley-primary mb-6 leading-[0.95]">
               GET IN TOUCH
             </h2>
-            <p className="text-lg text-marley-primary/80 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg font-sans text-marley-primary/80 mb-8 max-w-2xl mx-auto">
               Thank you for visiting Marley Co.! We're so excited to have you here as we prepare to launch our premium diaper bag collection. The overwhelming support and enthusiasm from our fans have been truly incredible—your excitement fuels our passion to deliver the very best for modern parents.
             </p>
           </div>
@@ -44,14 +44,14 @@ export const ContactSection = () => {
             <div className="space-y-8">
               <div>
                 <h3 className="text-2xl font-serif text-marley-primary mb-4">Stay in Touch</h3>
-                <p className="text-marley-primary/80">
+                <p className="font-sans text-marley-primary/80">
                   Have questions, feedback, or just want to say hi? We'd love to hear from you! Please feel free to reach out using the contact form.
                 </p>
               </div>
               
               <div className="space-y-4">
                 <h3 className="text-2xl font-serif text-marley-primary">Shipping Across Canada</h3>
-                <p className="text-marley-primary/80">
+                <p className="font-sans text-marley-primary/80">
                   We're thrilled to announce that once our online store is live, we're hoping to offer shipping across Canada! Whether you're in bustling Toronto, the serene prairies of Saskatchewan, or the scenic coasts of British Columbia, Marley Co. will be there for you.
                 </p>
               </div>
@@ -101,7 +101,7 @@ export const ContactSection = () => {
           <div className="text-center space-y-8 animate-fadeIn" style={{ animationDelay: "0.4s" }}>
             <div>
               <h3 className="text-2xl font-serif text-marley-primary mb-4">Stay Updated</h3>
-              <p className="text-marley-primary/80 mb-6">
+              <p className="font-sans text-marley-primary/80 mb-6">
                 If you haven't already, don't forget to sign up for our mailing list to be the first to know about our launch, exclusive promotions, and parenting tips. Plus, get your $15 off coupon when you join the Marley Co. family!
               </p>
               <Button 
@@ -113,7 +113,7 @@ export const ContactSection = () => {
             </div>
 
             <div className="pt-8 border-t border-marley-primary/10">
-              <p className="text-lg text-marley-primary/80">
+              <p className="text-lg font-sans text-marley-primary/80">
                 Thank you for your patience as we work hard to bring you diaper bags that redefine style and functionality. We're beyond excited to grow this journey together with you.
               </p>
               <p className="mt-4 font-serif text-marley-primary">
