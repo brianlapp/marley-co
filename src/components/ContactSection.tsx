@@ -1,7 +1,7 @@
+import { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
-import { useState } from "react";
 import { toast } from "./ui/use-toast";
 
 export const ContactSection = () => {
@@ -14,6 +14,12 @@ export const ContactSection = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const encode = (data: Record<string, string>) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -21,12 +27,20 @@ export const ContactSection = () => {
     try {
       const form = e.target as HTMLFormElement;
       const formData = new FormData(form);
-      
-      // Submit to Netlify's forms endpoint
-      const response = await fetch("/.netlify/functions/submission-created", {
+      const data: Record<string, string> = {};
+      formData.forEach((value, key) => {
+        data[key] = value.toString();
+      });
+
+      const response = await fetch("/", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData as any).toString()
+        headers: { 
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: encode({
+          "form-name": "contact",
+          ...data
+        })
       });
 
       if (response.ok) {
@@ -95,7 +109,7 @@ export const ContactSection = () => {
             </div>
 
             {/* Static Form for Netlify Detection */}
-            <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+            <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
               <input type="text" name="name" />
               <input type="email" name="email" />
               <input type="tel" name="phone" />
@@ -106,10 +120,8 @@ export const ContactSection = () => {
             <form 
               name="contact"
               method="POST"
-              netlify="true"
-              netlify-honeypot="bot-field"
               data-netlify="true"
-              action="/contact/?success=true"
+              data-netlify-honeypot="bot-field"
               onSubmit={handleSubmit}
               className="space-y-4 md:space-y-6 bg-white p-6 md:p-8 rounded-lg shadow-sm"
             >
