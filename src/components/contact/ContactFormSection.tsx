@@ -9,6 +9,15 @@ export const ContactFormSection = () => {
 
   return (
     <section className="py-8 md:py-16 lg:py-24 bg-marley-cool">
+      {/* Hidden form for Netlify form detection */}
+      <form name="contact" data-netlify="true" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="tel" name="phone" />
+        <textarea name="message"></textarea>
+        <input type="checkbox" name="newsletter" />
+      </form>
+
       <div className="max-w-4xl mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 animate-fadeIn" style={{ animationDelay: "0.2s" }}>
           <div className="space-y-6 md:space-y-8">
