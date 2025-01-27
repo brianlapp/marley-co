@@ -3,13 +3,15 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { toast } from "./ui/use-toast";
+import { Checkbox } from "./ui/checkbox";
 
 export const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    message: ""
+    message: "",
+    joinMailingList: false
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -25,6 +27,7 @@ export const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
+      // Submit contact form to Netlify
       const response = await fetch('/', {
         method: "POST",
         headers: { 
@@ -40,7 +43,23 @@ export const ContactSection = () => {
         })
       });
 
-      console.log('Response:', response); // Debug line
+      // If mailing list opt-in is checked, submit to Campaign Monitor
+      if (formData.joinMailingList) {
+        const cmForm = document.createElement('form');
+        cmForm.method = 'post';
+        cmForm.action = 'https://www.createsend.com/t/subscribeerror?description=';
+        cmForm.setAttribute('data-id', 'A61C50BEC994754B1D79C5819EC1255C780C82AB3D8F428CF1A5AF96133138DAB6CEDFFE80FFDA652C40DF149AC51EF7E1005C93B2DF3FE45E54B61B3F985E93');
+        
+        const emailInput = document.createElement('input');
+        emailInput.type = 'hidden';
+        emailInput.name = 'cm-tjdlthk-tjdlthk';
+        emailInput.value = formData.email;
+        
+        cmForm.appendChild(emailInput);
+        document.body.appendChild(cmForm);
+        cmForm.submit();
+        document.body.removeChild(cmForm);
+      }
 
       if (response.ok) {
         toast({
@@ -52,7 +71,8 @@ export const ContactSection = () => {
           name: "",
           email: "",
           phone: "",
-          message: ""
+          message: "",
+          joinMailingList: false
         });
       } else {
         throw new Error('Form submission failed');
@@ -150,6 +170,21 @@ export const ContactSection = () => {
                 required
                 className="min-h-[120px] md:min-h-[150px] bg-white border-marley-primary/20"
               />
+              <div className="flex items-center space-x-2">
+                <Checkbox
+                  id="joinMailingList"
+                  checked={formData.joinMailingList}
+                  onCheckedChange={(checked) => 
+                    setFormData({ ...formData, joinMailingList: checked as boolean })
+                  }
+                />
+                <label
+                  htmlFor="joinMailingList"
+                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                >
+                  Join our mailing list to receive updates and exclusive offers
+                </label>
+              </div>
               <Button 
                 type="submit" 
                 className="w-full h-12 bg-[#FF5757] hover:bg-[#FF5757]/90 text-white"
