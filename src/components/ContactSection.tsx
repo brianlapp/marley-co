@@ -14,24 +14,24 @@ export const ContactSection = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const encode = (data: Record<string, string>) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
-      const form = e.target as HTMLFormElement;
-      const formData = new FormData(form);
-      const searchParams = new URLSearchParams();
-      
-      // Convert FormData to URLSearchParams
-      for (const [key, value] of formData.entries()) {
-        searchParams.append(key, value.toString());
-      }
-      
       const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: searchParams.toString()
+        body: encode({ 
+          "form-name": "contact",
+          ...formData 
+        })
       });
 
       if (response.ok) {
@@ -41,7 +41,6 @@ export const ContactSection = () => {
         });
         
         // Reset form
-        form.reset();
         setFormData({
           name: "",
           email: "",
@@ -108,7 +107,7 @@ export const ContactSection = () => {
               onSubmit={handleSubmit}
             >
               <input type="hidden" name="form-name" value="contact" />
-              <div className="hidden">
+              <div hidden>
                 <input name="bot-field" />
               </div>
               <Input
