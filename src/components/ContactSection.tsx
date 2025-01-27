@@ -19,13 +19,13 @@ export const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      const formElement = e.target as HTMLFormElement;
-      const formData = new FormData(formElement);
+      const form = e.target as HTMLFormElement;
+      const formData = new FormData(form);
       
       const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData as any).toString()
+        body: new URLSearchParams(formData).toString()
       });
 
       if (response.ok) {
@@ -34,14 +34,14 @@ export const ContactSection = () => {
           description: "Thank you for contacting us. We'll get back to you soon.",
         });
         
+        // Reset form
+        form.reset();
         setFormData({
           name: "",
           email: "",
           phone: "",
           message: ""
         });
-        
-        formElement.reset();
       } else {
         throw new Error('Form submission failed');
       }
@@ -56,8 +56,6 @@ export const ContactSection = () => {
       setIsSubmitting(false);
     }
   };
-
-  // ... keep existing code (section 1: Get in Touch)
 
   return (
     <div className="min-h-screen">
@@ -98,13 +96,16 @@ export const ContactSection = () => {
             <form 
               name="contact"
               method="POST"
+              netlify="true"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               className="space-y-4 md:space-y-6 bg-white p-6 md:p-8 rounded-lg shadow-sm"
               onSubmit={handleSubmit}
             >
               <input type="hidden" name="form-name" value="contact" />
-              <input type="hidden" name="bot-field" />
+              <div className="hidden">
+                <input name="bot-field" />
+              </div>
               <Input
                 name="name"
                 placeholder="Name"
