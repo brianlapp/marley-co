@@ -96,7 +96,7 @@ export const ContactSection = () => {
       </section>
 
       {/* Section 3: Stay Updated */}
-      <section className="py-16 md:py-24 bg-marley-warm">
+      <section className="py-16 md:py-24 bg-marley-light">
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center space-y-8 animate-fadeIn" style={{ animationDelay: "0.4s" }}>
             <div>
