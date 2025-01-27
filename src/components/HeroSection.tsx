@@ -57,7 +57,7 @@ export const HeroSection = () => {
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-sans font-bold tracking-tight text-marley-primary leading-[0.95]">
             ONLINE STORE
           </h1>
-          <p className="text-4xl md:text-6xl lg:text-7xl font-sans font-medium tracking-tight text-marley-primary/90 mt-[-0.2em]">
+          <p className="text-4xl md:text-6xl lg:text-7xl font-sans font-bold tracking-tight text-marley-primary mt-[-0.2em]">
             Coming Soon
           </p>
         </div>
@@ -66,9 +66,6 @@ export const HeroSection = () => {
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-sans font-bold text-[#FF5757] uppercase">
             $15 Sign Up Bonus
           </h2>
-          <p className="text-lg text-marley-primary/80 mb-8 font-sans">
-            Sign up today and get $15 towards your next purchase with us
-          </p>
           <EmailCapture />
         </div>
       </div>

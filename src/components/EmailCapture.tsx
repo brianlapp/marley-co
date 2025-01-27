@@ -63,8 +63,8 @@ export const EmailCapture = () => {
           {isLoading ? "Subscribing..." : "Subscribe"}
         </Button>
       </div>
-      <p className="text-sm text-white/80 text-center sm:whitespace-nowrap">
-        Signup today & Get 25% off your first purchase when we launch!
+      <p className="text-sm text-marley-primary/80 text-center mt-4">
+        Sign up today and get $15 towards your next purchase with us
       </p>
     </form>
   );
