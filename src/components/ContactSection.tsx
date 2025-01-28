@@ -4,8 +4,10 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { toast } from "./ui/use-toast";
 import { Checkbox } from "./ui/checkbox";
+import { useNavigate } from "react-router-dom";
 
 export const ContactSection = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -74,6 +76,11 @@ export const ContactSection = () => {
           message: "",
           joinMailingList: false
         });
+
+        // Add a small delay before redirecting to ensure the toast message is visible
+        setTimeout(() => {
+          navigate('/');
+        }, 2000);
       } else {
         throw new Error('Form submission failed');
       }
