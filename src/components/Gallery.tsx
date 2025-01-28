@@ -70,7 +70,8 @@ export const Gallery = () => {
             <img
               src={selectedImage}
               alt="Enlarged view"
-              className="w-full h-full object-contain"
+              className="w-full h-full object-contain cursor-pointer"
+              onClick={() => setSelectedImage(null)}
             />
           )}
         </DialogContent>
