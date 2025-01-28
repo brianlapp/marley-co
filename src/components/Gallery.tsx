@@ -1,4 +1,9 @@
 import { useEffect, useState } from "react";
+import { ZoomIn } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+} from "@/components/ui/dialog";
 
 interface Image {
   id: number;
@@ -8,6 +13,7 @@ interface Image {
 export const Gallery = () => {
   const [images, setImages] = useState<Image[]>([]);
   const [loading, setLoading] = useState(true);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   useEffect(() => {
     const loadImages = async () => {
@@ -57,29 +63,46 @@ export const Gallery = () => {
   }
 
   return (
-    <section className="w-screen relative left-[50%] right-[50%] ml-[-50vw] mr-[-50vw] bg-[#545454] py-8 sm:py-12 md:py-16">
-      <div className="max-w-[2000px] mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {images.map((image, index) => (
-            <div
-              key={image.id}
-              className={`relative aspect-square overflow-hidden rounded-lg group opacity-0 animate-fadeIn md:last:hidden lg:last:block`}
-              style={{
-                animationDelay: `${index * 0.05}s`,
-                animationFillMode: 'forwards'
-              }}
-            >
-              <img
-                src={image.src}
-                alt={`Gallery image ${image.id}`}
-                className="object-cover w-full h-full transition-all duration-300 group-hover:scale-110"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
-            </div>
-          ))}
+    <>
+      <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+        <DialogContent className="max-w-[90vw] max-h-[90vh] p-0">
+          {selectedImage && (
+            <img
+              src={selectedImage}
+              alt="Enlarged view"
+              className="w-full h-full object-contain"
+            />
+          )}
+        </DialogContent>
+      </Dialog>
+
+      <section className="w-screen relative left-[50%] right-[50%] ml-[-50vw] mr-[-50vw] bg-[#545454] py-8 sm:py-12 md:py-16">
+        <div className="max-w-[2000px] mx-auto px-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {images.map((image, index) => (
+              <div
+                key={image.id}
+                className={`relative aspect-square overflow-hidden rounded-lg group opacity-0 animate-fadeIn cursor-pointer md:last:hidden lg:last:block`}
+                style={{
+                  animationDelay: `${index * 0.05}s`,
+                  animationFillMode: 'forwards'
+                }}
+                onClick={() => setSelectedImage(image.src)}
+              >
+                <img
+                  src={image.src}
+                  alt={`Gallery image ${image.id}`}
+                  className="object-cover w-full h-full transition-all duration-300 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
+                  <ZoomIn className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-8 h-8" />
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
