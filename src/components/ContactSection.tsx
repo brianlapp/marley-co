@@ -3,8 +3,8 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { toast } from "./ui/use-toast";
-import { Checkbox } from "./ui/checkbox";
 import { useNavigate } from "react-router-dom";
+import { EmailCapture } from "./EmailCapture";
 
 export const ContactSection = () => {
   const navigate = useNavigate();
@@ -13,7 +13,6 @@ export const ContactSection = () => {
     email: "",
     phone: "",
     message: "",
-    joinMailingList: false
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -29,7 +28,6 @@ export const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      // Submit contact form to Netlify
       const response = await fetch('/', {
         method: "POST",
         headers: { 
@@ -45,26 +43,6 @@ export const ContactSection = () => {
         })
       });
 
-      // If mailing list opt-in is checked, call our serverless function
-      if (formData.joinMailingList) {
-        try {
-          await fetch('/.netlify/functions/subscribe', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              name: formData.name,
-              email: formData.email,
-              joinMailingList: true
-            })
-          });
-        } catch (error) {
-          console.error('Mailing list subscription error:', error);
-          // Don't block form submission for mailing list errors
-        }
-      }
-
       if (response.ok) {
         toast({
           title: "Message Sent!",
@@ -76,10 +54,8 @@ export const ContactSection = () => {
           email: "",
           phone: "",
           message: "",
-          joinMailingList: false
         });
 
-        // Add a small delay before redirecting to ensure the toast message is visible
         setTimeout(() => {
           navigate('/');
         }, 2000);
@@ -179,21 +155,6 @@ export const ContactSection = () => {
                 required
                 className="min-h-[120px] md:min-h-[150px] bg-white border-marley-primary/20"
               />
-              <div className="flex items-center space-x-2">
-                <Checkbox
-                  id="joinMailingList"
-                  checked={formData.joinMailingList}
-                  onCheckedChange={(checked) => 
-                    setFormData({ ...formData, joinMailingList: checked as boolean })
-                  }
-                />
-                <label
-                  htmlFor="joinMailingList"
-                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                >
-                  Join our mailing list to receive updates and exclusive offers
-                </label>
-              </div>
               <Button 
                 type="submit" 
                 className="w-full h-12 bg-[#FF5757] hover:bg-[#FF5757]/90 text-white"
@@ -215,12 +176,7 @@ export const ContactSection = () => {
               <p className="font-sans text-marley-primary/80 mb-4 md:mb-6">
                 If you haven't already, don't forget to sign up for our mailing list to be the first to know about our launch, exclusive promotions, and parenting tips. Plus, get your $15 off coupon when you join the Marley Co. family!
               </p>
-              <Button 
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                className="bg-[#FF5757] hover:bg-[#FF5757]/90 text-white h-10 md:h-12 px-6 md:px-8"
-              >
-                Sign Up for Updates
-              </Button>
+              <EmailCapture />
             </div>
 
             <div className="pt-6 md:pt-8 border-t border-marley-primary/10">
