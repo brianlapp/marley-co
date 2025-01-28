@@ -45,22 +45,24 @@ export const ContactSection = () => {
         })
       });
 
-      // If mailing list opt-in is checked, submit to Campaign Monitor
+      // If mailing list opt-in is checked, call our serverless function
       if (formData.joinMailingList) {
-        const cmForm = document.createElement('form');
-        cmForm.method = 'post';
-        cmForm.action = 'https://www.createsend.com/t/subscribeerror?description=';
-        cmForm.setAttribute('data-id', 'A61C50BEC994754B1D79C5819EC1255C780C82AB3D8F428CF1A5AF96133138DAB6CEDFFE80FFDA652C40DF149AC51EF7E1005C93B2DF3FE45E54B61B3F985E93');
-        
-        const emailInput = document.createElement('input');
-        emailInput.type = 'hidden';
-        emailInput.name = 'cm-tjdlthk-tjdlthk';
-        emailInput.value = formData.email;
-        
-        cmForm.appendChild(emailInput);
-        document.body.appendChild(cmForm);
-        cmForm.submit();
-        document.body.removeChild(cmForm);
+        try {
+          await fetch('/.netlify/functions/subscribe', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              name: formData.name,
+              email: formData.email,
+              joinMailingList: true
+            })
+          });
+        } catch (error) {
+          console.error('Mailing list subscription error:', error);
+          // Don't block form submission for mailing list errors
+        }
       }
 
       if (response.ok) {
