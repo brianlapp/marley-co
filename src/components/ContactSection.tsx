@@ -174,7 +174,7 @@ export const ContactSection = () => {
             <div>
               <h3 className="text-xl md:text-2xl font-sans text-marley-primary mb-3 md:mb-4">Stay Updated</h3>
               <p className="font-sans text-marley-primary/80 mb-4 md:mb-6">
-                If you haven't already, don't forget to sign up for our mailing list to be the first to know about our launch, exclusive promotions, and parenting tips. Plus, get your $15 off coupon when you join the Marley Co. family!
+                If you haven't already, don't forget to sign up for our mailing list to be the first to know about our launch, exclusive promotions, and parenting tips. Plus, get your $10 off coupon when you join the Marley Co. family!
               </p>
               <EmailCapture />
             </div>
