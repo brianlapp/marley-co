@@ -64,7 +64,7 @@ export const EmailCapture = () => {
         </Button>
       </div>
       <p className="text-sm text-marley-primary/80 text-center mt-4">
-        Sign up today and get $15 towards your next purchase with us
+        Sign up today and get $10 towards your next purchase with us
       </p>
     </form>
   );

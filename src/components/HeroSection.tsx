@@ -77,7 +77,7 @@ export const HeroSection = () => {
         
         <div className="space-y-4 md:space-y-6 mt-2">
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-sans font-bold text-[#FF5757] uppercase">
-            $15 Sign Up Bonus
+            $10 Sign Up Bonus
           </h2>
           <EmailCapture />
         </div>
