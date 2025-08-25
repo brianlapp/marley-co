@@ -16,6 +16,14 @@ export const GiveawayHero = () => {
             <p className="text-lg sm:text-xl text-marley-primary leading-relaxed mb-8">
               The perfect mix of fashion and function — designed for parents who want it all.
             </p>
+            
+            {/* Form appears here on mobile only */}
+            <div className="lg:hidden mb-8">
+              <div className="bg-white rounded-lg shadow-lg p-8">
+                <GiveawayForm />
+              </div>
+            </div>
+            
             <p className="text-lg text-marley-primary mb-8 leading-relaxed">
               Enter now for your chance to win a premium Marley Co diaper bag — the ultimate parenting essential that keeps you organized without sacrificing style. With spacious compartments, durable design, and a sleek modern look, this bag is built to handle everything parenthood throws your way.
             </p>
@@ -39,7 +47,8 @@ export const GiveawayHero = () => {
             </div>
           </div>
           
-          <div className="bg-white rounded-lg shadow-lg p-8">
+          {/* Form appears here on desktop only */}
+          <div className="hidden lg:block bg-white rounded-lg shadow-lg p-8">
             <GiveawayForm />
           </div>
         </div>
