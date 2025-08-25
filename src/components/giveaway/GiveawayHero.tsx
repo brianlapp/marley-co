@@ -1,5 +1,6 @@
 import { GiveawayForm } from "./GiveawayForm";
 import { Check } from "lucide-react";
+import diaperBagHero from "@/assets/diaper-bag-hero.jpg";
 
 export const GiveawayHero = () => {
   return (
@@ -13,6 +14,15 @@ export const GiveawayHero = () => {
             <p className="text-xl text-marley-primary mb-8 leading-relaxed">
               The perfect mix of fashion and function — designed for parents who want it all.
             </p>
+            
+            <div className="mb-8 lg:hidden">
+              <img 
+                src={diaperBagHero} 
+                alt="Stylish Marley Co diaper bag in modern neutral color"
+                className="w-full max-w-md mx-auto rounded-lg shadow-lg"
+              />
+            </div>
+            
             <p className="text-lg text-marley-primary mb-8 leading-relaxed">
               Enter now for your chance to win a premium Marley Co diaper bag — the ultimate parenting essential that keeps you organized without sacrificing style. With spacious compartments, durable design, and a sleek modern look, this bag is built to handle everything parenthood throws your way.
             </p>
@@ -33,6 +43,14 @@ export const GiveawayHero = () => {
                 <Check className="w-5 h-5 text-green-600" />
                 <span className="text-marley-primary">Premium quality you'll love carrying every day</span>
               </div>
+            </div>
+            
+            <div className="hidden lg:block mb-8">
+              <img 
+                src={diaperBagHero} 
+                alt="Stylish Marley Co diaper bag in modern neutral color"
+                className="w-full max-w-lg rounded-lg shadow-lg"
+              />
             </div>
           </div>
           
