@@ -64,7 +64,7 @@ export const GiveawayForm = () => {
           Enter to Win!
         </h3>
         <p className="text-[#FF5757] font-semibold text-lg">
-          🎉 Your dream diaper bag awaits
+          Your dream diaper bag awaits
         </p>
       </div>
       
@@ -168,7 +168,7 @@ export const GiveawayForm = () => {
             </span>
           ) : (
             <span className="flex items-center justify-center gap-2">
-              🎁 ENTER NOW - IT'S FREE!
+              ENTER
             </span>
           )}
         </Button>
@@ -178,7 +178,7 @@ export const GiveawayForm = () => {
             By entering, you agree to receive emails from Marley Co. Unsubscribe anytime.
           </p>
           <p className="text-xs text-green-600 font-medium">
-            ✅ No purchase required • ✅ Takes under 30 seconds
+            No purchase required • Takes under 30 seconds
           </p>
         </div>
       </form>

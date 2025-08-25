@@ -12,10 +12,10 @@ export const HowToEnter = () => {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-marley-dark mb-6">
-            Enter in <span className="text-[#FF5757]">3 Simple Steps</span>
+            How To Enter
           </h2>
           <p className="text-xl text-marley-primary max-w-2xl mx-auto">
-            It's quick, easy, and completely free. Your dream diaper bag is just minutes away!
+            Entering is quick and easy! Follow these simple steps to secure your chance to win this amazing diaper bag.
           </p>
         </div>
         
@@ -29,9 +29,9 @@ export const HowToEnter = () => {
               <div className="hidden md:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-[#FF5757]/50 to-transparent transform -translate-y-1/2"></div>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-marley-light/30">
-              <h4 className="text-xl font-bold text-marley-dark mb-3">📝 Fill the Form</h4>
+              <h4 className="text-xl font-bold text-marley-dark mb-3">Fill in the short entry form with your name and email</h4>
               <p className="text-marley-primary">
-                Quick entry form with just your name and email — takes under 30 seconds
+                Complete the quick entry form with your basic details. Takes less than 30 seconds!
               </p>
             </div>
           </div>
@@ -45,9 +45,9 @@ export const HowToEnter = () => {
               <div className="hidden md:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-[#FF5757]/50 to-transparent transform -translate-y-1/2"></div>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-marley-light/30">
-              <h4 className="text-xl font-bold text-marley-dark mb-3">✉️ Confirm Entry</h4>
+              <h4 className="text-xl font-bold text-marley-dark mb-3">Confirm your entry in your inbox so we can contact the winner</h4>
               <p className="text-marley-primary">
-                Check your inbox and confirm — this ensures we can reach you if you win!
+                Check your email and confirm your entry. This ensures we can contact you if you win!
               </p>
             </div>
           </div>
@@ -59,9 +59,9 @@ export const HowToEnter = () => {
               </div>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-marley-light/30">
-              <h4 className="text-xl font-bold text-marley-dark mb-3">🎁 Get Updates</h4>
+              <h4 className="text-xl font-bold text-marley-dark mb-3">Watch your email for bonus entry options and early access to promos</h4>
               <p className="text-marley-primary">
-                Watch for bonus entry opportunities and early access to exclusive deals
+                Look for bonus actions like following Marley Co on Instagram or sharing with a friend to increase your odds.
               </p>
             </div>
           </div>
@@ -69,11 +69,10 @@ export const HowToEnter = () => {
         
         <div className="bg-gradient-to-r from-marley-light to-marley-muted rounded-2xl p-8 text-center shadow-lg border border-marley-light/50">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <span className="text-2xl">💡</span>
             <h4 className="text-2xl font-bold text-marley-dark">Pro Tip</h4>
           </div>
           <p className="text-lg text-marley-primary max-w-3xl mx-auto leading-relaxed">
-            After submitting, look for <span className="font-semibold text-[#FF5757]">bonus entry opportunities</span> like following Marley Co on social media or sharing with friends to multiply your chances of winning!
+            After you submit, look for bonus actions like following Marley Co on Instagram or sharing with a friend to increase your odds.
           </p>
         </div>
       </div>

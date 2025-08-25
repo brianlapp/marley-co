@@ -24,14 +24,14 @@ export const GiveawayHero = () => {
             {/* Hero headline with excitement */}
             <div className="space-y-4">
               <div className="inline-block bg-[#FF5757] text-white px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide animate-pulse">
-                🎁 FREE GIVEAWAY
+                FREE GIVEAWAY
               </div>
               <h1 className="text-marley-dark text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[0.9] tracking-tight">
-                Win the Ultimate
-                <span className="block text-[#FF5757] font-black">Diaper Bag</span>
+                Win a Stylish Marley Co 
+                <span className="block text-[#FF5757] font-black">Diaper Bag!</span>
               </h1>
               <p className="text-xl sm:text-2xl text-marley-primary font-medium leading-relaxed">
-                Fashion meets function — designed for parents who refuse to compromise.
+                The perfect mix of fashion and function — designed for parents who want it all.
               </p>
             </div>
             
@@ -42,42 +42,72 @@ export const GiveawayHero = () => {
               </div>
             </div>
             
-            {/* Value proposition */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <p className="text-lg text-marley-dark font-medium mb-4">
-                🚀 Enter in under 30 seconds and win:
+            {/* Mobile only content */}
+            <div className="lg:hidden space-y-6">
+              <p className="text-lg text-marley-dark leading-relaxed">
+                Enter now for your chance to win a premium Marley Co diaper bag — the ultimate parenting essential 
+                that keeps you organized without sacrificing style. With spacious compartments, durable design, and 
+                a sleek modern look, this bag is built to handle everything parenthood throws your way.
               </p>
+              
+              <p className="text-lg text-marley-dark font-medium">
+                Don't miss out — it takes less than 30 seconds to enter!
+              </p>
+              
               <div className="space-y-3">
-                <div className="flex items-center gap-3 group">
-                  <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Check className="w-4 h-4 text-white" />
-                  </div>
-                  <span className="text-marley-dark font-medium">Premium Marley Co diaper bag ($180 value)</span>
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-green-600 flex-shrink-0" />
+                  <span className="text-marley-dark">Spacious & practical design</span>
                 </div>
-                <div className="flex items-center gap-3 group">
-                  <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Check className="w-4 h-4 text-white" />
-                  </div>
-                  <span className="text-marley-dark font-medium">Matching premium changing pad</span>
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-green-600 flex-shrink-0" />
+                  <span className="text-marley-dark">Modern, fashion-forward style</span>
                 </div>
-                <div className="flex items-center gap-3 group">
-                  <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Check className="w-4 h-4 text-white" />
-                  </div>
-                  <span className="text-marley-dark font-medium">Early access to future drops</span>
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-green-600 flex-shrink-0" />
+                  <span className="text-marley-dark">Premium quality you'll love carrying every day</span>
                 </div>
               </div>
             </div>
 
             {/* Urgency element */}
-            <div className="bg-gradient-to-r from-[#FF5757] to-[#FF5757]/80 text-white rounded-xl p-4 text-center">
-              <p className="font-bold text-lg">⏰ Limited Time Only</p>
+            <div className="bg-gradient-to-r from-[#FF5757] to-[#FF5757]/80 text-white rounded-xl p-4 text-center lg:hidden">
+              <p className="font-bold text-lg">Limited Time Only</p>
               <p className="text-sm opacity-90">Giveaway ends soon - Enter now!</p>
             </div>
           </div>
           
-          {/* Desktop form - enhanced */}
-          <div className="hidden lg:block">
+          {/* Desktop form and benefits */}
+          <div className="hidden lg:block space-y-8">
+            {/* Value proposition aligned with form center */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <p className="text-lg text-marley-dark leading-relaxed mb-4">
+                Enter now for your chance to win a premium Marley Co diaper bag — the ultimate parenting essential 
+                that keeps you organized without sacrificing style. With spacious compartments, durable design, and 
+                a sleek modern look, this bag is built to handle everything parenthood throws your way.
+              </p>
+              
+              <p className="text-lg text-marley-dark font-medium mb-4">
+                Don't miss out — it takes less than 30 seconds to enter!
+              </p>
+              
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-green-600 flex-shrink-0" />
+                  <span className="text-marley-dark">Spacious & practical design</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-green-600 flex-shrink-0" />
+                  <span className="text-marley-dark">Modern, fashion-forward style</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-green-600 flex-shrink-0" />
+                  <span className="text-marley-dark">Premium quality you'll love carrying every day</span>
+                </div>
+              </div>
+            </div>
+            
+            {/* Form */}
             <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl p-8 border border-white/20 hover:shadow-3xl transition-all duration-500 hover:scale-[1.02]">
               <GiveawayForm />
             </div>

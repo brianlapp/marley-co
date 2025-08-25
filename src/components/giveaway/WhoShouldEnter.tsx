@@ -13,7 +13,7 @@ export const WhoShouldEnter = () => {
             <div className="flex justify-center mb-4">
               <Check className="w-8 h-8 text-green-600" />
             </div>
-            <h4 className="text-marley-dark mb-3">New & Expecting Parents</h4>
+            <h4 className="text-marley-dark mb-3">New and expecting parents who value quality and design</h4>
             <p className="text-marley-primary">
               Parents who value quality and design in their everyday essentials
             </p>
@@ -23,7 +23,7 @@ export const WhoShouldEnter = () => {
             <div className="flex justify-center mb-4">
               <Check className="w-8 h-8 text-green-600" />
             </div>
-            <h4 className="text-marley-dark mb-3">Caregivers & Grandparents</h4>
+            <h4 className="text-marley-dark mb-3">Caregivers and grandparents looking for a great gift</h4>
             <p className="text-marley-primary">
               Looking for a great gift that combines style with functionality
             </p>
@@ -33,7 +33,7 @@ export const WhoShouldEnter = () => {
             <div className="flex justify-center mb-4">
               <Check className="w-8 h-8 text-green-600" />
             </div>
-            <h4 className="text-marley-dark mb-3">Organized Parents</h4>
+            <h4 className="text-marley-dark mb-3">Any parent who wants an organized, stylish bag that outlives the diaper years</h4>
             <p className="text-marley-primary">
               Any parent who wants an organized, stylish bag that outlives the diaper years
             </p>

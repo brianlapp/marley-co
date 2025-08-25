@@ -7,11 +7,11 @@ export const WhyParentsLove = () => {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-marley-dark mb-8">
-            Why <span className="text-[#FF5757]">10,000+ Parents</span> Choose Marley Co
+            Why Parents Love Marley Co
           </h2>
           <div className="max-w-4xl mx-auto">
             <p className="text-xl text-marley-primary leading-relaxed mb-8">
-              This isn't just another diaper bag — it's the premium parenting solution that transforms your daily routine.
+              Marley Co creates premium diaper bags that balance everyday practicality with modern style. Thoughtful pocket placement keeps bottles upright. Wipe-clean materials handle real life messes. Soft straps and a structured silhouette make it a bag you will actually love to carry. Whether you are running errands or hopping on a weekend trip, Marley Co is built for parents who want function without compromising their look.
             </p>
             
             {/* Stats row */}
