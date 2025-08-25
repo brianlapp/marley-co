@@ -59,16 +59,22 @@ export const GiveawayForm = () => {
 
   return (
     <div className="w-full">
-      <h3 className="text-2xl font-serif text-marley-dark text-center mb-6">
-        Enter the Giveaway
-      </h3>
+      <div className="text-center mb-8">
+        <h3 className="text-3xl font-bold text-marley-dark mb-2">
+          Enter to Win!
+        </h3>
+        <p className="text-[#FF5757] font-semibold text-lg">
+          🎉 Your dream diaper bag awaits
+        </p>
+      </div>
       
-      <div className="mb-6">
+      <div className="mb-8 relative group">
         <img 
           src={diaperBagHero} 
           alt="Stylish Marley Co diaper bag in modern neutral color"
-          className="w-full max-w-sm mx-auto rounded-lg"
+          className="w-full max-w-sm mx-auto rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       </div>
       
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4" data-netlify="true">
@@ -152,15 +158,29 @@ export const GiveawayForm = () => {
         
         <Button
           type="submit"
-          className="w-full h-12 bg-[#FF5757] hover:bg-[#FF5757]/90 text-white font-medium text-lg"
+          className="w-full h-14 bg-gradient-to-r from-[#FF5757] to-[#FF5757]/90 hover:from-[#FF5757]/90 hover:to-[#FF5757] text-white font-bold text-xl rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300"
           disabled={isLoading}
         >
-          {isLoading ? "Entering..." : "ENTER"}
+          {isLoading ? (
+            <span className="flex items-center gap-2">
+              <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+              Entering...
+            </span>
+          ) : (
+            <span className="flex items-center justify-center gap-2">
+              🎁 ENTER NOW - IT'S FREE!
+            </span>
+          )}
         </Button>
         
-        <p className="text-xs text-marley-accent text-center mt-4">
-          By entering, you agree to receive emails from Marley Co. You can unsubscribe at any time.
-        </p>
+        <div className="text-center mt-6 space-y-2">
+          <p className="text-xs text-marley-accent">
+            By entering, you agree to receive emails from Marley Co. Unsubscribe anytime.
+          </p>
+          <p className="text-xs text-green-600 font-medium">
+            ✅ No purchase required • ✅ Takes under 30 seconds
+          </p>
+        </div>
       </form>
     </div>
   );
