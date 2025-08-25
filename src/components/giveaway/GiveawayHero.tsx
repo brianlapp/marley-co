@@ -8,10 +8,10 @@ export const GiveawayHero = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Full width heading section */}
         <div className="text-center mb-12">
-          <h1 className="text-marley-dark mb-6">
+          <h1 className="text-marley-dark mb-6 text-3xl sm:text-4xl lg:text-5xl font-bold whitespace-nowrap">
             Win a Stylish Marley Co Diaper Bag!
           </h1>
-          <p className="text-xl text-marley-primary leading-relaxed max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-marley-primary leading-relaxed max-w-4xl mx-auto">
             The perfect mix of fashion and function — designed for parents who want it all.
           </p>
         </div>
