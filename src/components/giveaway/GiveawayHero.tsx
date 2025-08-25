@@ -19,11 +19,11 @@ export const GiveawayHero = () => {
         {/* Content and form grid */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
-            <div className="mb-8 lg:hidden">
+            <div className="mb-8">
               <img 
                 src={diaperBagHero} 
                 alt="Stylish Marley Co diaper bag in modern neutral color"
-                className="w-full max-w-md mx-auto rounded-lg shadow-lg"
+                className="w-full max-w-md lg:max-w-lg mx-auto lg:mx-0 rounded-lg shadow-lg"
               />
             </div>
             
@@ -47,14 +47,6 @@ export const GiveawayHero = () => {
                 <Check className="w-5 h-5 text-green-600" />
                 <span className="text-marley-primary">Premium quality you'll love carrying every day</span>
               </div>
-            </div>
-            
-            <div className="hidden lg:block mb-8">
-              <img 
-                src={diaperBagHero} 
-                alt="Stylish Marley Co diaper bag in modern neutral color"
-                className="w-full max-w-lg rounded-lg shadow-lg"
-              />
             </div>
           </div>
           
