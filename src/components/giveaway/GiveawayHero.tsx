@@ -8,7 +8,7 @@ export const GiveawayHero = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Content and form grid */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div className="text-center lg:text-left">
             <h1 className="text-marley-dark mb-6 text-3xl sm:text-4xl lg:text-5xl font-bold">
               Win a Stylish Marley Co Diaper Bag!
