@@ -4,7 +4,7 @@ import diaperBagHero from "@/assets/diaper-bag-hero.jpg";
 
 export const GiveawayHero = () => {
   return (
-    <section className="pt-16 pb-16 bg-gradient-to-br from-marley-light to-marley-muted">
+    <section className="pt-24 pb-16 bg-gradient-to-br from-marley-light to-marley-muted">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Content and form grid */}
