@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Index from "./pages/Index";
 import Contact from "./pages/Contact";
+import DipaerBagGiveaway from "./pages/DipaerBagGiveaway";
 
 // Scroll to top component
 const ScrollToTop = () => {
@@ -33,6 +34,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/diaper-bag-giveaway" element={<DipaerBagGiveaway />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
