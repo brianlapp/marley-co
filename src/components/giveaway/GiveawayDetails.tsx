@@ -33,6 +33,25 @@ export const GiveawayDetails = () => {
             <h3 className="text-marley-dark mb-6">
               What Makes Marley Co Different
             </h3>
+            
+            {/* Technical specifications visual */}
+            <div className="mb-8 p-6 bg-white rounded-lg shadow-sm border border-marley-light">
+              <div className="text-center mb-4">
+                <h4 className="text-marley-dark font-medium mb-2">Technical Specifications</h4>
+                <p className="text-sm text-marley-primary">Professional design with precise measurements</p>
+              </div>
+              <div className="grid grid-cols-2 gap-4 text-sm text-marley-primary">
+                <div>
+                  <span className="font-medium">Dimensions:</span>
+                  <br />Professional specs available
+                </div>
+                <div>
+                  <span className="font-medium">Materials:</span>
+                  <br />Premium grade construction
+                </div>
+              </div>
+            </div>
+            
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <Check className="w-5 h-5 text-green-600 mt-1" />

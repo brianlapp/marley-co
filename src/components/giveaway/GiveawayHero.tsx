@@ -1,11 +1,23 @@
 import { GiveawayForm } from "./GiveawayForm";
 import { Check } from "lucide-react";
 import diaperBagHero from "@/assets/diaper-bag-hero.jpg";
+import heroBackground from "@/assets/hero-background.jpg";
 
 export const GiveawayHero = () => {
   return (
-    <section className="pt-24 pb-16 bg-gradient-to-br from-marley-light to-marley-muted">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section 
+      className="pt-24 pb-16 relative overflow-hidden"
+      style={{
+        backgroundImage: `url(${heroBackground})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      {/* Overlay for readability */}
+      <div className="absolute inset-0 bg-marley-light/75"></div>
+      
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Content and form grid */}
         <div className="grid lg:grid-cols-2 gap-12 items-start">
