@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "@/components/ui/use-toast";
+import diaperBagHero from "@/assets/diaper-bag-hero.jpg";
 
 interface GiveawayFormData {
   firstName: string;
@@ -61,6 +62,14 @@ export const GiveawayForm = () => {
       <h3 className="text-2xl font-serif text-marley-dark text-center mb-6">
         Enter the Giveaway
       </h3>
+      
+      <div className="mb-6">
+        <img 
+          src={diaperBagHero} 
+          alt="Stylish Marley Co diaper bag in modern neutral color"
+          className="w-full max-w-sm mx-auto rounded-lg shadow-lg"
+        />
+      </div>
       
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4" data-netlify="true">
         <input type="hidden" name="form-name" value="giveaway" />

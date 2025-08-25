@@ -19,14 +19,6 @@ export const GiveawayHero = () => {
         {/* Content and form grid */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
-            <div className="mb-8">
-              <img 
-                src={diaperBagHero} 
-                alt="Stylish Marley Co diaper bag in modern neutral color"
-                className="w-full max-w-md lg:max-w-lg mx-auto lg:mx-0 rounded-lg shadow-lg"
-              />
-            </div>
-            
             <p className="text-lg text-marley-primary mb-8 leading-relaxed">
               Enter now for your chance to win a premium Marley Co diaper bag — the ultimate parenting essential that keeps you organized without sacrificing style. With spacious compartments, durable design, and a sleek modern look, this bag is built to handle everything parenthood throws your way.
             </p>
