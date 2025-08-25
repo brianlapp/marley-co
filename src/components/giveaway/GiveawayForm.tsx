@@ -67,7 +67,7 @@ export const GiveawayForm = () => {
         <img 
           src={diaperBagHero} 
           alt="Stylish Marley Co diaper bag in modern neutral color"
-          className="w-full max-w-sm mx-auto rounded-lg shadow-lg"
+          className="w-full max-w-sm mx-auto rounded-lg"
         />
       </div>
       
