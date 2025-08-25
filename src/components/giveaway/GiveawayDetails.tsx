@@ -34,22 +34,13 @@ export const GiveawayDetails = () => {
               What Makes Marley Co Different
             </h3>
             
-            {/* Technical specifications visual */}
-            <div className="mb-8 p-6 bg-white rounded-lg shadow-sm border border-marley-light">
-              <div className="text-center mb-4">
-                <h4 className="text-marley-dark font-medium mb-2">Technical Specifications</h4>
-                <p className="text-sm text-marley-primary">Professional design with precise measurements</p>
-              </div>
-              <div className="grid grid-cols-2 gap-4 text-sm text-marley-primary">
-                <div>
-                  <span className="font-medium">Dimensions:</span>
-                  <br />Professional specs available
-                </div>
-                <div>
-                  <span className="font-medium">Materials:</span>
-                  <br />Premium grade construction
-                </div>
-              </div>
+            {/* Technical diagram */}
+            <div className="mb-8 text-center">
+              <img 
+                src="/lovable-uploads/8e734889-f98a-4c91-9ff1-3b9fa31dac50.png" 
+                alt="Marley Co diaper bag technical specifications and dimensions"
+                className="w-full max-w-md mx-auto rounded-lg"
+              />
             </div>
             
             <div className="space-y-4">
