@@ -74,9 +74,9 @@ export const GiveawayForm = () => {
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4" data-netlify="true">
         <input type="hidden" name="form-name" value="giveaway" />
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-4">
           <div>
-            <Label htmlFor="firstName" className="text-marley-primary">
+            <Label htmlFor="firstName" className="text-marley-primary text-left block">
               First Name *
             </Label>
             <Input
@@ -91,7 +91,7 @@ export const GiveawayForm = () => {
           </div>
           
           <div>
-            <Label htmlFor="lastName" className="text-marley-primary">
+            <Label htmlFor="lastName" className="text-marley-primary text-left block">
               Last Name *
             </Label>
             <Input
@@ -107,7 +107,7 @@ export const GiveawayForm = () => {
         </div>
         
         <div>
-          <Label htmlFor="email" className="text-marley-primary">
+          <Label htmlFor="email" className="text-marley-primary text-left block">
             Email *
           </Label>
           <Input
@@ -129,7 +129,7 @@ export const GiveawayForm = () => {
         </div>
         
         <div>
-          <Label className="text-marley-primary">
+          <Label className="text-marley-primary text-left block">
             I am... *
           </Label>
           <Select 
