@@ -19,7 +19,7 @@ export const GiveawayHero = () => {
             
             {/* Form appears here on mobile only */}
             <div className="lg:hidden mb-8">
-              <div className="bg-white rounded-lg shadow-lg p-8">
+              <div className="bg-white rounded-lg shadow-lg p-8 border-2 border-[#FF5757]">
                 <GiveawayForm />
               </div>
             </div>
@@ -48,7 +48,7 @@ export const GiveawayHero = () => {
           </div>
           
           {/* Form appears here on desktop only */}
-          <div className="hidden lg:block bg-white rounded-lg shadow-lg p-8">
+          <div className="hidden lg:block bg-white rounded-lg shadow-lg p-8 border-2 border-[#FF5757]">
             <GiveawayForm />
           </div>
         </div>
