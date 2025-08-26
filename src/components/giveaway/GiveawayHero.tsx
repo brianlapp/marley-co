@@ -44,22 +44,28 @@ export const GiveawayHero = () => {
                 a sleek modern look, this bag is built to handle everything parenthood throws your way.
               </p>
               
-              <p className="text-base text-marley-dark font-medium mb-4">
+              <p className="font-headline text-lg text-marley-dark font-semibold mb-4">
                 Don't miss out — it takes less than 30 seconds to enter!
               </p>
               
-              <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-600 flex-shrink-0" />
-                  <span className="text-marley-dark text-sm">Spacious & practical design</span>
+              <div className="space-y-4">
+                <div className="flex items-center gap-4 p-3 bg-white/20 backdrop-blur-sm rounded-xl border border-white/30 hover:bg-white/30 transition-all duration-300">
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Check className="w-4 h-4 text-white" strokeWidth={3} />
+                  </div>
+                  <span className="text-marley-dark font-medium">Spacious & practical design</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-600 flex-shrink-0" />
-                  <span className="text-marley-dark text-sm">Modern, fashion-forward style</span>
+                <div className="flex items-center gap-4 p-3 bg-white/20 backdrop-blur-sm rounded-xl border border-white/30 hover:bg-white/30 transition-all duration-300">
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Check className="w-4 h-4 text-white" strokeWidth={3} />
+                  </div>
+                  <span className="text-marley-dark font-medium">Modern, fashion-forward style</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-600 flex-shrink-0" />
-                  <span className="text-marley-dark text-sm">Premium quality you'll love carrying every day</span>
+                <div className="flex items-center gap-4 p-3 bg-white/20 backdrop-blur-sm rounded-xl border border-white/30 hover:bg-white/30 transition-all duration-300">
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Check className="w-4 h-4 text-white" strokeWidth={3} />
+                  </div>
+                  <span className="text-marley-dark font-medium">Premium quality you'll love carrying every day</span>
                 </div>
               </div>
             </div>
@@ -79,22 +85,28 @@ export const GiveawayHero = () => {
                 a sleek modern look, this bag is built to handle everything parenthood throws your way.
               </p>
               
-              <p className="text-base text-marley-dark font-medium">
+              <p className="font-headline text-base text-marley-dark font-semibold mb-4">
                 Don't miss out — it takes less than 30 seconds to enter!
               </p>
               
               <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-600 flex-shrink-0" />
-                  <span className="text-marley-dark text-sm">Spacious & practical design</span>
+                <div className="flex items-center gap-3 p-2 bg-white/20 backdrop-blur-sm rounded-lg border border-white/30">
+                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Check className="w-3 h-3 text-white" strokeWidth={3} />
+                  </div>
+                  <span className="text-marley-dark text-sm font-medium">Spacious & practical design</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-600 flex-shrink-0" />
-                  <span className="text-marley-dark text-sm">Modern, fashion-forward style</span>
+                <div className="flex items-center gap-3 p-2 bg-white/20 backdrop-blur-sm rounded-lg border border-white/30">
+                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Check className="w-3 h-3 text-white" strokeWidth={3} />
+                  </div>
+                  <span className="text-marley-dark text-sm font-medium">Modern, fashion-forward style</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-600 flex-shrink-0" />
-                  <span className="text-marley-dark text-sm">Premium quality you'll love carrying every day</span>
+                <div className="flex items-center gap-3 p-2 bg-white/20 backdrop-blur-sm rounded-lg border border-white/30">
+                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Check className="w-3 h-3 text-white" strokeWidth={3} />
+                  </div>
+                  <span className="text-marley-dark text-sm font-medium">Premium quality you'll love carrying every day</span>
                 </div>
               </div>
             </div>
