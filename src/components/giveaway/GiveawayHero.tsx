@@ -37,7 +37,7 @@ export const GiveawayHero = () => {
             </div>
             
             {/* Desktop value proposition - moved to left side */}
-            <div className="hidden lg:block bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="hidden lg:block bg-white rounded-2xl p-6 lg:p-8 shadow-md border border-accent-red/30">
               <p className="text-base text-marley-dark leading-relaxed mb-4">
                 Enter now for your chance to win a premium Marley Co diaper bag — the ultimate parenting essential 
                 that keeps you organized without sacrificing style. With spacious compartments, durable design, and 
@@ -49,19 +49,19 @@ export const GiveawayHero = () => {
               </p>
               
               <div className="space-y-2">
-                <div className="flex items-center gap-4 p-3 bg-white/20 backdrop-blur-sm rounded-xl border border-accent-red/40 hover:bg-white/30 transition-all duration-300">
+                <div className="flex items-center gap-4 p-3 bg-white rounded-xl border border-accent-red/30 hover:bg-marley-light/20 transition-all duration-300">
                   <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <Check className="w-4 h-4 text-white" strokeWidth={3} />
                   </div>
                   <span className="text-marley-dark font-medium">Spacious & practical design</span>
                 </div>
-                <div className="flex items-center gap-4 p-3 bg-white/20 backdrop-blur-sm rounded-xl border border-accent-red/40 hover:bg-white/30 transition-all duration-300">
+                <div className="flex items-center gap-4 p-3 bg-white rounded-xl border border-accent-red/30 hover:bg-marley-light/20 transition-all duration-300">
                   <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <Check className="w-4 h-4 text-white" strokeWidth={3} />
                   </div>
                   <span className="text-marley-dark font-medium">Modern, fashion-forward style</span>
                 </div>
-                <div className="flex items-center gap-4 p-3 bg-white/20 backdrop-blur-sm rounded-xl border border-accent-red/40 hover:bg-white/30 transition-all duration-300">
+                <div className="flex items-center gap-4 p-3 bg-white rounded-xl border border-accent-red/30 hover:bg-marley-light/20 transition-all duration-300">
                   <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <Check className="w-4 h-4 text-white" strokeWidth={3} />
                   </div>
