@@ -19,7 +19,7 @@ export const GiveawayHero = () => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full">
         {/* Content and form grid */}
-        <div className="grid lg:grid-cols-2 gap-8 xl:gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-start">
           {/* Left Column - Content */}
           <div className="text-center lg:text-left space-y-4 lg:space-y-6">
             {/* Hero headline with excitement */}
@@ -27,11 +27,11 @@ export const GiveawayHero = () => {
               <div className="inline-block bg-accent-red text-accent-red-foreground px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
                 FREE GIVEAWAY
               </div>
-              <h1 className="font-headline text-marley-dark text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight mb-3">
+              <h1 className="font-headline text-marley-dark text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold leading-tight tracking-tight mb-3">
                 Win a Stylish <span className="whitespace-nowrap">Marley Co</span>
                 <span className="block text-accent-red font-black">Diaper Bag!</span>
               </h1>
-              <p className="text-base sm:text-lg lg:text-2xl text-marley-primary font-medium leading-relaxed">
+              <p className="text-base sm:text-lg lg:text-xl xl:text-2xl text-marley-primary font-medium leading-relaxed">
                 The perfect mix of fashion and function — designed for parents who want it all.
               </p>
             </div>
