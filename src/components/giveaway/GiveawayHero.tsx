@@ -65,7 +65,7 @@ export const GiveawayHero = () => {
                   <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <Check className="w-4 h-4 text-white" strokeWidth={3} />
                   </div>
-                  <span className="text-marley-dark font-medium">Premium quality you'll love carrying every day</span>
+                  <span className="text-marley-dark font-medium">Premium quality you'll love carrying <span className="whitespace-nowrap">every day</span></span>
                 </div>
               </div>
             </div>
@@ -106,7 +106,7 @@ export const GiveawayHero = () => {
                   <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <Check className="w-3 h-3 text-white" strokeWidth={3} />
                   </div>
-                  <span className="text-marley-dark text-sm font-medium">Premium quality you'll love carrying every day</span>
+                  <span className="text-marley-dark text-sm font-medium">Premium quality you'll love carrying <span className="whitespace-nowrap">every day</span></span>
                 </div>
               </div>
             </div>
