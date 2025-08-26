@@ -56,37 +56,27 @@ export const GiveawayDetails = () => {
               
               <div className="space-y-3">
                 <div className="flex items-start gap-3 p-3 bg-white backdrop-blur-sm rounded-xl border border-accent-red/30 hover:bg-white/90 transition-all duration-300">
-                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
-                    <Check className="w-3 h-3 text-white" strokeWidth={3} />
-                  </div>
+                  <div className="w-3 h-3 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
                   <span className="text-marley-dark">Designed for real life with spill-resistant, easy-wipe interior and exterior</span>
                 </div>
                 
                 <div className="flex items-start gap-3 p-3 bg-white backdrop-blur-sm rounded-xl border border-accent-red/30 hover:bg-white/90 transition-all duration-300">
-                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
-                    <Check className="w-3 h-3 text-white" strokeWidth={3} />
-                  </div>
+                  <div className="w-3 h-3 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
                   <span className="text-marley-dark">Smart organization including insulated bottle pockets and quick-grab front zip</span>
                 </div>
                 
                 <div className="flex items-start gap-3 p-3 bg-white backdrop-blur-sm rounded-xl border border-accent-red/30 hover:bg-white/90 transition-all duration-300">
-                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
-                    <Check className="w-3 h-3 text-white" strokeWidth={3} />
-                  </div>
+                  <div className="w-3 h-3 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
                   <span className="text-marley-dark">Padded laptop sleeve so your work and parent life stay in one stylish place</span>
                 </div>
                 
                 <div className="flex items-start gap-3 p-3 bg-white backdrop-blur-sm rounded-xl border border-accent-red/30 hover:bg-white/90 transition-all duration-300">
-                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
-                    <Check className="w-3 h-3 text-white" strokeWidth={3} />
-                  </div>
+                  <div className="w-3 h-3 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
                   <span className="text-marley-dark">Convertible carry options backpack or top handle for hands-free comfort</span>
                 </div>
                 
                 <div className="flex items-start gap-3 p-3 bg-white backdrop-blur-sm rounded-xl border border-accent-red/30 hover:bg-white/90 transition-all duration-300">
-                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
-                    <Check className="w-3 h-3 text-white" strokeWidth={3} />
-                  </div>
+                  <div className="w-3 h-3 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
                   <span className="text-marley-dark">Premium hardware and stitching for durability that lasts beyond the baby stage</span>
                 </div>
               </div>
