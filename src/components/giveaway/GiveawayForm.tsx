@@ -158,7 +158,7 @@ export const GiveawayForm = () => {
         
         <Button
           type="submit"
-          className="w-full h-12 lg:h-14 bg-gradient-to-r from-accent-red to-accent-red/90 hover:from-accent-red/90 hover:to-accent-red text-accent-red-foreground font-bold text-lg lg:text-xl rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300"
+          className="w-full h-12 lg:h-14 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-600 text-white font-bold text-lg lg:text-xl rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300"
           disabled={isLoading}
         >
           {isLoading ? (
@@ -177,7 +177,7 @@ export const GiveawayForm = () => {
           <p className="text-xs text-marley-accent">
             By entering, you agree to receive emails from Marley Co. Unsubscribe anytime.
           </p>
-          <p className="text-xs text-green-600 font-medium">
+          <p className="text-xs text-accent-red font-medium">
             No purchase required • Takes under 30 seconds
           </p>
         </div>
