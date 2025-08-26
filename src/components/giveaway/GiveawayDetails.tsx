@@ -14,19 +14,19 @@ export const GiveawayDetails = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 xl:gap-16 items-start">
-          {/* Left Column - CTA Image */}
-          <div className="relative group">
-            <img 
-              src={diaperBagHero} 
-              alt="Stylish Marley Co diaper bag - what you could win"
-              className="w-full h-auto rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </div>
-          
-          {/* Right Column - Prize details */}
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Prize details with modern cards */}
           <div className="space-y-8">
+            {/* Image inside the container */}
+            <div className="relative group mb-8">
+              <img 
+                src={diaperBagHero} 
+                alt="Stylish Marley Co diaper bag - what you could win"
+                className="w-full h-auto rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+
             <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-accent-red/30">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 bg-accent-red rounded-full flex items-center justify-center">
@@ -38,13 +38,13 @@ export const GiveawayDetails = () => {
               </div>
               
               <div className="space-y-3">
-                <div className="flex items-center gap-4 p-3 bg-accent-red/5 backdrop-blur-sm rounded-xl border border-accent-red/30 hover:bg-accent-red/10 transition-all duration-300">
+                <div className="flex items-center gap-4 p-3 bg-white backdrop-blur-sm rounded-xl border border-accent-red/30 hover:bg-white/90 transition-all duration-300">
                   <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <Check className="w-4 h-4 text-white" strokeWidth={3} />
                   </div>
                   <span className="text-marley-dark font-medium">1 x Marley Co Premium Diaper Bag</span>
                 </div>
-                <div className="flex items-center gap-4 p-3 bg-accent-red/5 backdrop-blur-sm rounded-xl border border-accent-red/30 hover:bg-accent-red/10 transition-all duration-300">
+                <div className="flex items-center gap-4 p-3 bg-white backdrop-blur-sm rounded-xl border border-accent-red/30 hover:bg-white/90 transition-all duration-300">
                   <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <Check className="w-4 h-4 text-white" strokeWidth={3} />
                   </div>
@@ -52,43 +52,45 @@ export const GiveawayDetails = () => {
                 </div>
               </div>
             </div>
-
-            {/* Features Section */}
+          </div>
+          
+          {/* Features with modern styling */}
+          <div className="space-y-6">
             <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-accent-red/30">
               <h3 className="text-2xl font-bold text-marley-dark mb-6">
                 What Makes Marley Co Different
               </h3>
               
               <div className="space-y-3">
-                <div className="flex items-start gap-3 p-3 bg-accent-red/5 backdrop-blur-sm rounded-xl border border-accent-red/30 hover:bg-accent-red/10 transition-all duration-300">
+                <div className="flex items-start gap-3 p-3 bg-white backdrop-blur-sm rounded-xl border border-accent-red/30 hover:bg-white/90 transition-all duration-300">
                   <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
                     <Check className="w-3 h-3 text-white" strokeWidth={3} />
                   </div>
                   <span className="text-marley-dark">Designed for real life with spill-resistant, easy-wipe interior and exterior</span>
                 </div>
                 
-                <div className="flex items-start gap-3 p-3 bg-accent-red/5 backdrop-blur-sm rounded-xl border border-accent-red/30 hover:bg-accent-red/10 transition-all duration-300">
+                <div className="flex items-start gap-3 p-3 bg-white backdrop-blur-sm rounded-xl border border-accent-red/30 hover:bg-white/90 transition-all duration-300">
                   <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
                     <Check className="w-3 h-3 text-white" strokeWidth={3} />
                   </div>
                   <span className="text-marley-dark">Smart organization including insulated bottle pockets and quick-grab front zip</span>
                 </div>
                 
-                <div className="flex items-start gap-3 p-3 bg-accent-red/5 backdrop-blur-sm rounded-xl border border-accent-red/30 hover:bg-accent-red/10 transition-all duration-300">
+                <div className="flex items-start gap-3 p-3 bg-white backdrop-blur-sm rounded-xl border border-accent-red/30 hover:bg-white/90 transition-all duration-300">
                   <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
                     <Check className="w-3 h-3 text-white" strokeWidth={3} />
                   </div>
                   <span className="text-marley-dark">Padded laptop sleeve so your work and parent life stay in one stylish place</span>
                 </div>
                 
-                <div className="flex items-start gap-3 p-3 bg-accent-red/5 backdrop-blur-sm rounded-xl border border-accent-red/30 hover:bg-accent-red/10 transition-all duration-300">
+                <div className="flex items-start gap-3 p-3 bg-white backdrop-blur-sm rounded-xl border border-accent-red/30 hover:bg-white/90 transition-all duration-300">
                   <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
                     <Check className="w-3 h-3 text-white" strokeWidth={3} />
                   </div>
                   <span className="text-marley-dark">Convertible carry options backpack or top handle for hands-free comfort</span>
                 </div>
                 
-                <div className="flex items-start gap-3 p-3 bg-accent-red/5 backdrop-blur-sm rounded-xl border border-accent-red/30 hover:bg-accent-red/10 transition-all duration-300">
+                <div className="flex items-start gap-3 p-3 bg-white backdrop-blur-sm rounded-xl border border-accent-red/30 hover:bg-white/90 transition-all duration-300">
                   <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
                     <Check className="w-3 h-3 text-white" strokeWidth={3} />
                   </div>
