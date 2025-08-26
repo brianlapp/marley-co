@@ -72,7 +72,7 @@ export const GiveawayHero = () => {
             
             {/* Mobile form */}
             <div className="lg:hidden">
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl p-6 border border-accent-red/30 hover:shadow-3xl transition-all duration-300">
+              <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl p-6 border border-accent-red/30 hover:shadow-2xl transition-all duration-300">
                 <GiveawayForm />
               </div>
             </div>
@@ -120,7 +120,7 @@ export const GiveawayHero = () => {
           
           {/* Right Column - Desktop Form Only */}
           <div className="hidden lg:flex lg:flex-col">
-            <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl p-8 border border-accent-red/30 hover:shadow-3xl transition-all duration-500 hover:scale-[1.02]">
+            <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-xl p-8 border border-accent-red/30 hover:shadow-2xl transition-all duration-500 hover:scale-[1.02]">
               <GiveawayForm />
             </div>
           </div>
