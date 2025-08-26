@@ -10,7 +10,7 @@ export const GiveawayFAQ = () => {
         
         <Accordion type="single" collapsible className="bg-white rounded-lg">
           <AccordionItem value="item-1">
-            <AccordionTrigger className="px-6 text-marley-dark text-left">
+            <AccordionTrigger className="px-6 text-marley-dark text-left text-sm font-sans">
               Is the giveaway free to enter?
             </AccordionTrigger>
             <AccordionContent className="px-6 text-marley-primary">
