@@ -1,7 +1,7 @@
 import { GiveawayForm } from "./GiveawayForm";
 import { Check } from "lucide-react";
 import diaperBagHero from "@/assets/diaper-bag-hero.jpg";
-import heroBackground from "@/assets/hero-background.jpg";
+import heroBackground from "@/assets/new-hero-background.jpg";
 
 export const GiveawayHero = () => {
   return (
