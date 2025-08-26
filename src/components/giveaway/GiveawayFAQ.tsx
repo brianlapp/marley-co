@@ -4,7 +4,7 @@ export const GiveawayFAQ = () => {
   return (
     <section className="py-16 bg-marley-muted">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-marley-dark mb-8 text-center">
+        <h2 className="font-headline text-marley-dark mb-8 text-center">
           Frequently Asked Questions
         </h2>
         

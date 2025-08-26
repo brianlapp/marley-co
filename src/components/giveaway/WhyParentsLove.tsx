@@ -6,7 +6,7 @@ export const WhyParentsLove = () => {
       
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="mb-16">
-          <h2 className="text-marley-dark mb-6">
+          <h2 className="font-headline text-marley-dark mb-6">
             Why Parents Love Marley Co
           </h2>
           <div className="max-w-4xl mx-auto">

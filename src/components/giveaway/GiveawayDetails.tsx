@@ -6,7 +6,7 @@ export const GiveawayDetails = () => {
     <section className="py-16 bg-gradient-to-br from-marley-muted via-white to-marley-muted/50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-marley-dark mb-6">
+          <h2 className="font-headline text-marley-dark mb-6">
             About the Giveaway
           </h2>
           <p className="text-lg lg:text-xl text-marley-primary max-w-3xl mx-auto leading-relaxed">
@@ -19,7 +19,7 @@ export const GiveawayDetails = () => {
           <div className="space-y-8">
             <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-accent-red/30">
               <div className="mb-6">
-                <h3 className="text-2xl font-bold text-marley-dark">
+                <h3 className="font-headline text-2xl font-bold text-marley-dark">
                   What You Could Win
                 </h3>
               </div>
@@ -50,7 +50,7 @@ export const GiveawayDetails = () => {
           {/* Features with modern styling */}
           <div className="space-y-6">
             <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-accent-red/30">
-              <h3 className="text-2xl font-bold text-marley-dark mb-6">
+              <h3 className="font-headline text-2xl font-bold text-marley-dark mb-6">
                 What Makes Marley Co Different
               </h3>
               

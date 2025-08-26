@@ -11,7 +11,7 @@ export const HowToEnter = () => {
       
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-marley-dark mb-6">
+          <h2 className="font-headline text-marley-dark mb-6">
             How To Enter
           </h2>
           <p className="text-lg lg:text-xl text-marley-primary max-w-2xl mx-auto">
