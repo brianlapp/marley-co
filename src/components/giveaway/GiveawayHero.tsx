@@ -49,19 +49,19 @@ export const GiveawayHero = () => {
               </p>
               
               <div className="space-y-2">
-                <div className="flex items-center gap-4 p-3 bg-white/20 backdrop-blur-sm rounded-xl border border-white/40 hover:bg-white/30 transition-all duration-300">
+                <div className="flex items-center gap-4 p-3 bg-white/20 backdrop-blur-sm rounded-xl border border-accent-red/40 hover:bg-white/30 transition-all duration-300">
                   <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <Check className="w-4 h-4 text-white" strokeWidth={3} />
                   </div>
                   <span className="text-marley-dark font-medium">Spacious & practical design</span>
                 </div>
-                <div className="flex items-center gap-4 p-3 bg-white/20 backdrop-blur-sm rounded-xl border border-white/40 hover:bg-white/30 transition-all duration-300">
+                <div className="flex items-center gap-4 p-3 bg-white/20 backdrop-blur-sm rounded-xl border border-accent-red/40 hover:bg-white/30 transition-all duration-300">
                   <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <Check className="w-4 h-4 text-white" strokeWidth={3} />
                   </div>
                   <span className="text-marley-dark font-medium">Modern, fashion-forward style</span>
                 </div>
-                <div className="flex items-center gap-4 p-3 bg-white/20 backdrop-blur-sm rounded-xl border border-white/40 hover:bg-white/30 transition-all duration-300">
+                <div className="flex items-center gap-4 p-3 bg-white/20 backdrop-blur-sm rounded-xl border border-accent-red/40 hover:bg-white/30 transition-all duration-300">
                   <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <Check className="w-4 h-4 text-white" strokeWidth={3} />
                   </div>
