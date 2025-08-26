@@ -59,11 +59,11 @@ export const GiveawayForm = () => {
 
   return (
     <div className="w-full">
-      <div className="text-center mb-6">
-        <h3 className="font-headline text-3xl lg:text-4xl xl:text-5xl font-black text-marley-dark mb-1">
+      <div className="text-center mb-6 -mx-6 lg:-mx-8 p-6 lg:p-8 bg-accent-red">
+        <h3 className="font-headline text-3xl lg:text-4xl xl:text-5xl font-black text-white mb-1">
           Enter to Win!
         </h3>
-        <p className="text-accent-red font-semibold text-base lg:text-lg">
+        <p className="text-white/90 font-semibold text-base lg:text-lg">
           Your dream diaper bag awaits
         </p>
       </div>
