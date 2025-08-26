@@ -59,20 +59,20 @@ export const GiveawayForm = () => {
 
   return (
     <div className="w-full">
-      <div className="text-center mb-8">
-        <h3 className="text-3xl font-bold text-marley-dark mb-2">
+      <div className="text-center mb-6">
+        <h3 className="text-2xl lg:text-3xl font-bold text-marley-dark mb-2">
           Enter to Win!
         </h3>
-        <p className="text-[#FF5757] font-semibold text-lg">
+        <p className="text-accent-red font-semibold text-base lg:text-lg">
           Your dream diaper bag awaits
         </p>
       </div>
       
-      <div className="mb-8 relative group">
+      <div className="mb-6 relative group">
         <img 
           src={diaperBagHero} 
           alt="Stylish Marley Co diaper bag in modern neutral color"
-          className="w-full max-w-sm mx-auto rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300"
+          className="w-full max-w-xs mx-auto rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       </div>
@@ -158,7 +158,7 @@ export const GiveawayForm = () => {
         
         <Button
           type="submit"
-          className="w-full h-14 bg-gradient-to-r from-[#FF5757] to-[#FF5757]/90 hover:from-[#FF5757]/90 hover:to-[#FF5757] text-white font-bold text-xl rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300"
+          className="w-full h-12 lg:h-14 bg-gradient-to-r from-accent-red to-accent-red/90 hover:from-accent-red/90 hover:to-accent-red text-accent-red-foreground font-bold text-lg lg:text-xl rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300"
           disabled={isLoading}
         >
           {isLoading ? (

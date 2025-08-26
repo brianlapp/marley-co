@@ -33,6 +33,10 @@ export default {
           warm: "#E2D1C3",       // Warm accent
           cool: "#D3E4FD",       // Cool accent
         },
+        "accent-red": {
+          DEFAULT: "hsl(var(--accent-red))",
+          foreground: "hsl(var(--accent-red-foreground))",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
