@@ -60,7 +60,7 @@ export const GiveawayForm = () => {
   return (
     <div className="w-full">
       <div className="text-center mb-6">
-        <h3 className="font-headline text-3xl lg:text-4xl xl:text-5xl font-black text-marley-dark mb-2">
+        <h3 className="font-headline text-3xl lg:text-4xl xl:text-5xl font-black text-marley-dark mb-1">
           Enter to Win!
         </h3>
         <p className="text-accent-red font-semibold text-base lg:text-lg">
