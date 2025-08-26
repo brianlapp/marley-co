@@ -26,15 +26,11 @@ export const GiveawayDetails = () => {
               
               <div className="space-y-3 mb-6">
                 <div className="flex items-center gap-4 p-3 bg-white backdrop-blur-sm rounded-xl border border-accent-red/30 hover:bg-white/90 transition-all duration-300">
-                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Check className="w-4 h-4 text-white" strokeWidth={3} />
-                  </div>
+                  <div className="w-3 h-3 bg-orange-500 rounded-full flex-shrink-0"></div>
                   <span className="text-marley-dark font-medium">1 x Marley Co Premium Diaper Bag</span>
                 </div>
                 <div className="flex items-center gap-4 p-3 bg-white backdrop-blur-sm rounded-xl border border-accent-red/30 hover:bg-white/90 transition-all duration-300">
-                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Check className="w-4 h-4 text-white" strokeWidth={3} />
-                  </div>
+                  <div className="w-3 h-3 bg-orange-500 rounded-full flex-shrink-0"></div>
                   <span className="text-marley-dark font-medium">Matching changing pad</span>
                 </div>
               </div>
