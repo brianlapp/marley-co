@@ -6,7 +6,7 @@ import heroBackground from "@/assets/new-hero-background.jpg";
 export const GiveawayHero = () => {
   return (
     <section 
-      className="pt-20 pb-16 relative overflow-hidden min-h-screen flex items-center"
+      className="pt-16 pb-12 relative overflow-hidden min-h-screen flex items-center"
       style={{
         backgroundImage: `url(${heroBackground})`,
         backgroundSize: 'cover',
@@ -19,19 +19,19 @@ export const GiveawayHero = () => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full">
         {/* Content and form grid */}
-        <div className="grid lg:grid-cols-2 gap-12 xl:gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 xl:gap-16 items-start">
           {/* Left Column - Content */}
-          <div className="text-center lg:text-left space-y-6">
+          <div className="text-center lg:text-left space-y-4">
             {/* Hero headline with excitement */}
-            <div className="space-y-4">
+            <div className="space-y-3">
               <div className="inline-block bg-accent-red text-accent-red-foreground px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
                 FREE GIVEAWAY
               </div>
-              <h1 className="font-headline text-marley-dark text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight mb-4">
+              <h1 className="font-headline text-marley-dark text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight mb-3">
                 Win a Stylish <span className="whitespace-nowrap">Marley Co</span>
                 <span className="block text-accent-red font-black">Diaper Bag!</span>
               </h1>
-              <p className="text-lg sm:text-xl lg:text-2xl text-marley-primary font-medium leading-relaxed">
+              <p className="text-base sm:text-lg lg:text-2xl text-marley-primary font-medium leading-relaxed">
                 The perfect mix of fashion and function — designed for parents who want it all.
               </p>
             </div>
@@ -71,25 +71,25 @@ export const GiveawayHero = () => {
             </div>
             
             {/* Mobile form */}
-            <div className="lg:hidden">
+            <div className="lg:hidden mt-6">
               <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl p-6 border border-accent-red/30 hover:shadow-2xl transition-all duration-300">
                 <GiveawayForm />
               </div>
             </div>
             
             {/* Mobile only content */}
-            <div className="lg:hidden space-y-6">
-              <p className="text-base text-marley-dark leading-relaxed">
+            <div className="lg:hidden space-y-4 mt-6">
+              <p className="text-sm text-marley-dark leading-relaxed">
                 Enter now for your chance to win a premium Marley Co diaper bag — the ultimate parenting essential 
                 that keeps you organized without sacrificing style. With spacious compartments, durable design, and 
                 a sleek modern look, this bag is built to handle everything parenthood throws your way.
               </p>
               
-              <p className="font-headline text-base text-marley-dark font-semibold mb-4">
+              <p className="font-headline text-sm text-marley-dark font-semibold mb-3">
                 Don't miss out — it takes less than 30 seconds to enter!
               </p>
               
-              <div className="space-y-3">
+              <div className="space-y-2">
                 <div className="flex items-center gap-3 p-2 bg-white/20 backdrop-blur-sm rounded-lg border border-white/30">
                   <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <Check className="w-3 h-3 text-white" strokeWidth={3} />
