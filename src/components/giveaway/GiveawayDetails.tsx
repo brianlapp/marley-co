@@ -17,7 +17,7 @@ export const GiveawayDetails = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Prize details with modern cards */}
           <div className="space-y-8">
-            <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-accent-red/30">
+            <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-md hover:shadow-lg transition-all duration-300 border border-accent-red/30">
               <div className="mb-6">
                 <h3 className="font-headline text-2xl font-bold text-marley-dark">
                   What You Could Win
@@ -49,7 +49,7 @@ export const GiveawayDetails = () => {
           
           {/* Features with modern styling */}
           <div className="space-y-6">
-            <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-accent-red/30">
+            <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-md hover:shadow-lg transition-all duration-300 border border-accent-red/30">
               <h3 className="font-headline text-2xl font-bold text-marley-dark mb-6">
                 What Makes Marley Co Different
               </h3>

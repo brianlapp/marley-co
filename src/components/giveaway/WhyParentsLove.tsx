@@ -16,26 +16,26 @@ export const WhyParentsLove = () => {
             
             {/* Stats row */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6 mb-12">
-              <div className="bg-white rounded-xl p-4 lg:p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="bg-white rounded-xl p-4 lg:p-6 shadow-md hover:shadow-lg transition-all duration-300">
                 <div className="text-2xl lg:text-3xl font-bold text-accent-red mb-2">4.9★</div>
                 <div className="text-xs lg:text-sm text-marley-primary font-medium">Average Rating</div>
               </div>
-              <div className="bg-white rounded-xl p-4 lg:p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="bg-white rounded-xl p-4 lg:p-6 shadow-md hover:shadow-lg transition-all duration-300">
                 <div className="text-2xl lg:text-3xl font-bold text-accent-red mb-2">10K+</div>
                 <div className="text-xs lg:text-sm text-marley-primary font-medium">Happy Parents</div>
               </div>
-              <div className="bg-white rounded-xl p-4 lg:p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="bg-white rounded-xl p-4 lg:p-6 shadow-md hover:shadow-lg transition-all duration-300">
                 <div className="text-2xl lg:text-3xl font-bold text-accent-red mb-2">98%</div>
                 <div className="text-xs lg:text-sm text-marley-primary font-medium">Would Recommend</div>
               </div>
-              <div className="bg-white rounded-xl p-4 lg:p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="bg-white rounded-xl p-4 lg:p-6 shadow-md hover:shadow-lg transition-all duration-300">
                 <div className="text-2xl lg:text-3xl font-bold text-accent-red mb-2">24M+</div>
                 <div className="text-xs lg:text-sm text-marley-primary font-medium">Days of Use</div>
               </div>
             </div>
             
             {/* Main content in beautiful card */}
-            <div className="bg-white rounded-2xl p-6 md:p-8 lg:p-12 shadow-xl border border-marley-light/50 text-left">
+            <div className="bg-white rounded-2xl p-6 md:p-8 lg:p-12 shadow-lg border border-marley-light/50 text-left">
               <div className="grid md:grid-cols-2 gap-6 lg:gap-8 items-center">
                 <div className="space-y-4 lg:space-y-6">
                   <div className="flex items-start gap-4">

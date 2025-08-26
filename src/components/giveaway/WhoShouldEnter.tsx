@@ -24,7 +24,7 @@ export const WhoShouldEnter = () => {
         </p>
         
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="group bg-white rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-accent-red/30">
+          <div className="group bg-white rounded-2xl p-6 lg:p-8 shadow-md hover:shadow-lg transition-all duration-300 border border-accent-red/30">
             <div className="flex justify-center mb-6">
               <div className="bg-gradient-to-br from-accent-red to-accent-red/80 rounded-2xl w-16 h-16 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
                 <div className="w-4 h-4 bg-white rounded-full"></div>
@@ -36,7 +36,7 @@ export const WhoShouldEnter = () => {
             </p>
           </div>
           
-          <div className="group bg-white rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-accent-red/30">
+          <div className="group bg-white rounded-2xl p-6 lg:p-8 shadow-md hover:shadow-lg transition-all duration-300 border border-accent-red/30">
             <div className="flex justify-center mb-6">
               <div className="bg-gradient-to-br from-accent-red to-accent-red/80 rounded-2xl w-16 h-16 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
                 <div className="w-4 h-4 bg-white rounded-full"></div>
@@ -48,7 +48,7 @@ export const WhoShouldEnter = () => {
             </p>
           </div>
           
-          <div className="group bg-white rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-accent-red/30">
+          <div className="group bg-white rounded-2xl p-6 lg:p-8 shadow-md hover:shadow-lg transition-all duration-300 border border-accent-red/30">
             <div className="flex justify-center mb-6">
               <div className="bg-gradient-to-br from-accent-red to-accent-red/80 rounded-2xl w-16 h-16 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
                 <div className="w-4 h-4 bg-white rounded-full"></div>
