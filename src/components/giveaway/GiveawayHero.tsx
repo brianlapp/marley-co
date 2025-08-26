@@ -19,7 +19,7 @@ export const GiveawayHero = () => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full">
         {/* Content and form grid */}
-        <div className="grid lg:grid-cols-2 gap-12 xl:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 xl:gap-16 items-start">
           {/* Left Column - Content */}
           <div className="text-center lg:text-left space-y-6">
             {/* Hero headline with excitement */}
@@ -28,7 +28,7 @@ export const GiveawayHero = () => {
                 FREE GIVEAWAY
               </div>
               <h1 className="text-marley-dark text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight mb-4">
-                Win a Stylish Marley Co 
+                Win a Stylish <span className="whitespace-nowrap">Marley Co</span>
                 <span className="block text-accent-red font-black">Diaper Bag!</span>
               </h1>
               <p className="text-lg sm:text-xl lg:text-2xl text-marley-primary font-medium leading-relaxed">
@@ -107,7 +107,7 @@ export const GiveawayHero = () => {
           </div>
           
           {/* Right Column - Desktop Form Only */}
-          <div className="hidden lg:flex lg:flex-col lg:justify-center">
+          <div className="hidden lg:flex lg:flex-col">
             <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl p-8 border border-white/20 hover:shadow-3xl transition-all duration-500 hover:scale-[1.02]">
               <GiveawayForm />
             </div>
