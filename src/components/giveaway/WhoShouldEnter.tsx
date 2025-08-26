@@ -1,15 +1,21 @@
 import { Check } from "lucide-react";
+import heroBackground from "@/assets/new-hero-background.jpg";
 
 export const WhoShouldEnter = () => {
   return (
-    <section className="py-16 bg-marley-muted relative overflow-hidden">
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 right-10 w-32 h-32 bg-accent-red rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-10 w-32 h-32 bg-marley-primary rounded-full blur-3xl"></div>
-      </div>
+    <section 
+      className="py-16 relative overflow-hidden"
+      style={{
+        backgroundImage: `url(${heroBackground})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      {/* Modern gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-marley-light/85 via-marley-light/75 to-marley-muted/90 z-10"></div>
       
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20">
         <h2 className="font-headline text-marley-dark mb-6">
           Who Should Enter
         </h2>
