@@ -36,6 +36,34 @@ export const GiveawayHero = () => {
               </p>
             </div>
             
+            {/* Desktop value proposition - moved to left side */}
+            <div className="hidden lg:block bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <p className="text-base text-marley-dark leading-relaxed mb-4">
+                Enter now for your chance to win a premium Marley Co diaper bag — the ultimate parenting essential 
+                that keeps you organized without sacrificing style. With spacious compartments, durable design, and 
+                a sleek modern look, this bag is built to handle everything parenthood throws your way.
+              </p>
+              
+              <p className="text-base text-marley-dark font-medium mb-4">
+                Don't miss out — it takes less than 30 seconds to enter!
+              </p>
+              
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-green-600 flex-shrink-0" />
+                  <span className="text-marley-dark text-sm">Spacious & practical design</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-green-600 flex-shrink-0" />
+                  <span className="text-marley-dark text-sm">Modern, fashion-forward style</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-green-600 flex-shrink-0" />
+                  <span className="text-marley-dark text-sm">Premium quality you'll love carrying every day</span>
+                </div>
+              </div>
+            </div>
+            
             {/* Mobile form */}
             <div className="lg:hidden">
               <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl p-6 border border-white/20 hover:shadow-3xl transition-all duration-300">
@@ -78,37 +106,8 @@ export const GiveawayHero = () => {
             </div>
           </div>
           
-          {/* Right Column - Desktop Form and Benefits */}
-          <div className="hidden lg:flex lg:flex-col lg:justify-center lg:space-y-6">
-            {/* Value proposition aligned with form center */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <p className="text-base text-marley-dark leading-relaxed mb-4">
-                Enter now for your chance to win a premium Marley Co diaper bag — the ultimate parenting essential 
-                that keeps you organized without sacrificing style. With spacious compartments, durable design, and 
-                a sleek modern look, this bag is built to handle everything parenthood throws your way.
-              </p>
-              
-              <p className="text-base text-marley-dark font-medium mb-4">
-                Don't miss out — it takes less than 30 seconds to enter!
-              </p>
-              
-              <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-600 flex-shrink-0" />
-                  <span className="text-marley-dark text-sm">Spacious & practical design</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-600 flex-shrink-0" />
-                  <span className="text-marley-dark text-sm">Modern, fashion-forward style</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-600 flex-shrink-0" />
-                  <span className="text-marley-dark text-sm">Premium quality you'll love carrying every day</span>
-                </div>
-              </div>
-            </div>
-            
-            {/* Form */}
+          {/* Right Column - Desktop Form Only */}
+          <div className="hidden lg:flex lg:flex-col lg:justify-center">
             <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl p-8 border border-white/20 hover:shadow-3xl transition-all duration-500 hover:scale-[1.02]">
               <GiveawayForm />
             </div>
