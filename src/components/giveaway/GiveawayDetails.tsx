@@ -17,27 +17,14 @@ export const GiveawayDetails = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Prize details with modern cards */}
           <div className="space-y-8">
-            {/* Image inside the container */}
-            <div className="relative group mb-8">
-              <img 
-                src={diaperBagHero} 
-                alt="Stylish Marley Co diaper bag - what you could win"
-                className="w-full h-auto rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </div>
-
             <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-accent-red/30">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-accent-red rounded-full flex items-center justify-center">
-                  <Check className="w-6 h-6 text-white" strokeWidth={3} />
-                </div>
+              <div className="mb-6">
                 <h3 className="text-2xl font-bold text-marley-dark">
                   What You Could Win
                 </h3>
               </div>
               
-              <div className="space-y-3">
+              <div className="space-y-3 mb-6">
                 <div className="flex items-center gap-4 p-3 bg-white backdrop-blur-sm rounded-xl border border-accent-red/30 hover:bg-white/90 transition-all duration-300">
                   <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <Check className="w-4 h-4 text-white" strokeWidth={3} />
@@ -50,6 +37,16 @@ export const GiveawayDetails = () => {
                   </div>
                   <span className="text-marley-dark font-medium">Matching changing pad</span>
                 </div>
+              </div>
+
+              {/* Image directly under the pills */}
+              <div className="relative group">
+                <img 
+                  src={diaperBagHero} 
+                  alt="Stylish Marley Co diaper bag - what you could win"
+                  className="w-full h-auto rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             </div>
           </div>
