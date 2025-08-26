@@ -69,6 +69,7 @@ export default {
       fontFamily: {
         serif: ['Playfair Display', 'serif'],
         sans: ['Inter', 'sans-serif'],
+        headline: ['Poppins', 'sans-serif'],
       },
       keyframes: {
         "accordion-down": {
