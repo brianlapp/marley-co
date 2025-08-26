@@ -68,13 +68,13 @@ export const GiveawayForm = () => {
         </p>
       </div>
       
-      <div className="mb-6 relative group">
+      <div className="mb-6 -mx-6 lg:-mx-8 relative group">
         <img 
           src={diaperBagHero} 
           alt="Stylish Marley Co diaper bag in modern neutral color"
-          className="w-full max-w-xs mx-auto rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300"
+          className="w-full h-48 lg:h-56 object-cover rounded-t-3xl group-hover:scale-105 transition-all duration-300"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-t-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       </div>
       
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4" data-netlify="true">
