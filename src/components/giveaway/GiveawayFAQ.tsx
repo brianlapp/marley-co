@@ -10,7 +10,7 @@ export const GiveawayFAQ = () => {
         
         <Accordion type="single" collapsible className="bg-white rounded-lg">
           <AccordionItem value="item-1">
-            <AccordionTrigger className="px-6 text-marley-dark text-left text-sm font-sans">
+            <AccordionTrigger className="px-6 text-marley-dark text-left text-base font-sans">
               Is the giveaway free to enter?
             </AccordionTrigger>
             <AccordionContent className="px-6 text-marley-primary">
@@ -19,7 +19,7 @@ export const GiveawayFAQ = () => {
           </AccordionItem>
           
           <AccordionItem value="item-2">
-            <AccordionTrigger className="px-6 text-marley-dark text-left">
+            <AccordionTrigger className="px-6 text-marley-dark text-left text-base font-sans">
               How will I know if I won?
             </AccordionTrigger>
             <AccordionContent className="px-6 text-marley-primary">
@@ -28,7 +28,7 @@ export const GiveawayFAQ = () => {
           </AccordionItem>
           
           <AccordionItem value="item-3">
-            <AccordionTrigger className="px-6 text-marley-dark text-left">
+            <AccordionTrigger className="px-6 text-marley-dark text-left text-base font-sans">
               Is this available in Canada?
             </AccordionTrigger>
             <AccordionContent className="px-6 text-marley-primary">
@@ -37,7 +37,7 @@ export const GiveawayFAQ = () => {
           </AccordionItem>
           
           <AccordionItem value="item-4">
-            <AccordionTrigger className="px-6 text-marley-dark text-left">
+            <AccordionTrigger className="px-6 text-marley-dark text-left text-base font-sans">
               How often do you run giveaways?
             </AccordionTrigger>
             <AccordionContent className="px-6 text-marley-primary">
@@ -46,7 +46,7 @@ export const GiveawayFAQ = () => {
           </AccordionItem>
           
           <AccordionItem value="item-5">
-            <AccordionTrigger className="px-6 text-marley-dark text-left">
+            <AccordionTrigger className="px-6 text-marley-dark text-left text-base font-sans">
               Will you spam me?
             </AccordionTrigger>
             <AccordionContent className="px-6 text-marley-primary">
