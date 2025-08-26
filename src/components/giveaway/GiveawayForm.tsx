@@ -158,7 +158,7 @@ export const GiveawayForm = () => {
         
         <Button
           type="submit"
-          className="w-full h-12 lg:h-14 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-600 text-white font-bold text-lg lg:text-xl rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300"
+          className="w-full h-12 lg:h-14 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-600 text-white font-bold text-lg lg:text-xl rounded-xl shadow-md hover:shadow-lg transform hover:scale-[1.02] transition-all duration-300"
           disabled={isLoading}
         >
           {isLoading ? (
