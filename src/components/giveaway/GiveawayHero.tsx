@@ -6,7 +6,7 @@ import heroBackground from "@/assets/new-hero-background.jpg";
 export const GiveawayHero = () => {
   return (
     <section 
-      className="pt-16 pb-12 relative overflow-hidden min-h-screen flex items-center"
+      className="pt-16 lg:pt-20 pb-12 lg:pb-16 relative overflow-hidden min-h-screen flex items-center"
       style={{
         backgroundImage: `url(${heroBackground})`,
         backgroundSize: 'cover',
@@ -21,7 +21,7 @@ export const GiveawayHero = () => {
         {/* Content and form grid */}
         <div className="grid lg:grid-cols-2 gap-8 xl:gap-16 items-start">
           {/* Left Column - Content */}
-          <div className="text-center lg:text-left space-y-4">
+          <div className="text-center lg:text-left space-y-4 lg:space-y-6">
             {/* Hero headline with excitement */}
             <div className="space-y-3">
               <div className="inline-block bg-accent-red text-accent-red-foreground px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
