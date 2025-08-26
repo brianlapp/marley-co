@@ -48,7 +48,7 @@ export const GiveawayHero = () => {
                 Don't miss out — it takes less than 30 seconds to enter!
               </p>
               
-              <div className="space-y-4">
+              <div className="space-y-2">
                 <div className="flex items-center gap-4 p-3 bg-white/20 backdrop-blur-sm rounded-xl border border-white/30 hover:bg-white/30 transition-all duration-300">
                   <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <Check className="w-4 h-4 text-white" strokeWidth={3} />
