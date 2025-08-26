@@ -24,7 +24,7 @@ export const GiveawayHero = () => {
           <div className="text-center lg:text-left space-y-6">
             {/* Hero headline with excitement */}
             <div className="space-y-4">
-              <div className="inline-block bg-accent-red text-accent-red-foreground px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide animate-pulse">
+              <div className="inline-block bg-accent-red text-accent-red-foreground px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
                 FREE GIVEAWAY
               </div>
               <h1 className="font-headline text-marley-dark text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight mb-4">
