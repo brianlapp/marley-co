@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import diaperBagHero from "@/assets/diaper-bag-hero.jpg";
 
 export const GiveawayDetails = () => {
   return (
@@ -13,66 +14,84 @@ export const GiveawayDetails = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Prize details with modern cards */}
+        <div className="grid lg:grid-cols-2 gap-12 xl:gap-16 items-start">
+          {/* Left Column - CTA Image */}
+          <div className="relative group">
+            <img 
+              src={diaperBagHero} 
+              alt="Stylish Marley Co diaper bag - what you could win"
+              className="w-full h-auto rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </div>
+          
+          {/* Right Column - Prize details */}
           <div className="space-y-8">
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-marley-light/50">
+            <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-accent-red/30">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-[#FF5757] to-[#FF5757]/80 rounded-full flex items-center justify-center">
-                  <Check className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-accent-red rounded-full flex items-center justify-center">
+                  <Check className="w-6 h-6 text-white" strokeWidth={3} />
                 </div>
                 <h3 className="text-2xl font-bold text-marley-dark">
                   What You Could Win
                 </h3>
               </div>
               
-              <div className="space-y-4">
-                <div className="flex items-center gap-4 p-4 bg-green-50 rounded-xl border-l-4 border-green-500">
-                  <Check className="w-6 h-6 text-green-600 flex-shrink-0" />
-                  <div>
-                    <p className="font-semibold text-marley-dark">1 x Marley Co Premium Diaper Bag</p>
+              <div className="space-y-3">
+                <div className="flex items-center gap-4 p-3 bg-accent-red/5 backdrop-blur-sm rounded-xl border border-accent-red/30 hover:bg-accent-red/10 transition-all duration-300">
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Check className="w-4 h-4 text-white" strokeWidth={3} />
                   </div>
+                  <span className="text-marley-dark font-medium">1 x Marley Co Premium Diaper Bag</span>
                 </div>
-                <div className="flex items-center gap-4 p-4 bg-green-50 rounded-xl border-l-4 border-green-500">
-                  <Check className="w-6 h-6 text-green-600 flex-shrink-0" />
-                  <div>
-                    <p className="font-semibold text-marley-dark">Matching changing pad</p>
+                <div className="flex items-center gap-4 p-3 bg-accent-red/5 backdrop-blur-sm rounded-xl border border-accent-red/30 hover:bg-accent-red/10 transition-all duration-300">
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Check className="w-4 h-4 text-white" strokeWidth={3} />
                   </div>
+                  <span className="text-marley-dark font-medium">Matching changing pad</span>
                 </div>
               </div>
             </div>
-          </div>
-          
-          {/* Features with modern styling */}
-          <div className="space-y-6">
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-marley-light/50">
+
+            {/* Features Section */}
+            <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-accent-red/30">
               <h3 className="text-2xl font-bold text-marley-dark mb-6">
                 What Makes Marley Co Different
               </h3>
               
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+              <div className="space-y-3">
+                <div className="flex items-start gap-3 p-3 bg-accent-red/5 backdrop-blur-sm rounded-xl border border-accent-red/30 hover:bg-accent-red/10 transition-all duration-300">
+                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
+                    <Check className="w-3 h-3 text-white" strokeWidth={3} />
+                  </div>
                   <span className="text-marley-dark">Designed for real life with spill-resistant, easy-wipe interior and exterior</span>
                 </div>
                 
-                <div className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                <div className="flex items-start gap-3 p-3 bg-accent-red/5 backdrop-blur-sm rounded-xl border border-accent-red/30 hover:bg-accent-red/10 transition-all duration-300">
+                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
+                    <Check className="w-3 h-3 text-white" strokeWidth={3} />
+                  </div>
                   <span className="text-marley-dark">Smart organization including insulated bottle pockets and quick-grab front zip</span>
                 </div>
                 
-                <div className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                <div className="flex items-start gap-3 p-3 bg-accent-red/5 backdrop-blur-sm rounded-xl border border-accent-red/30 hover:bg-accent-red/10 transition-all duration-300">
+                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
+                    <Check className="w-3 h-3 text-white" strokeWidth={3} />
+                  </div>
                   <span className="text-marley-dark">Padded laptop sleeve so your work and parent life stay in one stylish place</span>
                 </div>
                 
-                <div className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                <div className="flex items-start gap-3 p-3 bg-accent-red/5 backdrop-blur-sm rounded-xl border border-accent-red/30 hover:bg-accent-red/10 transition-all duration-300">
+                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
+                    <Check className="w-3 h-3 text-white" strokeWidth={3} />
+                  </div>
                   <span className="text-marley-dark">Convertible carry options backpack or top handle for hands-free comfort</span>
                 </div>
                 
-                <div className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                <div className="flex items-start gap-3 p-3 bg-accent-red/5 backdrop-blur-sm rounded-xl border border-accent-red/30 hover:bg-accent-red/10 transition-all duration-300">
+                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
+                    <Check className="w-3 h-3 text-white" strokeWidth={3} />
+                  </div>
                   <span className="text-marley-dark">Premium hardware and stitching for durability that lasts beyond the baby stage</span>
                 </div>
               </div>
