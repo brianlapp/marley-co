@@ -29,7 +29,7 @@ export const HowToEnter = () => {
               <div className="hidden md:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-accent-red/50 to-transparent transform -translate-y-1/2"></div>
             </div>
             <div className="bg-white rounded-xl p-4 lg:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-marley-light/30">
-              <h4 className="text-lg lg:text-xl font-bold text-marley-dark mb-3">Fill in the short entry form with your name and email</h4>
+              <h4 className="font-headline text-lg lg:text-xl font-bold text-marley-dark mb-3">Fill in the short entry form with your name and email</h4>
               <p className="text-marley-primary">
                 Complete the quick entry form with your basic details. Takes less than 30 seconds!
               </p>
@@ -45,7 +45,7 @@ export const HowToEnter = () => {
               <div className="hidden md:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-accent-red/50 to-transparent transform -translate-y-1/2"></div>
             </div>
             <div className="bg-white rounded-xl p-4 lg:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-marley-light/30">
-              <h4 className="text-lg lg:text-xl font-bold text-marley-dark mb-3">Confirm your entry in your inbox so we can contact the winner</h4>
+              <h4 className="font-headline text-lg lg:text-xl font-bold text-marley-dark mb-3">Confirm your entry in your inbox so we can contact the winner</h4>
               <p className="text-marley-primary text-sm lg:text-base">
                 Check your email and confirm your entry. This ensures we can contact you if you win!
               </p>
@@ -59,7 +59,7 @@ export const HowToEnter = () => {
               </div>
             </div>
             <div className="bg-white rounded-xl p-4 lg:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-marley-light/30">
-              <h4 className="text-lg lg:text-xl font-bold text-marley-dark mb-3">Watch your email for bonus entry options and early access to promos</h4>
+              <h4 className="font-headline text-lg lg:text-xl font-bold text-marley-dark mb-3">Watch your email for bonus entry options and early access to promos</h4>
               <p className="text-marley-primary text-sm lg:text-base">
                 Look for bonus actions like following Marley Co on Instagram or sharing with a friend to increase your odds.
               </p>
@@ -69,7 +69,7 @@ export const HowToEnter = () => {
         
         <div className="bg-gradient-to-r from-marley-light to-marley-muted rounded-2xl p-8 text-center shadow-lg border border-marley-light/50">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <h4 className="text-xl lg:text-2xl font-bold text-marley-dark">Pro Tip</h4>
+            <h4 className="font-headline text-xl lg:text-2xl font-bold text-marley-dark">Pro Tip</h4>
           </div>
           <p className="text-base lg:text-lg text-marley-primary max-w-3xl mx-auto leading-relaxed">
             After you submit, look for bonus actions like following Marley Co on Instagram or sharing with a friend to increase your odds.

@@ -12,7 +12,7 @@ export const ParentPeaceOfMind = () => {
           <div className="text-center">
             <div className="bg-marley-light rounded-lg p-6 mb-4">
               <Check className="w-8 h-8 text-green-600 mx-auto mb-3" />
-              <h4 className="text-marley-dark mb-2">Easy to Clean</h4>
+              <h4 className="font-headline text-marley-dark mb-2">Easy to Clean</h4>
             </div>
             <p className="text-marley-primary">
               Everyday messes wipe right off
@@ -22,7 +22,7 @@ export const ParentPeaceOfMind = () => {
           <div className="text-center">
             <div className="bg-marley-light rounded-lg p-6 mb-4">
               <Check className="w-8 h-8 text-green-600 mx-auto mb-3" />
-              <h4 className="text-marley-dark mb-2">Built to Last</h4>
+              <h4 className="font-headline text-marley-dark mb-2">Built to Last</h4>
             </div>
             <p className="text-marley-primary">
               Reinforced seams and premium zippers
@@ -32,7 +32,7 @@ export const ParentPeaceOfMind = () => {
           <div className="text-center">
             <div className="bg-marley-light rounded-lg p-6 mb-4">
               <Check className="w-8 h-8 text-green-600 mx-auto mb-3" />
-              <h4 className="text-marley-dark mb-2">Comfortable to Carry</h4>
+              <h4 className="font-headline text-marley-dark mb-2">Comfortable to Carry</h4>
             </div>
             <p className="text-marley-primary">
               Padded straps distribute weight evenly
