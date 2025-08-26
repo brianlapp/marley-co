@@ -67,11 +67,11 @@ export const HowToEnter = () => {
           </div>
         </div>
         
-        <div className="bg-gradient-to-r from-marley-light to-marley-muted rounded-2xl p-8 text-center shadow-md border border-marley-light/50">
+        <div className="bg-gradient-to-r from-marley-primary to-accent-red rounded-2xl p-8 text-center shadow-md border border-marley-light/50">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <h4 className="font-headline text-xl lg:text-2xl font-bold text-marley-dark">Pro Tip</h4>
+            <h4 className="font-headline text-xl lg:text-2xl font-bold text-white">Pro Tip</h4>
           </div>
-          <p className="text-base lg:text-lg text-marley-primary max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base lg:text-lg text-white/95 max-w-3xl mx-auto leading-relaxed">
             After you submit, look for bonus actions like following Marley Co on Instagram or sharing with a friend to increase your odds.
           </p>
         </div>
