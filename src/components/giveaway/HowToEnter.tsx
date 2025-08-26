@@ -67,7 +67,7 @@ export const HowToEnter = () => {
           </div>
         </div>
         
-        <div className="bg-gradient-to-r from-marley-primary to-accent-red rounded-2xl p-8 text-center shadow-md border border-marley-light/50">
+        <div className="bg-gradient-to-r from-accent-red to-accent-red/80 rounded-2xl p-8 text-center shadow-md border border-marley-light/50">
           <div className="flex items-center justify-center gap-2 mb-4">
             <h4 className="font-headline text-xl lg:text-2xl font-bold text-white">Pro Tip</h4>
           </div>
