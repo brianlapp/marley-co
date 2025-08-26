@@ -88,7 +88,7 @@ export const GiveawayForm = () => {
             <Input
               id="firstName"
               {...register("firstName", { required: "First name is required" })}
-              className="mt-1"
+              className="mt-1 border border-accent-red/30 focus:border-accent-red focus:ring-accent-red/20"
               placeholder="Enter your first name"
             />
             {errors.firstName && (
@@ -103,7 +103,7 @@ export const GiveawayForm = () => {
             <Input
               id="lastName"
               {...register("lastName", { required: "Last name is required" })}
-              className="mt-1"
+              className="mt-1 border border-accent-red/30 focus:border-accent-red focus:ring-accent-red/20"
               placeholder="Enter your last name"
             />
             {errors.lastName && (
@@ -116,18 +116,18 @@ export const GiveawayForm = () => {
           <Label htmlFor="email" className="text-marley-primary text-left block">
             Email *
           </Label>
-          <Input
-            id="email"
-            type="email"
-            {...register("email", { 
-              required: "Email is required",
-              pattern: {
-                value: /^\S+@\S+$/i,
-                message: "Please enter a valid email address"
-              }
-            })}
-            className="mt-1"
-            placeholder="Enter your email address"
+            <Input
+              id="email"
+              type="email"
+              {...register("email", { 
+                required: "Email is required",
+                pattern: {
+                  value: /^\S+@\S+$/i,
+                  message: "Please enter a valid email address"
+                }
+              })}
+              className="mt-1 border border-accent-red/30 focus:border-accent-red focus:ring-accent-red/20"
+              placeholder="Enter your email address"
           />
           {errors.email && (
             <p className="text-sm text-red-600 mt-1">{errors.email.message}</p>
@@ -142,7 +142,7 @@ export const GiveawayForm = () => {
             onValueChange={(value) => setValue("parentStatus", value)}
             required
           >
-            <SelectTrigger className="mt-1">
+            <SelectTrigger className="mt-1 border border-accent-red/30 focus:border-accent-red focus:ring-accent-red/20">
               <SelectValue placeholder="Select your status" />
             </SelectTrigger>
             <SelectContent>
