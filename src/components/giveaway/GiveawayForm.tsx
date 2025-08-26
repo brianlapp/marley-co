@@ -59,7 +59,7 @@ export const GiveawayForm = () => {
 
   return (
     <div className="w-full">
-      <div className="text-center -mx-6 lg:-mx-8 -mt-6 lg:-mt-8 mb-6 p-4 lg:p-6 bg-accent-red rounded-t-3xl">
+      <div className="text-center -mx-6 lg:-mx-8 -mt-6 lg:-mt-8 p-4 lg:p-6 bg-accent-red rounded-t-3xl">
         <h3 className="font-headline text-3xl lg:text-4xl xl:text-5xl font-black text-white mb-1">
           Enter to Win!
         </h3>
@@ -68,7 +68,7 @@ export const GiveawayForm = () => {
         </p>
       </div>
       
-      <div className="mb-6 -mx-6 lg:-mx-8 relative group">
+      <div className="-mx-6 lg:-mx-8 relative group">
         <img 
           src={diaperBagHero} 
           alt="Stylish Marley Co diaper bag in modern neutral color"
