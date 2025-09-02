@@ -2,6 +2,18 @@ import { Label } from "@/components/ui/label";
 import diaperBagHero from "@/assets/diaper-bag-hero.jpg";
 
 export const GiveawayForm = () => {
+  const handleSubmit = (e: React.FormEvent) => {
+    const form = e.target as HTMLFormElement;
+    const firstNameInput = form.querySelector('#firstName') as HTMLInputElement;
+    const lastNameInput = form.querySelector('#lastName') as HTMLInputElement;
+    const cmNameInput = form.querySelector('#cm-name') as HTMLInputElement;
+    
+    // Combine first and last name for Campaign Monitor
+    if (firstNameInput && lastNameInput && cmNameInput) {
+      cmNameInput.value = `${firstNameInput.value} ${lastNameInput.value}`.trim();
+    }
+    // Let the form submit naturally - don't prevent default
+  };
 
   return (
     <div className="w-full">
@@ -29,7 +41,7 @@ export const GiveawayForm = () => {
         action="https://www.createsend.com/t/subscribeerror?description="
         method="post"
         data-id="A61C50BEC994754B1D79C5819EC1255CFA28D1654E6F0CD6DD89EBC6584511957D64FA779A3911D0CBD6793EBFE3D860B8AC108077707263B7C565A5740BE030"
-        
+        onSubmit={handleSubmit}
       >
         <div className="grid grid-cols-1 gap-4">
           <div>
