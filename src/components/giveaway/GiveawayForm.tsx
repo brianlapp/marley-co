@@ -12,6 +12,9 @@ export const GiveawayForm = () => {
     if (firstNameInput && lastNameInput && cmNameInput) {
       cmNameInput.value = `${firstNameInput.value} ${lastNameInput.value}`.trim();
     }
+    
+    // Don't prevent default - let the form submit to Campaign Monitor
+    // The form will naturally submit to the action URL
   };
 
   return (
