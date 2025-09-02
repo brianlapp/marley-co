@@ -38,8 +38,8 @@ export const GiveawayDetails = () => {
               {/* Image directly under the pills */}
               <div className="relative group">
                 <img 
-                  src={diaperBagHero} 
-                  alt="Stylish Marley Co diaper bag - what you could win"
+                  src="/lovable-uploads/377800ac-6699-4995-89d6-83257b80bdf6.png" 
+                  alt="Black quilted Marley Co diaper bag with cream changing pad - what you could win"
                   className="w-full h-auto rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
