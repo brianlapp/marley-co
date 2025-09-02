@@ -78,13 +78,14 @@ export const GiveawayForm = () => {
             </Label>
             <input
               id="firstName"
-              name="firstName"
+              name="cm-f-dtktuiu"
               type="text"
               required
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
               className="mt-1 w-full px-3 py-2 border border-accent-red/30 rounded-md focus:border-accent-red focus:ring-accent-red/20 focus:ring-2 focus:outline-none"
               placeholder="Enter your first name"
+              maxLength={200}
             />
           </div>
           
@@ -94,13 +95,14 @@ export const GiveawayForm = () => {
             </Label>
             <input
               id="lastName"
-              name="lastName"
+              name="cm-f-dtktudl"
               type="text"
               required
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
               className="mt-1 w-full px-3 py-2 border border-accent-red/30 rounded-md focus:border-accent-red focus:ring-accent-red/20 focus:ring-2 focus:outline-none"
               placeholder="Enter your last name"
+              maxLength={200}
             />
           </div>
         </div>
@@ -129,26 +131,19 @@ export const GiveawayForm = () => {
           </Label>
           <select
             id="parentStatus"
-            name="parentStatus"
+            name="cm-fo-dtktudr"
             required
             value={parentStatus}
             onChange={(e) => setParentStatus(e.target.value)}
             className="mt-1 w-full px-3 py-2 border border-accent-red/30 rounded-md focus:border-accent-red focus:ring-accent-red/20 focus:ring-2 focus:outline-none bg-white"
           >
             <option value="">Select your status</option>
-            <option value="pregnant">I'm Pregnant</option>
-            <option value="gave-birth">I Gave Birth</option>
-            <option value="grandparent">Grandparent</option>
+            <option value="7256125">I'm Pregnant</option>
+            <option value="7256126">I Gave Birth</option>
+            <option value="7256127">Grandparent</option>
           </select>
         </div>
 
-        {/* Hidden Campaign Monitor fields */}
-        <input 
-          type="hidden" 
-          name="cm-name" 
-          id="cm-name" 
-          value={combinedName}
-        />
         
         <button
           type="submit"
