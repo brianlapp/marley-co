@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import Index from "./pages/Index";
 import Contact from "./pages/Contact";
 import DipaerBagGiveaway from "./pages/DipaerBagGiveaway";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 // Scroll to top component
 const ScrollToTop = () => {
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/diaper-bag-giveaway" element={<DipaerBagGiveaway />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

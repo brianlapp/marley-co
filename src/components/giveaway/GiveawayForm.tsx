@@ -175,7 +175,10 @@ export const GiveawayForm = () => {
         
         <div className="text-center mt-6 space-y-2">
           <p className="text-xs text-marley-accent">
-            By entering, you agree to receive emails from Marley Co. Unsubscribe anytime.
+            By entering, you agree to receive emails from Marley Co and accept our{" "}
+            <a href="/privacy-policy" className="text-accent-red underline hover:text-accent-red/80 transition-colors">
+              Privacy Policy
+            </a>. Unsubscribe anytime.
           </p>
           <p className="text-xs text-accent-red font-medium">
             No purchase required • Takes under 30 seconds

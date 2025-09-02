@@ -5,7 +5,10 @@ export const LegalFooter = () => {
         <p className="text-sm text-center leading-relaxed text-white/90">
           No purchase necessary. Open to Canadian residents who are age of majority. One entry per person plus eligible bonus entries. 
           Odds depend on number of entries received. Giveaway closes on December 31, 2025. Selected entrant must correctly answer a 
-          mathematical skill-testing question and respond within 3 business days to claim the prize. See full Official Rules and Privacy Policy.
+          mathematical skill-testing question and respond within 3 business days to claim the prize. See full Official Rules and{" "}
+          <a href="/privacy-policy" className="text-white underline hover:text-white/80 transition-colors">
+            Privacy Policy
+          </a>.
         </p>
       </div>
     </section>
