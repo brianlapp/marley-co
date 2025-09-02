@@ -116,9 +116,10 @@ export const GiveawayForm = () => {
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="mt-1 w-full px-3 py-2 border border-accent-red/30 rounded-md focus:border-accent-red focus:ring-accent-red/20 focus:ring-2 focus:outline-none"
+            className="mt-1 w-full px-3 py-2 border border-accent-red/30 rounded-md focus:border-accent-red focus:ring-accent-red/20 focus:ring-2 focus:outline-none js-cm-email-input qa-input-email"
             placeholder="Enter your email address"
             autoComplete="email"
+            maxLength={200}
           />
         </div>
         
@@ -152,7 +153,7 @@ export const GiveawayForm = () => {
         <button
           type="submit"
           disabled={isLoading}
-          className="w-full h-12 lg:h-14 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-600 text-white font-bold text-lg lg:text-xl rounded-xl shadow-md hover:shadow-lg transform hover:scale-[1.02] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+          className="w-full h-12 lg:h-14 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-600 text-white font-bold text-lg lg:text-xl rounded-xl shadow-md hover:shadow-lg transform hover:scale-[1.02] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none js-cm-submit-button"
         >
           <span className="flex items-center justify-center gap-2">
             {isLoading ? "ENTERING..." : "ENTER"}
