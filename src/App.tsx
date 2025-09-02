@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Index from "./pages/Index";
 import Contact from "./pages/Contact";
+import TestCMForm from "./pages/TestCMForm";
 import DipaerBagGiveaway from "./pages/DipaerBagGiveaway";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 
@@ -35,6 +36,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/test-cm-form" element={<TestCMForm />} />
           <Route path="/diaper-bag-giveaway" element={<DipaerBagGiveaway />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
