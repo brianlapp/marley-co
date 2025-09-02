@@ -80,9 +80,12 @@ export const GiveawayForm = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       </div>
       
-      <form 
-        onSubmit={handleSubmit(onSubmit)} 
-        className="space-y-4"
+      <form
+        id="subForm"
+        className="js-cm-form space-y-4"
+        action="https://www.createsend.com/t/subscribeerror?description="
+        method="post"
+        data-id="A61C50BEC994754B1D79C5819EC1255CFA28D1654E6F0CD6DD89EBC6584511957D64FA779A3911D0CBD6793EBFE3D860B8AC108077707263B7C565A5740BE030"
       >
         <div className="grid grid-cols-1 gap-4">
           <div>
@@ -160,6 +163,10 @@ export const GiveawayForm = () => {
             <p className="text-sm text-red-600 mt-1">Please select your status</p>
           )}
         </div>
+
+        {/* Hidden Campaign Monitor fields */}
+        <input type="hidden" name="cm-name" value={`${watch('firstName') || ''} ${watch('lastName') || ''}`.trim()} />
+        <input type="hidden" name="cm-ttdljdt-ttdljdt" value={watch('email') || ''} />
         
         <Button
           type="submit"
