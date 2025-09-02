@@ -1,7 +1,43 @@
+import { useState } from "react";
 import { Label } from "@/components/ui/label";
+import { toast } from "@/components/ui/use-toast";
 import diaperBagHero from "@/assets/diaper-bag-hero.jpg";
 
 export const GiveawayForm = () => {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    try {
+      const form = e.target as HTMLFormElement;
+      const firstNameInput = form.querySelector('#firstName') as HTMLInputElement;
+      const lastNameInput = form.querySelector('#lastName') as HTMLInputElement;
+      const cmNameInput = form.querySelector('#cm-name') as HTMLInputElement;
+      
+      // Combine first and last name for Campaign Monitor
+      if (firstNameInput && lastNameInput && cmNameInput) {
+        cmNameInput.value = `${firstNameInput.value} ${lastNameInput.value}`.trim();
+      }
+      
+      form.submit();
+      
+      toast({
+        title: "Entry submitted successfully!",
+        description: "You're now entered in the giveaway. Good luck!",
+      });
+    } catch (error) {
+      console.error("Form submission error:", error);
+      toast({
+        title: "Something went wrong",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <div className="w-full">
@@ -29,6 +65,7 @@ export const GiveawayForm = () => {
         action="https://www.createsend.com/t/subscribeerror?description="
         method="post"
         data-id="A61C50BEC994754B1D79C5819EC1255CFA28D1654E6F0CD6DD89EBC6584511957D64FA779A3911D0CBD6793EBFE3D860B8AC108077707263B7C565A5740BE030"
+        onSubmit={handleSubmit}
       >
         <div className="grid grid-cols-1 gap-4">
           <div>
@@ -103,18 +140,10 @@ export const GiveawayForm = () => {
         <button
           type="submit"
           className="w-full h-12 lg:h-14 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-600 text-white font-bold text-lg lg:text-xl rounded-xl shadow-md hover:shadow-lg transform hover:scale-[1.02] transition-all duration-300"
-          onClick={() => {
-            const firstNameInput = document.getElementById('firstName') as HTMLInputElement;
-            const lastNameInput = document.getElementById('lastName') as HTMLInputElement;
-            const cmNameInput = document.getElementById('cm-name') as HTMLInputElement;
-            
-            if (firstNameInput && lastNameInput && cmNameInput) {
-              cmNameInput.value = `${firstNameInput.value} ${lastNameInput.value}`.trim();
-            }
-          }}
+          disabled={isLoading}
         >
           <span className="flex items-center justify-center gap-2">
-            ENTER
+            {isLoading ? "Submitting..." : "ENTER"}
           </span>
         </button>
         
