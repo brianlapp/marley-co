@@ -1,18 +1,46 @@
+import { useState } from "react";
 import { Label } from "@/components/ui/label";
+import { toast } from "@/components/ui/use-toast";
 import diaperBagHero from "@/assets/diaper-bag-hero.jpg";
 
 export const GiveawayForm = () => {
-  const handleSubmit = (e: React.FormEvent) => {
-    const form = e.target as HTMLFormElement;
-    const firstNameInput = form.querySelector('#firstName') as HTMLInputElement;
-    const lastNameInput = form.querySelector('#lastName') as HTMLInputElement;
-    const cmNameInput = form.querySelector('#cm-name') as HTMLInputElement;
-    
-    // Combine first and last name for Campaign Monitor
-    if (firstNameInput && lastNameInput && cmNameInput) {
-      cmNameInput.value = `${firstNameInput.value} ${lastNameInput.value}`.trim();
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [parentStatus, setParentStatus] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  // Pre-populate the combined name field whenever names change
+  const combinedName = `${firstName} ${lastName}`.trim();
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    try {
+      const form = e.target as HTMLFormElement;
+      form.submit();
+      
+      toast({
+        title: "Entry submitted successfully!",
+        description: "You're now entered in the giveaway. Good luck!",
+      });
+      
+      // Reset form
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setParentStatus("");
+    } catch (error) {
+      console.error("Form submission error:", error);
+      toast({
+        title: "Something went wrong",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
     }
-    // Let the form submit naturally - don't prevent default
   };
 
   return (
@@ -53,6 +81,8 @@ export const GiveawayForm = () => {
               name="firstName"
               type="text"
               required
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
               className="mt-1 w-full px-3 py-2 border border-accent-red/30 rounded-md focus:border-accent-red focus:ring-accent-red/20 focus:ring-2 focus:outline-none"
               placeholder="Enter your first name"
             />
@@ -67,6 +97,8 @@ export const GiveawayForm = () => {
               name="lastName"
               type="text"
               required
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
               className="mt-1 w-full px-3 py-2 border border-accent-red/30 rounded-md focus:border-accent-red focus:ring-accent-red/20 focus:ring-2 focus:outline-none"
               placeholder="Enter your last name"
             />
@@ -82,6 +114,8 @@ export const GiveawayForm = () => {
             name="cm-ttdljdt-ttdljdt"
             type="email"
             required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className="mt-1 w-full px-3 py-2 border border-accent-red/30 rounded-md focus:border-accent-red focus:ring-accent-red/20 focus:ring-2 focus:outline-none"
             placeholder="Enter your email address"
             autoComplete="email"
@@ -96,6 +130,8 @@ export const GiveawayForm = () => {
             id="parentStatus"
             name="parentStatus"
             required
+            value={parentStatus}
+            onChange={(e) => setParentStatus(e.target.value)}
             className="mt-1 w-full px-3 py-2 border border-accent-red/30 rounded-md focus:border-accent-red focus:ring-accent-red/20 focus:ring-2 focus:outline-none bg-white"
           >
             <option value="">Select your status</option>
@@ -110,15 +146,16 @@ export const GiveawayForm = () => {
           type="hidden" 
           name="cm-name" 
           id="cm-name" 
-          value="" 
+          value={combinedName}
         />
         
         <button
           type="submit"
-          className="w-full h-12 lg:h-14 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-600 text-white font-bold text-lg lg:text-xl rounded-xl shadow-md hover:shadow-lg transform hover:scale-[1.02] transition-all duration-300"
+          disabled={isLoading}
+          className="w-full h-12 lg:h-14 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-600 text-white font-bold text-lg lg:text-xl rounded-xl shadow-md hover:shadow-lg transform hover:scale-[1.02] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
         >
           <span className="flex items-center justify-center gap-2">
-            ENTER
+            {isLoading ? "ENTERING..." : "ENTER"}
           </span>
         </button>
         
