@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -16,56 +16,37 @@ interface GiveawayFormData {
 
 export const GiveawayForm = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const { register, handleSubmit, formState: { errors }, setValue, watch } = useForm<GiveawayFormData>();
+  const { register, handleSubmit, formState: { errors }, setValue, watch, reset } = useForm<GiveawayFormData>();
   
   const parentStatus = watch("parentStatus");
-  const firstName = watch("firstName");
-  const lastName = watch("lastName");
-
-  // Update hidden fields when form values change
-  useEffect(() => {
-    const nameField = document.querySelector('input[name="cm-name"]') as HTMLInputElement;
-    const statusField = document.querySelector('input[name="cm-f-tyrulyru"]') as HTMLInputElement;
-    
-    if (nameField && firstName && lastName) {
-      nameField.value = `${firstName} ${lastName}`.trim();
-    }
-    
-    if (statusField && parentStatus) {
-      statusField.value = parentStatus;
-    }
-  }, [firstName, lastName, parentStatus]);
-
-  // Load Campaign Monitor script
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://js.createsend1.com/javascript/copypastesubscribeformlogic.js';
-    script.type = 'text/javascript';
-    document.head.appendChild(script);
-
-    return () => {
-      // Cleanup script on unmount
-      if (document.head.contains(script)) {
-        document.head.removeChild(script);
-      }
-    };
-  }, []);
 
   const onSubmit = async (data: GiveawayFormData) => {
     setIsLoading(true);
     
     try {
-      // Submit directly to Campaign Monitor
-      const form = document.getElementById('giveawayForm') as HTMLFormElement;
-      if (form) {
-        form.submit();
-        
+      // Submit to our Netlify function which handles Campaign Monitor
+      const response = await fetch('/.netlify/functions/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: `${data.firstName} ${data.lastName}`.trim(),
+          email: data.email,
+          parentStatus: data.parentStatus,
+          joinMailingList: true
+        }),
+      });
+
+      if (response.ok) {
         toast({
           title: "Entry Successful!",
           description: "You're entered to win! Check your email for confirmation and bonus entry opportunities.",
         });
+        // Reset form
+        reset();
       } else {
-        throw new Error("Form not found");
+        throw new Error("Form submission failed");
       }
     } catch (error) {
       console.error("Form submission error:", error);
@@ -100,16 +81,9 @@ export const GiveawayForm = () => {
       </div>
       
       <form 
-        id="giveawayForm"
         onSubmit={handleSubmit(onSubmit)} 
-        className="space-y-4 js-cm-form" 
-        action="https://www.createsend.com/t/subscribeerror?description=" 
-        method="post"
-        data-id="A61C50BEC994754B1D79C5819EC1255CFA28D1654E6F0CD6DD89EBC6584511957D64FA779A3911D0CBD6793EBFE3D860B8AC108077707263B7C565A5740BE030"
+        className="space-y-4"
       >
-        {/* Hidden field to combine first and last name for Campaign Monitor */}
-        <input type="hidden" name="cm-name" value="" />
-        
         <div className="grid grid-cols-1 gap-4">
           <div>
             <Label htmlFor="firstName" className="text-marley-primary text-left block">
@@ -149,7 +123,6 @@ export const GiveawayForm = () => {
             <Input
               id="email"
               type="email"
-              name="cm-ttdljdt-ttdljdt"
               {...register("email", { 
                 required: "Email is required",
                 pattern: {
@@ -157,7 +130,7 @@ export const GiveawayForm = () => {
                   message: "Please enter a valid email address"
                 }
               })}
-              className="mt-1 border border-accent-red/30 focus:border-accent-red focus:ring-accent-red/20 js-cm-email-input qa-input-email"
+              className="mt-1 border border-accent-red/30 focus:border-accent-red focus:ring-accent-red/20"
               placeholder="Enter your email address"
               autoComplete="email"
           />
@@ -186,8 +159,6 @@ export const GiveawayForm = () => {
           {!parentStatus && (
             <p className="text-sm text-red-600 mt-1">Please select your status</p>
           )}
-          {/* Hidden field for parent status */}
-          <input type="hidden" name="cm-f-tyrulyru" value={parentStatus || ""} />
         </div>
         
         <Button

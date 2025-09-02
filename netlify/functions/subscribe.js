@@ -23,11 +23,11 @@ exports.handler = async (event, context) => {
     // Prepare form data for Campaign Monitor
     const formData = new URLSearchParams();
     formData.append('cm-name', name);
-    formData.append('cm-tjdlthk-tjdlthk', email);
+    formData.append('cm-ttdljdt-ttdljdt', email);
 
     // Send to Campaign Monitor
     try {
-      const response = await fetch('https://www.createsend.com/t/subscribe/6B2B751B9AD088DB', {
+      const response = await fetch('https://www.createsend.com/t/subscribeerror?description=', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
