@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import Contact from "./pages/Contact";
 import TestCMForm from "./pages/TestCMForm";
 import DipaerBagGiveaway from "./pages/DipaerBagGiveaway";
+import GiveawaySuccess from "./pages/GiveawaySuccess";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 // Scroll to top component
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/test-cm-form" element={<TestCMForm />} />
           <Route path="/diaper-bag-giveaway" element={<DipaerBagGiveaway />} />
+          <Route path="/giveaway-success" element={<GiveawaySuccess />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
       </BrowserRouter>

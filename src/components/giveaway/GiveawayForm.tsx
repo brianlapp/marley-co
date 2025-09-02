@@ -47,7 +47,7 @@ export const GiveawayForm = () => {
       <form
         id="subForm"
         className="js-cm-form space-y-4"
-        action="https://www.createsend.com/t/subscribeerror?description="
+        action="https://www.createsend.com/t/subscribeerror?description=&redirect=https://positive-parenting-solutions-giveaway.lovable.app/giveaway-success"
         method="post"
         data-id="A61C50BEC994754B1D79C5819EC1255CFA28D1654E6F0CD6DD89EBC6584511957D64FA779A3911D0CBD6793EBFE3D860B8AC108077707263B7C565A5740BE030"
       >
